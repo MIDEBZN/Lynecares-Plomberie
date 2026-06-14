@@ -64,6 +64,125 @@ import Footer from '../components/Footer.astro';
       </div>
     </section>
 
+    <!-- TRUST & STATS SECTION -->
+    <section class="trust-stats py-5">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-box glass">
+            <span class="stat-number">30<small>min</small></span>
+            <span class="stat-label">Temps de réponse moyen à Liège</span>
+          </div>
+          <div class="stat-box glass">
+            <span class="stat-number">15<small>ans</small></span>
+            <span class="stat-label">D'expertise à votre service</span>
+          </div>
+          <div class="stat-box glass">
+            <span class="stat-number">100<small>%</small></span>
+            <span class="stat-label">Devis respectés, sans surprise</span>
+          </div>
+          <div class="stat-box glass">
+            <span class="stat-number">24<small>/7</small></span>
+            <span class="stat-label">Disponibilité garantie</span>
+          </div>
+        </div>
+        
+        <div class="certifications-banner mt-5 glass text-center">
+          <h3>Nos Agréments & Garanties</h3>
+          <div class="cert-logos">
+            <div class="cert-item">
+              <span class="cert-icon">🛡️</span>
+              <span>Agréé Assurances</span>
+            </div>
+            <div class="cert-item">
+              <span class="cert-icon">🔥</span>
+              <span>Agréé Cerga (Gaz)</span>
+            </div>
+            <div class="cert-item">
+              <span class="cert-icon">🛢️</span>
+              <span>Cédicol (Mazout)</span>
+            </div>
+            <div class="cert-item">
+              <span class="cert-icon">✅</span>
+              <span>Entreprise Enregistrée</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="testimonials py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="section-title">Ce que disent nos clients</h2>
+          <div class="stars" style="color: #fbbf24; font-size: 1.5rem;">★★★★★</div>
+          <p>Noté 4.9/5 basé sur plus de 200 avis clients à Liège et province.</p>
+        </div>
+        
+        <div class="testimonials-grid">
+          <div class="review-card glass">
+            <div class="review-header">
+              <div class="avatar">M</div>
+              <div>
+                <strong>Marc D. (Liège)</strong>
+                <div class="stars" style="color: #fbbf24;">★★★★★</div>
+              </div>
+            </div>
+            <p>"Fuite d'eau impressionnante à 2h du matin. Le plombier est arrivé en 25 minutes et a colmaté la fuite. Le devis était clair dès le départ. Je recommande à 100% !"</p>
+            <span class="review-service">Service : Dépannage Urgence</span>
+          </div>
+          
+          <div class="review-card glass">
+            <div class="review-header">
+              <div class="avatar">S</div>
+              <div>
+                <strong>Sophie L. (Seraing)</strong>
+                <div class="stars" style="color: #fbbf24;">★★★★★</div>
+              </div>
+            </div>
+            <p>"Très professionnels. Ils ont utilisé une caméra pour trouver un bouchon récalcitrant dans mes canalisations sans devoir tout casser. Travail propre et rapide."</p>
+            <span class="review-service">Service : Débouchage Caméra</span>
+          </div>
+          
+          <div class="review-card glass">
+            <div class="review-header">
+              <div class="avatar">J</div>
+              <div>
+                <strong>Jean-Pol (Chaudfontaine)</strong>
+                <div class="stars" style="color: #fbbf24;">★★★★★</div>
+              </div>
+            </div>
+            <p>"Remplacement complet de notre vieille chaudière. Conseils excellents sur le choix du modèle, installation nickel et ils ont même nettoyé tout le chantier avant de partir."</p>
+            <span class="review-service">Service : Installation Chauffage</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICE MAP AREA -->
+    <section class="service-map py-5">
+      <div class="container">
+        <div class="map-flex glass">
+          <div class="map-content">
+            <h2>Zone d'Intervention Rapide</h2>
+            <p>Notre position stratégique nous permet de couvrir l'ensemble de la province de Liège avec des délais records. Consultez notre <a href="/locations">liste complète des communes</a>.</p>
+            <ul class="area-list mt-3">
+              <li><span class="text-cyan">📍</span> <strong>&lt; 30 min :</strong> Liège Centre, Herstal, Seraing, Ans, Grâce-Hollogne</li>
+              <li><span class="text-cyan">📍</span> <strong>&lt; 45 min :</strong> Verviers, Chaudfontaine, Visé, Flémalle, Waremme</li>
+              <li><span class="text-cyan">📍</span> <strong>Sur RDV :</strong> Huy, Eupen, Aywaille, Hannut</li>
+            </ul>
+            <a href="/locations" class="btn-secondary mt-4" style="display:inline-block;">Voir votre commune</a>
+          </div>
+          <div class="map-visual">
+            <div class="radar-map">
+              <div class="pulse"></div>
+              <div class="pin">Liège</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="faq-section container py-5">
       <h2 class="section-title">Questions Fréquentes (FAQ)</h2>
       <div class="faq-grid">
@@ -271,5 +390,191 @@ import Footer from '../components/Footer.astro';
   .faq-item p {
     color: #475569;
     margin: 0;
+  }
+
+  /* NEW SECTIONS STYLES */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  .stat-box {
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 4px solid var(--orange);
+  }
+
+  .stat-number {
+    display: block;
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--navy);
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+
+  .stat-number small {
+    font-size: 1.2rem;
+    color: var(--cyan);
+  }
+
+  .stat-label {
+    font-weight: 600;
+    color: #475569;
+  }
+
+  .certifications-banner {
+    padding: 30px;
+  }
+
+  .certifications-banner h3 {
+    color: var(--navy);
+    margin-bottom: 20px;
+  }
+
+  .cert-logos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .cert-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    color: var(--navy);
+  }
+
+  .cert-icon {
+    font-size: 2.5rem;
+  }
+
+  .bg-light {
+    background-color: white;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+
+  .review-card {
+    padding: 30px;
+    border-left: 4px solid var(--cyan);
+  }
+
+  .review-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+
+  .avatar {
+    width: 50px;
+    height: 50px;
+    background-color: var(--navy);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .review-card p {
+    font-style: italic;
+    color: #475569;
+    margin-bottom: 15px;
+  }
+
+  .review-service {
+    font-size: 0.85rem;
+    color: var(--orange);
+    font-weight: 600;
+  }
+
+  .map-flex {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 40px;
+    align-items: center;
+    background-color: white;
+    border-top: 4px solid var(--navy);
+  }
+
+  .area-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .area-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .area-list li:last-child {
+    border-bottom: none;
+  }
+
+  .text-cyan {
+    color: var(--cyan);
+  }
+
+  .map-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    background: #f8fafc;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .radar-map {
+    position: relative;
+    width: 200px;
+    height: 200px;
+  }
+
+  .pulse {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 168, 204, 0.2);
+    border-radius: 50%;
+    animation: radarPulse 2s infinite ease-out;
+  }
+
+  .pin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--navy);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    z-index: 2;
+  }
+
+  @keyframes radarPulse {
+    0% { transform: scale(0.1); opacity: 1; }
+    100% { transform: scale(1.5); opacity: 0; }
+  }
+
+  @media (max-width: 768px) {
+    .map-flex {
+      grid-template-columns: 1fr;
+    }
   }
 </style>
