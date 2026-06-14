@@ -4,78 +4,275 @@ import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="Nos Services | Lynecares Plomberie Liégeoise">
+<Layout title="Tous nos Services de Plomberie à Liège | Lynecares" description="Découvrez la liste complète de nos services de plomberie, chauffage et débouchage à Liège. Dépannage urgence 24/7, installation, et détection de fuite.">
   <Navbar />
   
   <main>
     <section class="page-header">
       <div class="container text-center">
-        <h1>Nos Services de Plomberie</h1>
-        <p>Des solutions complètes pour votre domicile ou votre entreprise</p>
+        <h1>Nos Services de Plomberie à Liège</h1>
+        <p>Expertise complète en dépannage, installation et entretien</p>
       </div>
     </section>
 
+    <!-- WHAT'S INCLUDED: DETAILED LIST OF SERVICES -->
     <section class="container py-5">
-      <div class="service-details">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Ce qui est inclus dans nos services</h2>
+        <p class="subtitle">Nous couvrons l'intégralité de vos besoins en plomberie et chauffage, avec des équipes spécialisées pour chaque domaine.</p>
+      </div>
+
+      <div class="services-masonry">
         
-        <div id="depannage" class="service-row glass">
-          <div class="service-content">
-            <h2>Dépannage Urgence 24/7</h2>
-            <p>Une fuite d'eau imprévue ou un WC bouché peut causer d'importants dégâts matériels si le problème n'est pas traité rapidement. Notre équipe d'urgence est mobilisée 24 heures sur 24, 7 jours sur 7 dans toute la région de Liège pour stopper les fuites et réparer vos installations défectueuses.</p>
-            <ul>
-              <li>✔️ Recherche et réparation de fuites</li>
-              <li>✔️ Débouchage express (WC, éviers, égouts)</li>
-              <li>✔️ Remplacement de pièces défectueuses</li>
-            </ul>
-            <a href="tel:+3200000000" class="btn-primary mt-4">Appeler l'Urgence</a>
+        <!-- Urgences -->
+        <div class="service-category glass" id="urgences">
+          <div class="category-header">
+            <span class="icon">🚨</span>
+            <h3>Urgences 24/7</h3>
           </div>
-          <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1542013936693-884638332954?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+          <ul class="service-list">
+            <li>Débouchage d'urgence 24h/24 à Liège</li>
+            <li>Réparation fuite d'eau en urgence à Liège</li>
+            <li>Intervention dégât des eaux en urgence à Liège</li>
+            <li>Réparation rupture de canalisation à Liège</li>
+          </ul>
         </div>
 
-        <div id="installation" class="service-row glass reverse">
-          <div class="service-content">
-            <h2>Installation Sanitaire</h2>
-            <p>Nous concevons et installons vos réseaux de distribution d'eau avec des matériaux durables et certifiés. Que ce soit pour une construction neuve ou une rénovation, nous garantissons un travail aux finitions impeccables.</p>
-            <ul>
-              <li>✔️ Création de nouvelles arrivées d'eau</li>
-              <li>✔️ Installation d'adoucisseurs d'eau</li>
-              <li>✔️ Raccordement de machines à laver et lave-vaisselle</li>
-            </ul>
-            <a href="/contact" class="btn-secondary mt-4">Demander un devis</a>
+        <!-- Débouchage -->
+        <div class="service-category glass" id="debouchage">
+          <div class="category-header">
+            <span class="icon">🌪️</span>
+            <h3>Débouchage</h3>
           </div>
-          <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+          <ul class="service-list">
+            <li>Débouchage d'évier à Liège</li>
+            <li>Débouchage WC et toilettes à Liège</li>
+            <li>Débouchage douche et baignoire à Liège</li>
+            <li>Débouchage d'égout extérieur à Liège</li>
+            <li>Débouchage de canalisation principale à Liège</li>
+            <li>Hydrocurage haute pression à Liège</li>
+          </ul>
         </div>
 
-        <div id="chauffage" class="service-row glass">
-          <div class="service-content">
-            <h2>Entretien et Chauffage</h2>
-            <p>Un système de chauffage bien entretenu est la clé pour passer un hiver au chaud tout en maîtrisant sa facture énergétique. Nous sommes agréés pour l'entretien, le dépannage et l'installation de chaudières.</p>
-            <ul>
-              <li>✔️ Entretien obligatoire de chaudière (gaz, mazout)</li>
-              <li>✔️ <a href="/services/desembouage-radiateur-liege">Désembouage de radiateurs</a></li>
-              <li>✔️ Installation de thermostats intelligents</li>
-            </ul>
-            <a href="/contact" class="btn-secondary mt-4">Prendre rendez-vous</a>
+        <!-- Fuites & Réparations -->
+        <div class="service-category glass" id="fuites">
+          <div class="category-header">
+            <span class="icon">💧</span>
+            <h3>Fuites & Réparations</h3>
           </div>
-          <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1581094288338-2314dddb7ece?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+          <ul class="service-list">
+            <li>Réparation de fuite de robinet à Liège</li>
+            <li>Réparation de fuite sous évier à Liège</li>
+            <li>Réparation de fuite de chasse d'eau à Liège</li>
+            <li>Remplacement de joints de plomberie à Liège</li>
+            <li>Réparation de tuyau percé ou éclaté à Liège</li>
+          </ul>
         </div>
 
-        <div id="renovation" class="service-row glass reverse">
-          <div class="service-content">
-            <h2>Rénovation de Salle de Bain</h2>
-            <p>Transformez votre salle de bain en un espace de détente moderne et fonctionnel. De la démolition à la pose des derniers accessoires, nous gérons votre projet de A à Z avec un seul interlocuteur.</p>
-            <ul>
-              <li>✔️ Installation de douches à l'italienne</li>
-              <li>✔️ Pose de meubles vasques et baignoires</li>
-              <li>✔️ <a href="/services/renovation-salle-de-bain-pmr">Adaptation PMR (Personnes à Mobilité Réduite)</a></li>
-            </ul>
-            <a href="/contact" class="btn-secondary mt-4">Parlons de votre projet</a>
+        <!-- Installations -->
+        <div class="service-category glass" id="installations">
+          <div class="category-header">
+            <span class="icon">🔧</span>
+            <h3>Installations</h3>
           </div>
-          <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+          <ul class="service-list">
+            <li>Installation de robinetterie à Liège</li>
+            <li>Installation de chauffe-eau et boiler à Liège</li>
+            <li>Installation de WC suspendu à Liège</li>
+            <li>Raccordement lave-vaisselle et machine à laver à Liège</li>
+            <li>Remplacement de ballon d'eau chaude à Liège</li>
+          </ul>
+        </div>
+
+        <!-- Détection & Diagnostic -->
+        <div class="service-category glass" id="diagnostic">
+          <div class="category-header">
+            <span class="icon">🔍</span>
+            <h3>Détection & Diagnostic</h3>
+          </div>
+          <ul class="service-list">
+            <li>Détection de fuite cachée à Liège</li>
+            <li>Inspection de canalisation par caméra à Liège</li>
+            <li>Diagnostic plomberie complet à Liège</li>
+          </ul>
+        </div>
+
+        <!-- Entretien -->
+        <div class="service-category glass" id="entretien">
+          <div class="category-header">
+            <span class="icon">⚙️</span>
+            <h3>Entretien</h3>
+          </div>
+          <ul class="service-list">
+            <li>Entretien de chauffe-eau et boiler à Liège</li>
+            <li>Détartrage de canalisation à Liège</li>
+            <li>Contrat d'entretien plomberie à Liège</li>
+            <li><a href="/services/desembouage-radiateur-liege" class="highlight-link">Désembouage de radiateurs &rarr;</a></li>
+          </ul>
         </div>
 
       </div>
     </section>
+
+    <!-- COMMON PROBLEMS WE SOLVE -->
+    <section class="problems-section py-5">
+      <div class="container">
+        <h2 class="section-title">Les problèmes fréquents que nous résolvons</h2>
+        <div class="problems-grid">
+          <div class="problem-card glass">
+            <h4>Bouchons récalcitrants</h4>
+            <p>L'eau stagne dans votre douche ou vos WC débordent. Les produits chimiques du commerce ne fonctionnent plus. Nous détruisons les bouchons de graisse, calcaire ou racines avec notre hydrocureuse.</p>
+          </div>
+          <div class="problem-card glass">
+            <h4>Fuites invisibles & Dégâts des eaux</h4>
+            <p>Une tache d'humidité apparaît sur votre mur ou votre facture d'eau explose sans raison. Grâce à nos outils de détection thermique et acoustique, nous localisons et réparons la fuite sans démolir votre intérieur.</p>
+          </div>
+          <div class="problem-card glass">
+            <h4>Pannes d'eau chaude</h4>
+            <p>Plus d'eau chaude sous la douche un matin d'hiver. Qu'il s'agisse d'un boiler entartré, d'une résistance grillée ou d'un thermostat défectueux, nous réparons ou remplaçons votre chauffe-eau en un temps record.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR PROCESS -->
+    <section class="container py-5">
+      <h2 class="section-title">Notre Processus (Étape par Étape)</h2>
+      <div class="process-steps">
+        <div class="step glass">
+          <div class="step-number">1</div>
+          <h3>Contact & Diagnostic Téléphonique</h3>
+          <p>Vous nous appelez au <strong>+32 (0) 400 00 00</strong>. Nous évaluons l'urgence de la situation et vous donnons une première estimation de notre heure d'arrivée.</p>
+        </div>
+        <div class="step glass">
+          <div class="step-number">2</div>
+          <h3>Arrivée & Devis Gratuit</h3>
+          <p>Notre technicien se rend sur place (en moins de 30 min pour les urgences). Il analyse le problème et vous fournit un devis clair et 100% transparent avant de toucher à quoi que ce soit.</p>
+        </div>
+        <div class="step glass">
+          <div class="step-number">3</div>
+          <h3>Intervention Professionnelle</h3>
+          <p>Une fois le devis validé, nous procédons à la réparation ou à l'installation en utilisant du matériel professionnel de haute qualité, dans le respect des normes belges.</p>
+        </div>
+        <div class="step glass">
+          <div class="step-number">4</div>
+          <h3>Nettoyage & Garantie</h3>
+          <p>Nous laissons le chantier parfaitement propre. Vous recevez votre facture détaillée et profitez de notre garantie sur les pièces et la main-d'œuvre.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="why-us-section py-5">
+      <div class="container">
+        <h2 class="section-title text-white">Pourquoi Choisir Lynecares ?</h2>
+        <div class="features-grid">
+          <div class="feature-item">
+            <span class="feature-icon">🛡️</span>
+            <h4>Transparence Totale</h4>
+            <p>Pas de frais cachés, pas de mauvaises surprises. Le prix annoncé est le prix payé.</p>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">⚡</span>
+            <h4>Réactivité Inégalée</h4>
+            <p>Une équipe locale prête à intervenir immédiatement pour sécuriser votre domicile.</p>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">🎓</span>
+            <h4>Expertise Certifiée</h4>
+            <p>Des plombiers qualifiés, formés en continu aux nouvelles technologies (caméras, hydrocurage).</p>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">♻️</span>
+            <h4>Approche Respectueuse</h4>
+            <p>Nous privilégions toujours la réparation au remplacement abusif et utilisons des méthodes écologiques pour le débouchage.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EMERGENCY & SERVICE AREA -->
+    <section class="container py-5">
+      <div class="info-split">
+        <div class="emergency-info glass">
+          <span class="huge-icon">🚑</span>
+          <h3>Disponibilité d'Urgence</h3>
+          <p>Les fuites et les refoulements d'égouts n'attendent pas les heures de bureau. C'est pourquoi notre pôle urgence est opérationnel <strong>24 heures sur 24, 7 jours sur 7, y compris les week-ends et les jours fériés</strong>.</p>
+          <a href="tel:+32400000000" class="btn-primary mt-3">Urgence : Appelez-nous</a>
+        </div>
+        <div class="area-info glass">
+          <span class="huge-icon">📍</span>
+          <h3>Zones d'Intervention</h3>
+          <p>Nous couvrons l'intégralité de la Province de Liège pour garantir notre réactivité :</p>
+          <ul>
+            <li><strong>Liège & Centre :</strong> Outremeuse, Guillemins, Sainte-Marguerite...</li>
+            <li><strong>Agglomération :</strong> <a href="/locations/plombier-seraing">Seraing</a>, <a href="/locations/plombier-herstal">Herstal</a>, Ans, Saint-Nicolas...</li>
+            <li><strong>Périphérie :</strong> Visé, Chaudfontaine, Flémalle, Waremme, Huy...</li>
+          </ul>
+          <a href="/locations" class="btn-secondary mt-3">Voir toutes nos zones</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQS -->
+    <section class="faq-section container py-5">
+      <h2 class="section-title">Foire Aux Questions (FAQ)</h2>
+      <div class="faq-grid">
+        <div class="faq-item glass">
+          <h3>Intervenez-vous la nuit et les jours fériés ?</h3>
+          <p>Absolument. Notre service de garde est actif toutes les nuits, les week-ends et les jours fériés pour les urgences absolues (rupture de canalisation, inondation, WC bouché inutilisable).</p>
+        </div>
+        <div class="faq-item glass">
+          <h3>Comment détectez-vous une fuite que l'on ne voit pas ?</h3>
+          <p>Nous sommes équipés de caméras thermiques, d'appareils à ultrasons et de détecteurs au gaz traceur. Ces technologies nous permettent de "voir" à travers les murs et les dalles sans rien casser.</p>
+        </div>
+        <div class="faq-item glass">
+          <h3>Est-ce que je dois payer le devis si je refuse les travaux ?</h3>
+          <p>Le devis sur place avant travaux est gratuit dans le cadre d'un dépannage classique. S'il s'agit d'une recherche de fuite complexe nécessitant du matériel spécifique, un forfait de recherche est appliqué, mais il est toujours annoncé à l'avance par téléphone.</p>
+        </div>
+        <div class="faq-item glass">
+          <h3>Pouvez-vous réparer toutes les marques de chauffe-eau ?</h3>
+          <p>Oui, nos plombiers-chauffagistes sont formés pour intervenir sur les plus grandes marques (Bulex, Vaillant, Junkers, Viessmann, Atlantic, etc.) et possèdent souvent les pièces de rechange courantes dans leur camion.</p>
+        </div>
+      </div>
+
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [{
+          "@type": "Question",
+          "name": "Intervenez-vous la nuit et les jours fériés ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolument. Notre service de garde est actif toutes les nuits, les week-ends et les jours fériés pour les urgences absolues."
+          }
+        }, {
+          "@type": "Question",
+          "name": "Comment détectez-vous une fuite que l'on ne voit pas ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nous sommes équipés de caméras thermiques, d'appareils à ultrasons et de détecteurs au gaz traceur pour trouver la fuite sans rien casser."
+          }
+        }, {
+          "@type": "Question",
+          "name": "Est-ce que je dois payer le devis si je refuse les travaux ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le devis sur place avant travaux est gratuit. Pas de frais cachés."
+          }
+        }, {
+          "@type": "Question",
+          "name": "Pouvez-vous réparer toutes les marques de chauffe-eau ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, nos techniciens interviennent sur toutes les grandes marques (Bulex, Vaillant, Junkers, etc.)."
+          }
+        }]
+      }
+      </script>
+    </section>
+
   </main>
 
   <Footer />
@@ -99,54 +296,210 @@ import Footer from '../components/Footer.astro';
     font-size: 1.2rem;
   }
 
-  .service-details {
+  .subtitle {
+    font-size: 1.1rem;
+    color: #475569;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  /* Services Masonry / Grid */
+  .services-masonry {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+
+  .service-category {
+    padding: 30px;
+    border-top: 4px solid var(--cyan);
+    height: 100%;
+  }
+
+  .category-header {
     display: flex;
-    flex-direction: column;
-    gap: 40px;
-  }
-
-  .service-row {
-    display: flex;
-    flex-wrap: wrap;
-    overflow: hidden;
-  }
-
-  .service-row.reverse {
-    flex-direction: row-reverse;
-  }
-
-  .service-content {
-    flex: 1;
-    min-width: 300px;
-    padding: 50px;
-  }
-
-  .service-content h2 {
-    color: var(--cyan);
+    align-items: center;
+    gap: 15px;
     margin-bottom: 20px;
   }
 
-  .service-content ul {
+  .category-header .icon {
+    font-size: 2rem;
+  }
+
+  .category-header h3 {
+    margin: 0;
+    color: var(--navy);
+  }
+
+  .service-list {
     list-style: none;
     padding: 0;
-    margin-top: 20px;
+    margin: 0;
   }
 
-  .service-content ul li {
+  .service-list li {
+    padding: 8px 0 8px 25px;
+    position: relative;
+    color: #334155;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+  
+  .service-list li:last-child {
+    border-bottom: none;
+  }
+
+  .service-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--orange);
+    font-weight: bold;
+  }
+
+  .highlight-link {
+    color: var(--cyan);
+    font-weight: 600;
+  }
+
+  /* Problems Section */
+  .problems-section {
+    background-color: white;
+  }
+
+  .problems-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+
+  .problem-card {
+    padding: 30px;
+    border-left: 4px solid var(--orange);
+  }
+
+  .problem-card h4 {
+    color: var(--navy);
+    font-size: 1.2rem;
+  }
+
+  /* Process Steps */
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .step {
+    padding: 30px;
+    position: relative;
+    text-align: center;
+  }
+
+  .step-number {
+    width: 50px;
+    height: 50px;
+    background-color: var(--navy);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+  }
+
+  .step h3 {
+    color: var(--cyan);
+    font-size: 1.1rem;
+  }
+
+  /* Why Us Section */
+  .why-us-section {
+    background: linear-gradient(135deg, var(--navy), #2a4175);
+    color: white;
+  }
+
+  .text-white {
+    color: white !important;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: center;
+  }
+
+  .feature-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  .feature-item h4 {
+    color: var(--cyan);
     margin-bottom: 10px;
-    font-weight: 500;
   }
 
-  .service-img {
-    flex: 1;
-    min-width: 300px;
-    background-size: cover;
-    background-position: center;
-    min-height: 400px;
+  .feature-item p {
+    color: #cbd5e1;
+  }
+
+  /* Emergency & Area */
+  .info-split {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+  }
+
+  .emergency-info, .area-info {
+    padding: 40px;
+    text-align: center;
+  }
+
+  .huge-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .area-info ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    display: inline-block;
+  }
+
+  .area-info ul li {
+    padding: 5px 0;
+  }
+
+  .area-info a {
+    color: var(--cyan);
+    font-weight: 600;
+  }
+
+  /* FAQ */
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+  }
+
+  .faq-item {
+    padding: 30px;
+  }
+
+  .faq-item h3 {
+    color: var(--navy);
+    font-size: 1.1rem;
+    margin-bottom: 10px;
   }
 
   @media (max-width: 768px) {
-    .service-content { padding: 30px; }
-    .service-img { min-height: 250px; }
+    .faq-grid { grid-template-columns: 1fr; }
+    .page-header h1 { font-size: 2.2rem; }
   }
 </style>
