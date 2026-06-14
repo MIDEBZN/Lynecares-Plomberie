@@ -29,7 +29,7 @@ const { title, description = "Plomberie Liégeoise - Expert plumbing services in
 			"image": "https://lynecares-plomberie.vercel.app/logo.png",
 			"@id": "https://lynecares-plomberie.vercel.app",
 			"url": "https://lynecares-plomberie.vercel.app",
-			"telephone": "+32400000000",
+			"telephone": "0466265895",
 			"address": {
 				"@type": "PostalAddress",
 				"streetAddress": "Rue de la plomberie 123",
@@ -63,5 +63,49 @@ const { title, description = "Plomberie Liégeoise - Expert plumbing services in
 	</head>
 	<body>
 		<slot />
+
+		<!-- Floating WhatsApp Button -->
+		<a href="https://wa.me/32466265895" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+			<svg viewBox="0 0 32 32" width="32" height="32" fill="white" xmlns="http://www.w3.org/2000/svg">
+				<path d="M16 2C8.268 2 2 8.268 2 16c0 2.455.632 4.764 1.745 6.77L2.112 28.52a.855.855 0 001.077 1.077l5.75-1.633A13.935 13.935 0 0016 30c7.732 0 14-6.268 14-14S23.732 2 16 2zm0 26.133a11.93 11.93 0 01-5.918-1.572.855.855 0 00-.77-.075l-4.2.1.1-4.2a.855.855 0 00-.075-.77A11.93 11.93 0 014.133 16C4.133 9.444 9.444 4.133 16 4.133S27.867 9.444 27.867 16 22.556 28.133 16 28.133zm6.333-8.866c-.347-.174-2.05-.1014-2.368-.13-.318-.029-.55-.029-.78.318-.23.347-.9 1.13-1.1 1.36-.2.23-.404.26-.75.087-2.37-1.19-4.04-2.78-5.32-5.46-.145-.3.087-.492.26-.666.159-.159.347-.404.52-.607.174-.202.23-.347.347-.578.116-.23.058-.434-.029-.607-.087-.174-.78-1.88-1.07-2.574-.28-.68-.564-.588-.78-.598-.202-.009-.434-.009-.665-.009-.23 0-.607.087-.925.434-.318.347-1.213 1.185-1.213 2.89s1.243 3.353 1.416 3.584c.174.23 2.443 3.729 5.918 5.232 2.37 1.026 3.25 1.1 4.417.925 1.167-.174 2.05-1.042 2.34-2.053.29-1.012.29-1.88.202-2.065-.087-.184-.318-.29-.665-.463z" />
+			</svg>
+		</a>
+
+		<style>
+			.whatsapp-float {
+				position: fixed;
+				width: 60px;
+				height: 60px;
+				bottom: 40px;
+				right: 40px;
+				background-color: #25d366;
+				color: #FFF;
+				border-radius: 50px;
+				text-align: center;
+				font-size: 30px;
+				box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+				z-index: 1000;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				transition: transform 0.3s ease;
+			}
+			.whatsapp-float:hover {
+				transform: scale(1.1);
+				background-color: #128c7e;
+			}
+			@media (max-width: 768px) {
+				.whatsapp-float {
+					width: 50px;
+					height: 50px;
+					bottom: 20px;
+					right: 20px;
+				}
+				.whatsapp-float svg {
+					width: 24px;
+					height: 24px;
+				}
+			}
+		</style>
 	</body>
 </html>
