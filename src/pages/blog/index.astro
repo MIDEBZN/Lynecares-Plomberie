@@ -1,0 +1,275 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+
+const articles = [
+  {
+    title: "Comment éviter les arnaques au dépannage ?",
+    url: "/blog/eviter-arnaques-plombier-urgence-liege",
+    excerpt: "Dépannage à 15€, menaces, devis gonflés... Découvrez les 5 techniques des faux plombiers à Liège et comment vous en protéger.",
+    category: "Conseils"
+  },
+  {
+    title: "Fuite d'eau après compteur : Locataire ou Propriétaire ?",
+    url: "/blog/fuite-eau-apres-compteur-locataire-proprietaire",
+    excerpt: "Qui paie la facture en cas de fuite d'eau en Wallonie ? Découvrez les règles légales pour les locataires et les propriétaires.",
+    category: "Législation"
+  },
+  {
+    title: "WC Bouché à Liège : 5 solutions efficaces",
+    url: "/blog/wc-bouche-liege-solutions-efficaces",
+    excerpt: "Votre toilette déborde ? Ne paniquez pas. Voici les méthodes professionnelles pour déboucher un WC avant d'appeler un déboucheur.",
+    category: "Tutoriel"
+  },
+  {
+    title: "Panne de chauffe-eau en hiver à Liège",
+    url: "/blog/panne-chauffe-eau-liege-hiver",
+    excerpt: "Plus d'eau chaude ? Découvrez les pannes les plus fréquentes sur les boilers et chaudières lors des vagues de froid.",
+    category: "Dépannage"
+  },
+  {
+    title: "Inondation de cave : Les premiers réflexes",
+    url: "/blog/inondation-cave-liege-reflexes-pompage",
+    excerpt: "Cave inondée à Liège ? Découvrez les étapes cruciales pour sécuriser votre maison et contacter notre service de pompage.",
+    category: "Urgence"
+  },
+  {
+    title: "Le calcaire à Liège : Pourquoi la Meuse abîme votre plomberie",
+    url: "/blog/calcaire-liege-durete-eau-plomberie",
+    excerpt: "Comprendre la dureté de l'eau liégeoise (Hesbaye) et protéger vos installations sanitaires contre le tartre.",
+    category: "Informations"
+  },
+  {
+    title: "Comment purger vos radiateurs avant l'hiver",
+    url: "/blog/comment-purger-radiateurs-chauffage-hiver",
+    excerpt: "Radiateur froid en haut ou bruyant ? Apprenez comment purger vos radiateurs facilement pour un chauffage optimal.",
+    category: "Tutoriel"
+  },
+  {
+    title: "Adoucisseur d'eau à Liège : Est-ce rentable en 2026 ?",
+    url: "/blog/adoucisseur-eau-rentable-liege",
+    excerpt: "L'eau calcaire justifie-t-elle l'achat d'un adoucisseur ? Calculs de rentabilité et avantages pour les maisons wallonnes.",
+    category: "Économies"
+  },
+  {
+    title: "Entretien Chaudière Wallonie : Obligations et Tarifs",
+    url: "/blog/entretien-annuel-chaudiere-wallonie-obligations-tarifs",
+    excerpt: "Découvrez vos obligations légales pour l'entretien annuel de votre chaudière en Wallonie et les tarifs 2026.",
+    category: "Législation"
+  },
+  {
+    title: "Comment détecter une fuite d'eau invisible sans casser",
+    url: "/blog/comment-detecter-fuite-eau-invisible-sans-casser-liege",
+    excerpt: "Découvrez comment les plombiers utilisent la caméra thermique et les ultrasons pour trouver une fuite d'eau cachée.",
+    category: "Technologies"
+  },
+  {
+    title: "Tarif Plombier Liège 2026 : Le vrai prix d'un dépannage",
+    url: "/blog/tarif-prix-plombier-liege-depannage",
+    excerpt: "Frais de déplacement, taux horaire, suppléments... Découvrez les vrais prix pour éviter les mauvaises surprises.",
+    category: "Prix & Devis"
+  },
+  {
+    title: "Devis Plomberie : 5 points à vérifier avant de signer",
+    url: "/blog/devis-plomberie-points-a-verifier-liege",
+    excerpt: "Comment lire un devis de plomberie ? Les éléments obligatoires pour éviter les arnaques et sécuriser vos travaux.",
+    category: "Prix & Devis"
+  },
+  {
+    title: "Primes Rénovation Wallonie 2026 : Financer vos Sanitaires",
+    url: "/blog/primes-renovation-wallonie-2026-plomberie",
+    excerpt: "Pompe à chaleur, chauffe-eau thermodynamique... Découvrez les aides régionales pour rénover votre plomberie.",
+    category: "Économies"
+  },
+  {
+    title: "Remplacement de baignoire par une douche italienne",
+    url: "/blog/remplacement-baignoire-douche-italienne-liege-budget",
+    excerpt: "Budget, étapes et conseils pour transformer votre ancienne baignoire en une magnifique douche à l'italienne de plain-pied.",
+    category: "Rénovation"
+  },
+  {
+    title: "Plombier pas cher à Liège : Pourquoi c'est un piège",
+    url: "/blog/plombier-pas-cher-liege-piege-arnaque",
+    excerpt: "Déplacement à 15€ ? Découvrez comment fonctionnent les arnaques discounts et pourquoi elles vous coûteront très cher.",
+    category: "Conseils"
+  },
+  {
+    title: "Plomberie à Seraing et Herstal : Les anciennes canalisations",
+    url: "/blog/plombier-seraing-herstal-anciennes-canalisations",
+    excerpt: "Tuyaux en plomb, égouts en grès... Les défis techniques de la rénovation sanitaire dans le bassin industriel liégeois.",
+    category: "Local"
+  },
+  {
+    title: "Plombier Centre de Liège : Interventions dans les rues piétonnes",
+    url: "/blog/plombier-centre-ville-liege-urgence-pietonnier",
+    excerpt: "Découvrez comment nos plombiers gèrent la logistique des urgences dans l'hypercentre historique de la Cité Ardente.",
+    category: "Local"
+  },
+  {
+    title: "Rénovation plomberie Maison de Maître à Liège",
+    url: "/blog/moderniser-plomberie-maison-de-maitre-liege",
+    excerpt: "Comment moderniser le chauffage et les sanitaires tout en préservant les moulures et les parquets d'époque.",
+    category: "Rénovation"
+  },
+  {
+    title: "Plombier de Garde : Zones d'intervention en 30 min",
+    url: "/blog/plombier-de-garde-liege-urgence-30-minutes",
+    excerpt: "Découvrez la liste des communes de Liège où notre service d'urgence intervient en moins d'une demi-heure.",
+    category: "Urgence"
+  },
+  {
+    title: "Manque de Pression d'eau (Sart-Tilman, Cointe) : Solutions",
+    url: "/blog/pression-eau-faible-liege-sart-tilman-cointe",
+    excerpt: "Un filet d'eau dans la douche ? Découvrez les causes et la solution du surpresseur domestique pour les hauteurs de Liège.",
+    category: "Informations"
+  },
+  {
+    title: "Plombier Zingueur : Réparation de Corniches et Gouttières",
+    url: "/blog/plombier-zingueur-liege-reparation-corniches",
+    excerpt: "L'importance du plombier-zingueur pour souder vos corniches et protéger votre façade liégeoise des infiltrations.",
+    category: "Toiture"
+  },
+  {
+    title: "Débouchage chimique vs haute pression : Lequel choisir ?",
+    url: "/blog/debouchage-chimique-haute-pression-choix",
+    excerpt: "Destop ou hydrocurage ? Les avantages et les dangers des différentes méthodes pour déboucher vos tuyaux.",
+    category: "Informations"
+  },
+  {
+    title: "Pompe à chaleur à Liège et Verviers : Est-ce adapté ?",
+    url: "/blog/pompe-a-chaleur-liege-verviers-faisabilite",
+    excerpt: "Remplacer sa chaudière mazout par une PAC air/eau : critères d'isolation, types de radiateurs et budget.",
+    category: "Chauffage"
+  },
+  {
+    title: "Comment dégeler des tuyaux en hiver sans les faire éclater ?",
+    url: "/blog/comment-degeler-tuyaux-geles-hiver-liege",
+    excerpt: "Vos canalisations sont gelées par le froid ? Les bons réflexes pour les dégeler en sécurité sans créer d'inondation.",
+    category: "Tutoriel"
+  },
+  {
+    title: "Domotique Plomberie : Détecteurs de fuite d'eau",
+    url: "/blog/domotique-plomberie-detecteur-fuite-connecte",
+    excerpt: "Protégez votre habitation avec des détecteurs connectés et des vannes automatiques qui stoppent l'eau en cas de fuite.",
+    category: "Technologies"
+  }
+];
+---
+
+<Layout title="Blog Plomberie Liège | Conseils et Astuces Lynecares" description="Découvrez tous nos articles, conseils et guides sur la plomberie, le chauffage et les législations sanitaires en province de Liège.">
+  <Navbar />
+  
+  <main>
+    <section class="page-header">
+      <div class="container text-center">
+        <h1>Le Blog Plomberie & Chauffage</h1>
+        <p>Expertise, conseils et actualités de la plomberie liégeoise</p>
+      </div>
+    </section>
+
+    <section class="blog-list py-5">
+      <div class="container">
+        <div class="grid">
+          {articles.map(article => (
+            <article class="blog-card glass">
+              <span class="category-badge">{article.category}</span>
+              <h2><a href={article.url}>{article.title}</a></h2>
+              <p>{article.excerpt}</p>
+              <a href={article.url} class="read-more">Lire l'article &rarr;</a>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .page-header {
+    background-color: var(--navy);
+    color: white;
+    padding: 120px 0 60px;
+  }
+
+  .page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: white;
+  }
+
+  .page-header p {
+    font-size: 1.2rem;
+    color: var(--cyan);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+  }
+
+  .blog-card {
+    padding: 30px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+
+  .category-badge {
+    background-color: var(--cyan);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 15px;
+    align-self: flex-start;
+  }
+
+  .blog-card h2 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    line-height: 1.4;
+  }
+
+  .blog-card h2 a {
+    color: var(--navy);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .blog-card h2 a:hover {
+    color: var(--orange);
+  }
+
+  .blog-card p {
+    color: #475569;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    flex-grow: 1;
+  }
+
+  .read-more {
+    color: var(--orange);
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+
+  .read-more:hover {
+    transform: translateX(5px);
+  }
+</style>

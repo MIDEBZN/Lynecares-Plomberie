@@ -21,6 +21,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
       <a href="/services" class={currentPath === "services" ? "active" : ""}>Services</a>
       <a href="/locations" class={currentPath === "locations" ? "active" : ""}>Zones d'intervention</a>
       <a href="/about" class={currentPath === "about" ? "active" : ""}>À propos</a>
+      <a href="/blog" class={currentPath.startsWith("blog") ? "active" : ""}>Blog</a>
       <a href="/contact" class={currentPath === "contact" ? "active" : ""}>Contact</a>
       <a href="tel:0466265895" class="btn-primary call-btn">☎ 0466 26 58 95</a>
     </nav>
