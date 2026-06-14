@@ -1,0 +1,111 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="Plombier à Esneux (4130) | Urgence, Débouchage & Chauffage | Lynecares" description="Plombier de confiance à Esneux. Intervention urgente, débouchage, réparation de fuite et entretien de chauffage. Devis gratuit et transparence totale.">
+  <Navbar />
+  
+  <main>
+    <section class="page-header">
+      <div class="container text-center">
+        <h1>Plombier de Garde à Esneux (4130)</h1>
+        <p>Intervention rapide et professionnelle : Tilff, Hony, Méry, Fontin</p>
+      </div>
+    </section>
+
+    <section class="container py-5">
+      <div class="row-split">
+        <div class="glass p-5 mb-4">
+          <h2>Votre Expert Local à Esneux</h2>
+          <p>Que vous habitiez au cœur d'<strong>Esneux</strong> ou dans les quartiers environnants, Lynecares Plomberie est votre partenaire de proximité pour toute urgence sanitaire ou projet d'installation.</p>
+          
+          <h3 class="mt-4">Nos temps de réponse sur Esneux</h3>
+          <div class="highlight-box">
+            <span class="icon">⏱️</span> <strong>Délai estimé : 25 à 30 minutes.</strong>
+            <p>Notre flotte de véhicules géolocalisés nous permet d'envoyer le technicien le plus proche de chez vous en un temps record.</p>
+          </div>
+        </div>
+        
+        <div class="glass p-5 mb-4">
+          <h2>Défis Plomberie & Climat à Esneux</h2>
+          <p>Village lové dans la boucle de l'Ourthe, Esneux et Tilff sont particulièrement vulnérables aux inondations et remontées de nappes phréatiques.</p>
+          <p>Nos plombiers sont spécialement formés pour anticiper ces spécificités géographiques et vous conseiller des solutions pérennes (pompes de relevage, clapets).</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-overview py-5 bg-light">
+      <div class="container">
+        <h2 class="section-title">Nos Services à Esneux</h2>
+        <div class="services-grid">
+          <div class="service-card glass">
+            <h3>🚨 Dépannage Urgence</h3>
+            <p>Fuite d'eau, rupture de tuyau ou dégât des eaux. Nous sécurisons votre domicile à Esneux 24h/24.</p>
+            <a href="/services/urgences-plomberie">En savoir plus</a>
+          </div>
+          <div class="service-card glass">
+            <h3>🔧 Pompes & Sécurité</h3>
+            <p>Installation de clapets anti-retour et de pompes vide-cave pour protéger votre maison des crues de l'Ourthe.</p>
+            <a href="/services/installations-sanitaires">En savoir plus</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container py-5">
+      <div class="glass p-5">
+        <h2>Pourquoi choisir Lynecares face à la concurrence locale ?</h2>
+        <p><strong>Notre expertise en assèchement et installation de systèmes de pompage certifiés est reconnue par les assurances locales suite aux inondations.</strong></p>
+        <p>De plus, nous garantissons une transparence tarifaire absolue, sans frais cachés de dernière minute.</p>
+        
+        <div class="trust-badges mt-4">
+          <span class="badge">✅ Devis Gratuit</span>
+          <span class="badge">✅ Prix Transparents</span>
+          <span class="badge">✅ Agréé Assurances</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section container py-5">
+      <h2 class="section-title">Questions Fréquentes - Esneux</h2>
+      <div class="faq-grid">
+        <div class="faq-item glass">
+          <h3>Faites-vous payer le déplacement jusqu'à Esneux ?</h3>
+          <p>Le devis sur place est gratuit. En cas d'intervention immédiate, un forfait de déplacement fixe et transparent vous est annoncé à l'avance.</p>
+        </div>
+      </div>
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "PlumbingService",
+        "name": "Lynecares Plomberie Esneux",
+        "areaServed": { "@type": "City", "name": "Esneux", "postalCode": "4130" },
+        "telephone": "+32400000000",
+        "url": "https://lynecares-plomberie.vercel.app/locations/plombier-esneux"
+      }
+      </script>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  @import '../../styles/global.css';
+  .page-header { background-color: var(--navy); color: white; padding: 150px 0 80px; text-align: center; }
+  .page-header h1 { color: white; font-size: 3rem; margin-bottom: 15px; }
+  .page-header p { color: var(--cyan); font-size: 1.2rem; }
+  .p-5 { padding: 40px; }
+  .row-split { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px; }
+  .highlight-box { background: rgba(0, 168, 204, 0.1); border-left: 4px solid var(--cyan); padding: 20px; border-radius: 8px; margin-top: 20px; }
+  .bg-light { background-color: white; }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+  .service-card { padding: 30px; border-top: 4px solid var(--orange); }
+  .service-card h3 { color: var(--navy); margin-bottom: 15px; }
+  .trust-badges { display: flex; flex-wrap: wrap; gap: 15px; }
+  .badge { background: var(--navy); color: white; padding: 8px 15px; border-radius: 20px; font-size: 0.9rem; }
+  .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 20px; }
+  .faq-item { padding: 30px; }
+  .faq-item h3 { color: var(--navy); font-size: 1.1rem; margin-bottom: 10px; }
+</style>

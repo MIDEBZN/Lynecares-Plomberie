@@ -1,0 +1,111 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="Plombier à Neupré (4120) | Urgence, Débouchage & Chauffage | Lynecares" description="Plombier de confiance à Neupré. Intervention urgente, débouchage, réparation de fuite et entretien de chauffage. Devis gratuit et transparence totale.">
+  <Navbar />
+  
+  <main>
+    <section class="page-header">
+      <div class="container text-center">
+        <h1>Plombier de Garde à Neupré (4120)</h1>
+        <p>Intervention rapide et professionnelle : Ehein, Rotheux-Rimière, Plainevaux, Neuville-en-Condroz</p>
+      </div>
+    </section>
+
+    <section class="container py-5">
+      <div class="row-split">
+        <div class="glass p-5 mb-4">
+          <h2>Votre Expert Local à Neupré</h2>
+          <p>Que vous habitiez au cœur de <strong>Neupré</strong> ou dans les quartiers environnants, Lynecares Plomberie est votre partenaire de proximité pour toute urgence sanitaire ou projet d'installation.</p>
+          
+          <h3 class="mt-4">Nos temps de réponse sur Neupré</h3>
+          <div class="highlight-box">
+            <span class="icon">⏱️</span> <strong>Délai estimé : 25 à 30 minutes (via la Route du Condroz).</strong>
+            <p>Notre flotte de véhicules géolocalisés nous permet d'envoyer le technicien le plus proche de chez vous en un temps record.</p>
+          </div>
+        </div>
+        
+        <div class="glass p-5 mb-4">
+          <h2>Défis Plomberie & Climat à Neupré</h2>
+          <p>Commune verdoyante et arborée, Neupré connaît souvent des problèmes de racines qui perforent les tuyaux d'égouttage souterrains.</p>
+          <p>Nos plombiers sont spécialement formés pour anticiper ces spécificités géographiques et vous conseiller des solutions pérennes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-overview py-5 bg-light">
+      <div class="container">
+        <h2 class="section-title">Nos Services à Neupré</h2>
+        <div class="services-grid">
+          <div class="service-card glass">
+            <h3>🚨 Dépannage Urgence</h3>
+            <p>Fuite d'eau, rupture de tuyau ou dégât des eaux. Nous sécurisons votre domicile à Neupré 24h/24.</p>
+            <a href="/services/urgences-plomberie">En savoir plus</a>
+          </div>
+          <div class="service-card glass">
+            <h3>🔍 Inspection Caméra</h3>
+            <p>Détection des racines ou cassures dans vos canalisations extérieures sans détruire votre jardin.</p>
+            <a href="/services/detection-fuite-diagnostic">En savoir plus</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container py-5">
+      <div class="glass p-5">
+        <h2>Pourquoi choisir Lynecares face à la concurrence locale ?</h2>
+        <p><strong>Nos machines d'hydrocurage haute pression sont capables de pulvériser les racines qui envahissent les égouts des villas de Neupré, un service que les plombiers classiques ne peuvent fournir.</strong></p>
+        <p>De plus, nous garantissons une transparence tarifaire absolue, sans frais cachés de dernière minute.</p>
+        
+        <div class="trust-badges mt-4">
+          <span class="badge">✅ Devis Gratuit</span>
+          <span class="badge">✅ Prix Transparents</span>
+          <span class="badge">✅ Agréé Assurances</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section container py-5">
+      <h2 class="section-title">Questions Fréquentes - Neupré</h2>
+      <div class="faq-grid">
+        <div class="faq-item glass">
+          <h3>Faites-vous payer le déplacement jusqu'à Neupré ?</h3>
+          <p>Le devis sur place est gratuit. En cas d'intervention immédiate, un forfait de déplacement fixe et transparent vous est annoncé à l'avance.</p>
+        </div>
+      </div>
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "PlumbingService",
+        "name": "Lynecares Plomberie Neupré",
+        "areaServed": { "@type": "City", "name": "Neupré", "postalCode": "4120" },
+        "telephone": "+32400000000",
+        "url": "https://lynecares-plomberie.vercel.app/locations/plombier-neupre"
+      }
+      </script>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  @import '../../styles/global.css';
+  .page-header { background-color: var(--navy); color: white; padding: 150px 0 80px; text-align: center; }
+  .page-header h1 { color: white; font-size: 3rem; margin-bottom: 15px; }
+  .page-header p { color: var(--cyan); font-size: 1.2rem; }
+  .p-5 { padding: 40px; }
+  .row-split { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px; }
+  .highlight-box { background: rgba(0, 168, 204, 0.1); border-left: 4px solid var(--cyan); padding: 20px; border-radius: 8px; margin-top: 20px; }
+  .bg-light { background-color: white; }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+  .service-card { padding: 30px; border-top: 4px solid var(--orange); }
+  .service-card h3 { color: var(--navy); margin-bottom: 15px; }
+  .trust-badges { display: flex; flex-wrap: wrap; gap: 15px; }
+  .badge { background: var(--navy); color: white; padding: 8px 15px; border-radius: 20px; font-size: 0.9rem; }
+  .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 20px; }
+  .faq-item { padding: 30px; }
+  .faq-item h3 { color: var(--navy); font-size: 1.1rem; margin-bottom: 10px; }
+</style>
