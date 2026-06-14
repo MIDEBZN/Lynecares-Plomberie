@@ -1,0 +1,80 @@
+---
+// TrustBanner.astro
+---
+<div class="trust-banner-wrapper">
+  <div class="container">
+    <div class="trust-grid">
+      <div class="trust-item">
+        <span class="trust-icon">⭐️⭐️⭐️⭐️⭐️</span>
+        <span class="trust-text"><strong>Avis Clients 5/5</strong><br/>Basé sur +200 avis</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">🛡️</span>
+        <span class="trust-text"><strong>Agréé Assurances</strong><br/>Prise en charge facilitée</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">🏆</span>
+        <span class="trust-text"><strong>15 Ans d'Expérience</strong><br/>Savoir-faire reconnu</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">📜</span>
+        <span class="trust-text"><strong>Certifications</strong><br/>Agréé Cerga & Cédicol</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">✅</span>
+        <span class="trust-text"><strong>Garantie Sérénité</strong><br/>Pièces et main-d'œuvre</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">⏱️</span>
+        <span class="trust-text"><strong>Délai Garanti</strong><br/>Intervention d'urgence</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .trust-banner-wrapper {
+    background: linear-gradient(135deg, var(--navy), #2a4175);
+    padding: 30px 0;
+    margin-top: 60px;
+    border-top: 4px solid var(--orange);
+    color: white;
+  }
+  
+  .trust-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    text-align: center;
+  }
+
+  .trust-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .trust-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .trust-text {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: #e2e8f0;
+  }
+
+  .trust-text strong {
+    color: white;
+    font-size: 1.05rem;
+  }
+
+  @media (max-width: 768px) {
+    .trust-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>
