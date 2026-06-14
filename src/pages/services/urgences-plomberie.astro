@@ -1,0 +1,157 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="Urgences Plomberie 24/7 à Liège | Lynecares" description="Intervention d'urgence 24h/24 et 7j/7 à Liège pour tout problème de plomberie : débouchage, fuite d'eau, dégât des eaux, rupture de canalisation.">
+  <Navbar />
+  
+  <main>
+    <section class="page-header">
+      <div class="container text-center">
+        <h1>Urgences Plomberie à Liège</h1>
+        <p>Intervention immédiate 24h/24 et 7j/7 en moins de 30 minutes</p>
+      </div>
+    </section>
+
+    <!-- WHAT'S INCLUDED -->
+    <section class="container py-5">
+      <h2 class="section-title">Ce qui est inclus dans nos urgences</h2>
+      <div class="glass p-5 mb-4">
+        <ul class="values-list">
+          <li><strong>Débouchage d'urgence 24h/24 :</strong> Intervention immédiate pour les WC débordants ou canalisations complètement bloquées.</li>
+          <li><strong>Réparation fuite d'eau en urgence :</strong> Arrêt immédiat de la fuite pour protéger votre habitation.</li>
+          <li><strong>Intervention dégât des eaux :</strong> Sécurisation de l'installation électrique et colmatage des arrivées d'eau.</li>
+          <li><strong>Réparation rupture de canalisation :</strong> Travaux de terrassement ou réparation encastrée d'urgence.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- COMMON PROBLEMS -->
+    <section class="problems-section py-5">
+      <div class="container">
+        <h2 class="section-title">Problèmes fréquents que nous résolvons</h2>
+        <div class="problems-grid">
+          <div class="problem-card glass">
+            <h4>Inondation soudaine</h4>
+            <p>Une canalisation lâche au milieu de la nuit, menaçant d'inonder vos sols et vos murs. Nous coupons l'eau, pompons l'excédent et réparons la tuyauterie.</p>
+          </div>
+          <div class="problem-card glass">
+            <h4>Fuite de gaz suspecte</h4>
+            <p>Une odeur de gaz anormale. Nous intervenons en urgence absolue pour détecter la source avec un nez électronique et sécuriser la conduite.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR PROCESS -->
+    <section class="container py-5">
+      <h2 class="section-title">Notre Processus d'Urgence</h2>
+      <div class="process-steps">
+        <div class="step glass">
+          <div class="step-number">1</div>
+          <h3>Appel SOS (24/7)</h3>
+          <p>Dès votre appel, un plombier de garde prend la route.</p>
+        </div>
+        <div class="step glass">
+          <div class="step-number">2</div>
+          <h3>Sécurisation Immédiate</h3>
+          <p>À notre arrivée, nous coupons l'arrivée générale pour stopper les dégâts.</p>
+        </div>
+        <div class="step glass">
+          <div class="step-number">3</div>
+          <h3>Devis Rapide & Clair</h3>
+          <p>Le technicien évalue la réparation et vous donne un prix fixe.</p>
+        </div>
+        <div class="step glass">
+          <div class="step-number">4</div>
+          <h3>Réparation Définitive</h3>
+          <p>Nous réparons la casse avec des pièces de stock de haute qualité.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="why-us-section py-5">
+      <div class="container text-center">
+        <h2 class="section-title text-white">Pourquoi nous choisir pour vos urgences ?</h2>
+        <p class="text-white mb-4">Parce que l'urgence ne justifie pas les prix exorbitants. Lynecares s'engage sur la transparence des tarifs de nuit et de week-end. Nos camions sont toujours pré-équipés pour résoudre 95% des pannes dès la première visite.</p>
+      </div>
+    </section>
+
+    <!-- EMERGENCY & SERVICE AREA -->
+    <section class="container py-5">
+      <div class="info-split">
+        <div class="emergency-info glass">
+          <span class="huge-icon">🚑</span>
+          <h3>Disponibilité d'Urgence</h3>
+          <p>Notre pôle urgence est opérationnel <strong>24 heures sur 24, 7 jours sur 7, y compris les week-ends et les jours fériés</strong>.</p>
+          <a href="tel:+32400000000" class="btn-primary mt-3">Urgence : Appelez-nous</a>
+        </div>
+        <div class="area-info glass">
+          <span class="huge-icon">📍</span>
+          <h3>Zones d'Intervention</h3>
+          <p>Nous couvrons l'intégralité de la Province de Liège : Liège ville, Seraing, Herstal, Ans, Flémalle, Visé, Waremme, Huy...</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQS -->
+    <section class="faq-section container py-5">
+      <h2 class="section-title">Foire Aux Questions (FAQ)</h2>
+      <div class="faq-grid">
+        <div class="faq-item glass">
+          <h3>Combien de temps faut-il pour arriver ?</h3>
+          <p>En moyenne, nous sommes sur place en moins de 30 minutes dans le grand Liège.</p>
+        </div>
+        <div class="faq-item glass">
+          <h3>Y a-t-il des frais de déplacement supplémentaires la nuit ?</h3>
+          <p>Un tarif de garde (soir/nuit/weekend) s'applique, mais il vous est communiqué clairement au téléphone avant notre départ.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  @import '../../styles/global.css';
+
+  .page-header {
+    background-color: var(--navy);
+    color: white;
+    padding: 150px 0 80px;
+    text-align: center;
+  }
+
+  .page-header h1 { color: white; font-size: 3rem; }
+  .page-header p { color: var(--cyan); font-size: 1.2rem; }
+  .p-5 { padding: 40px; }
+
+  .values-list { list-style: none; padding: 0; }
+  .values-list li { padding: 10px 0 10px 30px; position: relative; color: #475569; }
+  .values-list li::before { content: '✔️'; position: absolute; left: 0; top: 10px; }
+
+  .problems-section { background-color: white; }
+  .problems-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+  .problem-card { padding: 30px; border-left: 4px solid var(--orange); }
+  .problem-card h4 { color: var(--navy); font-size: 1.2rem; }
+
+  .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+  .step { padding: 30px; text-align: center; }
+  .step-number { width: 50px; height: 50px; background-color: var(--navy); color: white; font-size: 1.5rem; font-weight: bold; display: flex; align-items: center; justify-content: center; border-radius: 50%; margin: 0 auto 20px; }
+  .step h3 { color: var(--cyan); font-size: 1.1rem; }
+
+  .why-us-section { background: linear-gradient(135deg, var(--navy), #2a4175); color: white; }
+  .text-white { color: white !important; }
+
+  .info-split { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
+  .emergency-info, .area-info { padding: 40px; text-align: center; }
+  .huge-icon { font-size: 4rem; margin-bottom: 20px; display: block; }
+
+  .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+  .faq-item { padding: 30px; }
+  .faq-item h3 { color: var(--navy); font-size: 1.1rem; margin-bottom: 10px; }
+</style>

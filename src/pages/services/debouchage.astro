@@ -1,0 +1,153 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="Débouchage Liège | Canalisation, Évier, WC | Lynecares" description="Service professionnel de débouchage à Liège. Égout, WC, évier, baignoire. Hydrocurage haute pression et inspection caméra.">
+  <Navbar />
+  
+  <main>
+    <section class="page-header">
+      <div class="container text-center">
+        <h1>Débouchage à Liège</h1>
+        <p>Des canalisations propres, fluides et sans mauvaises odeurs</p>
+      </div>
+    </section>
+
+    <!-- WHAT'S INCLUDED -->
+    <section class="container py-5">
+      <h2 class="section-title">Ce qui est inclus dans nos services de débouchage</h2>
+      <div class="glass p-5 mb-4">
+        <ul class="values-list">
+          <li><strong>Débouchage d'évier :</strong> Dissolution des graisses et résidus alimentaires.</li>
+          <li><strong>Débouchage WC et toilettes :</strong> Retrait des amas de papier ou objets bloquants.</li>
+          <li><strong>Débouchage douche et baignoire :</strong> Élimination des amas de cheveux et savon.</li>
+          <li><strong>Débouchage d'égout extérieur :</strong> Désobstruction des conduites enterrées.</li>
+          <li><strong>Débouchage de canalisation principale :</strong> Rétablissement du flux général vers l'égout.</li>
+          <li><strong>Hydrocurage haute pression :</strong> Nettoyage intensif des parois internes pour éviter les récidives.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- COMMON PROBLEMS -->
+    <section class="problems-section py-5">
+      <div class="container">
+        <h2 class="section-title">Problèmes fréquents que nous résolvons</h2>
+        <div class="problems-grid">
+          <div class="problem-card glass">
+            <h4>Odeurs nauséabondes</h4>
+            <p>Des remontées d'odeurs d'égout dans la salle de bain ou la cuisine causées par un bouchon en formation ou un siphon désamorcé.</p>
+          </div>
+          <div class="problem-card glass">
+            <h4>Écoulement lent ou nul</h4>
+            <p>L'eau de votre baignoire met des heures à s'évacuer, signe qu'un bouchon s'est solidifié en profondeur dans la canalisation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR PROCESS -->
+    <section class="container py-5">
+      <h2 class="section-title">Notre Processus de Débouchage</h2>
+      <div class="process-steps">
+        <div class="step glass">
+          <div class="step-number">1</div>
+          <h3>Diagnostic & Caméra</h3>
+          <p>Nous introduisons si nécessaire une caméra endoscopique pour localiser le bouchon avec précision.</p>
+        </div>
+        <div class="step glass">
+          <div class="step-number">2</div>
+          <h3>Choix de l'outil</h3>
+          <p>Selon la nature du bouchon (graisse, racines, lingettes), nous utilisons un furet mécanique ou une hydrocureuse.</p>
+        </div>
+        <div class="step glass">
+          <div class="step-number">3</div>
+          <h3>Destruction du bouchon</h3>
+          <p>L'intervention se fait sans produits chimiques corrosifs, pour protéger vos tuyaux et l'environnement.</p>
+        </div>
+        <div class="step glass">
+          <div class="step-number">4</div>
+          <h3>Test d'écoulement</h3>
+          <p>Nous vérifions le débit de l'eau pour s'assurer que la canalisation est entièrement libérée.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="why-us-section py-5">
+      <div class="container text-center">
+        <h2 class="section-title text-white">Pourquoi nous choisir pour votre débouchage ?</h2>
+        <p class="text-white mb-4">Contrairement aux "déboucheurs du dimanche", nous sommes équipés d'hydrocureuses montées sur camionnettes. Cela nous permet d'injecter de l'eau à plus de 300 bars de pression, garantissant un débouchage total et durable là où un simple furet manuel échouerait.</p>
+      </div>
+    </section>
+
+    <!-- EMERGENCY & SERVICE AREA -->
+    <section class="container py-5">
+      <div class="info-split">
+        <div class="emergency-info glass">
+          <span class="huge-icon">🚑</span>
+          <h3>Disponibilité d'Urgence</h3>
+          <p>Service opérationnel <strong>24h/24 et 7j/7</strong>. Un WC bouché est une urgence absolue que nous traitons en priorité.</p>
+          <a href="tel:+32400000000" class="btn-primary mt-3">Urgence : Appelez-nous</a>
+        </div>
+        <div class="area-info glass">
+          <span class="huge-icon">📍</span>
+          <h3>Zones d'Intervention</h3>
+          <p>Nous débouchons vos canalisations partout en Province de Liège : Liège centre, Seraing, Herstal, Jemeppe, Fléron...</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQS -->
+    <section class="faq-section container py-5">
+      <h2 class="section-title">Foire Aux Questions (FAQ)</h2>
+      <div class="faq-grid">
+        <div class="faq-item glass">
+          <h3>Le débouchage à haute pression abîme-t-il les tuyaux ?</h3>
+          <p>Non, l'hydrocurage est spécifiquement conçu pour nettoyer la paroi interne des canalisations sans endommager le PVC ou le grès.</p>
+        </div>
+        <div class="faq-item glass">
+          <h3>Pourquoi mon WC se bouche-t-il régulièrement ?</h3>
+          <p>Cela peut être dû à un entartrage important, à des racines dans les égouts extérieurs ou à l'utilisation de lingettes non biodégradables. Une inspection caméra permet de trouver la cause exacte.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  @import '../../styles/global.css';
+
+  .page-header { background-color: var(--navy); color: white; padding: 150px 0 80px; text-align: center; }
+  .page-header h1 { color: white; font-size: 3rem; }
+  .page-header p { color: var(--cyan); font-size: 1.2rem; }
+  .p-5 { padding: 40px; }
+
+  .values-list { list-style: none; padding: 0; }
+  .values-list li { padding: 10px 0 10px 30px; position: relative; color: #475569; }
+  .values-list li::before { content: '✔️'; position: absolute; left: 0; top: 10px; }
+
+  .problems-section { background-color: white; }
+  .problems-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+  .problem-card { padding: 30px; border-left: 4px solid var(--orange); }
+  .problem-card h4 { color: var(--navy); font-size: 1.2rem; }
+
+  .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+  .step { padding: 30px; text-align: center; }
+  .step-number { width: 50px; height: 50px; background-color: var(--navy); color: white; font-size: 1.5rem; font-weight: bold; display: flex; align-items: center; justify-content: center; border-radius: 50%; margin: 0 auto 20px; }
+  .step h3 { color: var(--cyan); font-size: 1.1rem; }
+
+  .why-us-section { background: linear-gradient(135deg, var(--navy), #2a4175); color: white; }
+  .text-white { color: white !important; }
+
+  .info-split { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
+  .emergency-info, .area-info { padding: 40px; text-align: center; }
+  .huge-icon { font-size: 4rem; margin-bottom: 20px; display: block; }
+
+  .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+  .faq-item { padding: 30px; }
+  .faq-item h3 { color: var(--navy); font-size: 1.1rem; margin-bottom: 10px; }
+</style>

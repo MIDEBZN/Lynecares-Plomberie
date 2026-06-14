@@ -1,0 +1,133 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="Détection de Fuite et Inspection Caméra Liège | Lynecares" description="Inspection par caméra et détection de fuite non destructive à Liège. Diagnostic plomberie complet avec rapports pour votre assurance.">
+  <Navbar />
+  
+  <main>
+    <section class="page-header">
+      <div class="container text-center">
+        <h1>Détection & Diagnostic</h1>
+        <p>Des technologies de pointe pour trouver le problème sans rien casser</p>
+      </div>
+    </section>
+
+    <!-- WHAT'S INCLUDED -->
+    <section class="container py-5">
+      <h2 class="section-title">Nos services de détection avancée</h2>
+      <div class="glass p-5 mb-4">
+        <ul class="values-list">
+          <li><strong>Détection de fuite cachée :</strong> Utilisation de gaz traceur, ultrasons et caméras thermiques pour localiser précisément les fuites encastrées.</li>
+          <li><strong>Inspection de canalisation par caméra :</strong> Passage d'une caméra endoscopique dans vos égouts pour localiser cassures, racines ou affaissements.</li>
+          <li><strong>Diagnostic plomberie complet :</strong> Audit de votre installation avant un achat immobilier ou suite à des problèmes récurrents.</li>
+          <li><strong>Rapport pour assurance :</strong> Fourniture d'un document détaillé avec photos/vidéos prouvant l'origine du sinistre.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- COMMON PROBLEMS -->
+    <section class="problems-section py-5">
+      <div class="container">
+        <h2 class="section-title">Pourquoi faire un diagnostic ?</h2>
+        <div class="problems-grid">
+          <div class="problem-card glass">
+            <h4>Éviter la démolition inutile</h4>
+            <p>Autrefois, il fallait casser tout le carrelage de la salle de bain pour trouver une fuite. Aujourd'hui, nous vous disons exactement à quel centimètre creuser.</p>
+          </div>
+          <div class="problem-card glass">
+            <h4>Problèmes récurrents inexpliqués</h4>
+            <p>Si vos WC se bouchent tous les 2 mois malgré des débouchages répétés, seule l'inspection caméra permettra de voir qu'un tuyau est affaissé ou écrasé sous la terre.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR PROCESS -->
+    <section class="container py-5">
+      <h2 class="section-title">Notre Processus de Détection</h2>
+      <div class="process-steps">
+        <div class="step glass">
+          <div class="step-number">1</div>
+          <h3>Analyse de la situation</h3>
+          <p>Nous étudions les plans de la maison (si disponibles) et les symptômes (compteur qui tourne, taches d'humidité).</p>
+        </div>
+        <div class="step glass">
+          <div class="step-number">2</div>
+          <h3>Choix de la technologie</h3>
+          <p>Caméra thermique pour l'eau chaude, gaz traceur pour le chauffage sol, ou caméra poussée pour les égouts.</p>
+        </div>
+        <div class="step glass">
+          <div class="step-number">3</div>
+          <h3>Localisation précise</h3>
+          <p>Nous marquons au sol ou sur le mur l'emplacement exact du défaut au centimètre près.</p>
+        </div>
+        <div class="step glass">
+          <div class="step-number">4</div>
+          <h3>Rapport & Réparation</h3>
+          <p>Nous vous remettons le rapport pour votre assurance et vous proposons un devis pour la réparation ciblée.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="why-us-section py-5">
+      <div class="container text-center">
+        <h2 class="section-title text-white">Pourquoi nous choisir pour votre diagnostic ?</h2>
+        <p class="text-white mb-4">Investir dans du matériel de détection coûte extrêmement cher. Beaucoup de plombiers n'en ont pas et procèdent "à l'aveugle". Lynecares possède les derniers équipements de pointe pour vous faire gagner du temps et de l'argent en limitant les travaux de casse.</p>
+      </div>
+    </section>
+
+    <!-- EMERGENCY & SERVICE AREA -->
+    <section class="container py-5">
+      <div class="info-split">
+        <div class="emergency-info glass">
+          <span class="huge-icon">📸</span>
+          <h3>Prendre Rendez-vous</h3>
+          <p>Les diagnostics et inspections caméra se font généralement sur rendez-vous. En cas d'urgence absolue, un passage immédiat est possible.</p>
+          <a href="/contact" class="btn-primary mt-3">Planifier une inspection</a>
+        </div>
+        <div class="area-info glass">
+          <span class="huge-icon">📍</span>
+          <h3>Zones d'Intervention</h3>
+          <p>Service disponible sur Liège, Outremeuse, Guillemins, Ans, Saint-Nicolas, Fléron, Soumagne et toute la province.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  @import '../../styles/global.css';
+
+  .page-header { background-color: var(--navy); color: white; padding: 150px 0 80px; text-align: center; }
+  .page-header h1 { color: white; font-size: 3rem; }
+  .page-header p { color: var(--cyan); font-size: 1.2rem; }
+  .p-5 { padding: 40px; }
+
+  .values-list { list-style: none; padding: 0; }
+  .values-list li { padding: 10px 0 10px 30px; position: relative; color: #475569; }
+  .values-list li::before { content: '✔️'; position: absolute; left: 0; top: 10px; }
+
+  .problems-section { background-color: white; }
+  .problems-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+  .problem-card { padding: 30px; border-left: 4px solid var(--orange); }
+  .problem-card h4 { color: var(--navy); font-size: 1.2rem; }
+
+  .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+  .step { padding: 30px; text-align: center; }
+  .step-number { width: 50px; height: 50px; background-color: var(--navy); color: white; font-size: 1.5rem; font-weight: bold; display: flex; align-items: center; justify-content: center; border-radius: 50%; margin: 0 auto 20px; }
+  .step h3 { color: var(--cyan); font-size: 1.1rem; }
+
+  .why-us-section { background: linear-gradient(135deg, var(--navy), #2a4175); color: white; }
+  .text-white { color: white !important; }
+
+  .info-split { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
+  .emergency-info, .area-info { padding: 40px; text-align: center; }
+  .huge-icon { font-size: 4rem; margin-bottom: 20px; display: block; }
+</style>

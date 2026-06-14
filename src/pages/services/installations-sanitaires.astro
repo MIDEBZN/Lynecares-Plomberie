@@ -1,0 +1,134 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="Installation Sanitaire & Plomberie Liège | Lynecares" description="Projet de rénovation ou construction ? Nous installons vos WC, chauffe-eau, robinetterie et électroménager avec professionnalisme à Liège.">
+  <Navbar />
+  
+  <main>
+    <section class="page-header">
+      <div class="container text-center">
+        <h1>Installations Sanitaires à Liège</h1>
+        <p>De la pose d'un nouveau robinet à la création de votre salle de bain</p>
+      </div>
+    </section>
+
+    <!-- WHAT'S INCLUDED -->
+    <section class="container py-5">
+      <h2 class="section-title">Nos prestations d'installation</h2>
+      <div class="glass p-5 mb-4">
+        <ul class="values-list">
+          <li><strong>Installation de robinetterie :</strong> Mitigeurs, mélangeurs, robinets thermostatiques (Grohe, Hansgrohe, etc.).</li>
+          <li><strong>Installation de chauffe-eau et boiler :</strong> Électrique, thermodynamique ou gaz. Adapté à vos besoins.</li>
+          <li><strong>Installation de WC suspendu :</strong> Pose du bâti-support (Geberit), habillage et raccordement.</li>
+          <li><strong>Raccordement électroménager :</strong> Lave-vaisselle, machine à laver, frigo américain (arrivée d'eau et évacuation).</li>
+          <li><strong>Création d'arrivées d'eau :</strong> Tirage de nouvelles conduites pour aménagement de cuisine ou salle de bain.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- COMMON PROBLEMS -->
+    <section class="problems-section py-5">
+      <div class="container">
+        <h2 class="section-title">Ce que nos installations vous évitent</h2>
+        <div class="problems-grid">
+          <div class="problem-card glass">
+            <h4>Bricolages non conformes</h4>
+            <p>Une installation faite soi-même finit souvent par fuir ou ne pas respecter les pentes d'évacuation. Nos travaux respectent les DTU et normes belges de plomberie.</p>
+          </div>
+          <div class="problem-card glass">
+            <h4>Manque de pression</h4>
+            <p>Un mauvais dimensionnement des tuyaux lors d'une installation entraîne une perte de pression dans la douche. Nous calculons les bons diamètres (Alpex/Cuivre).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR PROCESS -->
+    <section class="container py-5">
+      <h2 class="section-title">Notre Processus d'Installation</h2>
+      <div class="process-steps">
+        <div class="step glass">
+          <div class="step-number">1</div>
+          <h3>Rendez-vous Conseil</h3>
+          <p>Nous discutons de vos envies, choisissons ensemble le matériel et validons la faisabilité technique.</p>
+        </div>
+        <div class="step glass">
+          <div class="step-number">2</div>
+          <h3>Devis Gratuit</h3>
+          <p>Vous recevez une offre détaillée incluant la fourniture du matériel (ou uniquement la main-d'œuvre si vous avez déjà acheté vos équipements).</p>
+        </div>
+        <div class="step glass">
+          <div class="step-number">3</div>
+          <h3>Réalisation des travaux</h3>
+          <p>Nous protégeons les lieux, effectuons le montage, les raccordements et les soudures/sertissages.</p>
+        </div>
+        <div class="step glass">
+          <div class="step-number">4</div>
+          <h3>Test et Explications</h3>
+          <p>Nous testons la nouvelle installation avec vous et vous expliquons son fonctionnement (notamment pour les boilers).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="why-us-section py-5">
+      <div class="container text-center">
+        <h2 class="section-title text-white">Pourquoi nous confier vos travaux ?</h2>
+        <p class="text-white mb-4">L'esthétique compte autant que la technique. Nous veillons à ce que nos installations soient droites, propres, avec des tuyauteries bien fixées et des joints silicones parfaits. Un travail d'artisan dont vous serez fier.</p>
+      </div>
+    </section>
+
+    <!-- EMERGENCY & SERVICE AREA -->
+    <section class="container py-5">
+      <div class="info-split">
+        <div class="emergency-info glass">
+          <span class="huge-icon">📅</span>
+          <h3>Planifiez votre projet</h3>
+          <p>Les installations se font généralement sur rendez-vous en semaine. N'hésitez pas à nous contacter pour fixer une date de visite.</p>
+          <a href="/contact" class="btn-primary mt-3">Demander un Devis</a>
+        </div>
+        <div class="area-info glass">
+          <span class="huge-icon">📍</span>
+          <h3>Zones d'Intervention</h3>
+          <p>Nous réalisons des chantiers d'installation à Liège, Chaudfontaine, Blegny, Soumagne, Awans, et alentours.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  @import '../../styles/global.css';
+
+  .page-header { background-color: var(--navy); color: white; padding: 150px 0 80px; text-align: center; }
+  .page-header h1 { color: white; font-size: 3rem; }
+  .page-header p { color: var(--cyan); font-size: 1.2rem; }
+  .p-5 { padding: 40px; }
+
+  .values-list { list-style: none; padding: 0; }
+  .values-list li { padding: 10px 0 10px 30px; position: relative; color: #475569; }
+  .values-list li::before { content: '✔️'; position: absolute; left: 0; top: 10px; }
+
+  .problems-section { background-color: white; }
+  .problems-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+  .problem-card { padding: 30px; border-left: 4px solid var(--orange); }
+  .problem-card h4 { color: var(--navy); font-size: 1.2rem; }
+
+  .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+  .step { padding: 30px; text-align: center; }
+  .step-number { width: 50px; height: 50px; background-color: var(--navy); color: white; font-size: 1.5rem; font-weight: bold; display: flex; align-items: center; justify-content: center; border-radius: 50%; margin: 0 auto 20px; }
+  .step h3 { color: var(--cyan); font-size: 1.1rem; }
+
+  .why-us-section { background: linear-gradient(135deg, var(--navy), #2a4175); color: white; }
+  .text-white { color: white !important; }
+
+  .info-split { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
+  .emergency-info, .area-info { padding: 40px; text-align: center; }
+  .huge-icon { font-size: 4rem; margin-bottom: 20px; display: block; }
+</style>

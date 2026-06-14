@@ -1,0 +1,152 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="Réparation Fuite d'Eau Liège | Lynecares Plomberie" description="Artisan plombier à Liège pour la réparation de vos fuites d'eau : robinet, sous évier, chasse d'eau, tuyau percé. Devis clair et intervention rapide.">
+  <Navbar />
+  
+  <main>
+    <section class="page-header">
+      <div class="container text-center">
+        <h1>Fuites & Réparations à Liège</h1>
+        <p>Ne laissez pas une petite fuite devenir un grand dégât des eaux</p>
+      </div>
+    </section>
+
+    <!-- WHAT'S INCLUDED -->
+    <section class="container py-5">
+      <h2 class="section-title">Ce qui est inclus dans nos services de réparation</h2>
+      <div class="glass p-5 mb-4">
+        <ul class="values-list">
+          <li><strong>Réparation de fuite de robinet :</strong> Remplacement de cartouches céramiques ou de robinetterie complète.</li>
+          <li><strong>Réparation de fuite sous évier :</strong> Changement de siphons et raccords PVC défectueux.</li>
+          <li><strong>Réparation de fuite de chasse d'eau :</strong> Remplacement de flotteurs, mécanismes de chasse ou joints de cuvette.</li>
+          <li><strong>Remplacement de joints de plomberie :</strong> Silicone, joints toriques, joints fibres pour étanchéité parfaite.</li>
+          <li><strong>Réparation de tuyau percé ou éclaté :</strong> Soudure, sertissage ou remplacement de sections en cuivre/Alpex.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- COMMON PROBLEMS -->
+    <section class="problems-section py-5">
+      <div class="container">
+        <h2 class="section-title">Problèmes fréquents que nous résolvons</h2>
+        <div class="problems-grid">
+          <div class="problem-card glass">
+            <h4>La chasse d'eau qui coule en continu</h4>
+            <p>Une chasse d'eau défectueuse peut gaspiller jusqu'à 150 litres d'eau par jour. Un simple remplacement de mécanisme suffit généralement à résoudre le problème et faire baisser votre facture.</p>
+          </div>
+          <div class="problem-card glass">
+            <h4>Tache d'humidité au plafond</h4>
+            <p>C'est le symptôme classique d'une fuite provenant de la salle de bain du dessus (souvent les joints de la baignoire ou un tuyau d'évacuation percé).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR PROCESS -->
+    <section class="container py-5">
+      <h2 class="section-title">Notre Processus de Réparation</h2>
+      <div class="process-steps">
+        <div class="step glass">
+          <div class="step-number">1</div>
+          <h3>Localisation</h3>
+          <p>Nous identifions l'origine exacte de la fuite, même si elle est cachée dans un coffrage ou un mur.</p>
+        </div>
+        <div class="step glass">
+          <div class="step-number">2</div>
+          <h3>Devis Détaillé</h3>
+          <p>Nous vous expliquons la pièce défectueuse et le coût de la réparation avant toute intervention.</p>
+        </div>
+        <div class="step glass">
+          <div class="step-number">3</div>
+          <h3>Réparation</h3>
+          <p>Remplacement du joint, du tuyau ou de la robinetterie avec du matériel certifié (Grohe, Geberit, etc.).</p>
+        </div>
+        <div class="step glass">
+          <div class="step-number">4</div>
+          <h3>Mise sous pression</h3>
+          <p>Nous remettons l'eau en route et vérifions méticuleusement l'étanchéité de notre réparation.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="why-us-section py-5">
+      <div class="container text-center">
+        <h2 class="section-title text-white">Pourquoi nous choisir pour vos réparations ?</h2>
+        <p class="text-white mb-4">Un bricolage temporaire sur une fuite finit toujours par céder et coûte plus cher à terme. Nos plombiers réalisent des soudures et sertissages aux normes professionnelles, garantissant une étanchéité parfaite pendant des années.</p>
+      </div>
+    </section>
+
+    <!-- EMERGENCY & SERVICE AREA -->
+    <section class="container py-5">
+      <div class="info-split">
+        <div class="emergency-info glass">
+          <span class="huge-icon">🚑</span>
+          <h3>Disponibilité d'Urgence</h3>
+          <p>Une grosse fuite ? Nous intervenons <strong>24h/24 et 7j/7</strong> pour éviter l'inondation de votre domicile.</p>
+          <a href="tel:+32400000000" class="btn-primary mt-3">Urgence : Appelez-nous</a>
+        </div>
+        <div class="area-info glass">
+          <span class="huge-icon">📍</span>
+          <h3>Zones d'Intervention</h3>
+          <p>Nos plombiers réparent vos fuites dans toute la province : Liège, Flémalle, Grâce-Hollogne, Saint-Nicolas, Visé...</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQS -->
+    <section class="faq-section container py-5">
+      <h2 class="section-title">Foire Aux Questions (FAQ)</h2>
+      <div class="faq-grid">
+        <div class="faq-item glass">
+          <h3>Dois-je couper l'eau en attendant votre arrivée ?</h3>
+          <p>Oui, si la fuite est importante, fermez la vanne d'arrêt générale (généralement située près de votre compteur d'eau) pour limiter les dégâts.</p>
+        </div>
+        <div class="faq-item glass">
+          <h3>Garantissez-vous vos réparations ?</h3>
+          <p>Oui, toutes nos pièces de remplacement et notre main d'œuvre sont sous garantie.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  @import '../../styles/global.css';
+
+  .page-header { background-color: var(--navy); color: white; padding: 150px 0 80px; text-align: center; }
+  .page-header h1 { color: white; font-size: 3rem; }
+  .page-header p { color: var(--cyan); font-size: 1.2rem; }
+  .p-5 { padding: 40px; }
+
+  .values-list { list-style: none; padding: 0; }
+  .values-list li { padding: 10px 0 10px 30px; position: relative; color: #475569; }
+  .values-list li::before { content: '✔️'; position: absolute; left: 0; top: 10px; }
+
+  .problems-section { background-color: white; }
+  .problems-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+  .problem-card { padding: 30px; border-left: 4px solid var(--orange); }
+  .problem-card h4 { color: var(--navy); font-size: 1.2rem; }
+
+  .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+  .step { padding: 30px; text-align: center; }
+  .step-number { width: 50px; height: 50px; background-color: var(--navy); color: white; font-size: 1.5rem; font-weight: bold; display: flex; align-items: center; justify-content: center; border-radius: 50%; margin: 0 auto 20px; }
+  .step h3 { color: var(--cyan); font-size: 1.1rem; }
+
+  .why-us-section { background: linear-gradient(135deg, var(--navy), #2a4175); color: white; }
+  .text-white { color: white !important; }
+
+  .info-split { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
+  .emergency-info, .area-info { padding: 40px; text-align: center; }
+  .huge-icon { font-size: 4rem; margin-bottom: 20px; display: block; }
+
+  .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+  .faq-item { padding: 30px; }
+  .faq-item h3 { color: var(--navy); font-size: 1.1rem; margin-bottom: 10px; }
+</style>
