@@ -4,9 +4,10 @@ import '../styles/global.css';
 interface Props {
 	title: string;
 	description?: string;
+	preloadImage?: string;
 }
 
-const { title, description = "Plomberie Liégeoise - Expert plumbing services in Liège. Dépannage, installation, and maintenance." } = Astro.props;
+const { title, description = "Plomberie Liégeoise - Expert plumbing services in Liège. Dépannage, installation, and maintenance.", preloadImage } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://www.lynecaressrl.site');
 ---
 
@@ -16,6 +17,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://www.lyne
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
+		{preloadImage && <link rel="preload" as="image" href={preloadImage} />}
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title} | Lynecares Plomberie</title>
