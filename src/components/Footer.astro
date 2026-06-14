@@ -8,8 +8,7 @@ import GlobalContactForm from './GlobalContactForm.astro';
   <div class="container footer-grid">
     <div class="footer-col">
       <div class="logo">
-        <span class="logo-icon">💧</span>
-        <span class="logo-text">Lynecares<br><small>Plomberie Liégeoise</small></span>
+        <img src="/images/logo.png" alt="Lynecares Plomberie Liégeoise" class="logo-img footer-logo" />
       </div>
       <p class="mt-4">Votre partenaire de confiance pour tous vos travaux de plomberie et chauffage à Liège et environs. Intervention rapide 7j/7.</p>
     </div>
@@ -91,22 +90,13 @@ import GlobalContactForm from './GlobalContactForm.astro';
     gap: 10px;
   }
 
-  .logo-icon {
-    font-size: 2rem;
-  }
-
-  .logo-text {
-    font-weight: 800;
-    color: var(--white);
-    line-height: 1.2;
-    text-transform: uppercase;
-    font-size: 1.2rem;
-  }
-
-  .logo-text small {
-    font-size: 0.8rem;
-    color: var(--cyan);
-    font-weight: 600;
+  .logo-img {
+    height: 65px;
+    width: auto;
+    object-fit: contain;
+    background-color: white;
+    padding: 8px;
+    border-radius: 8px;
   }
 
   .footer-bottom {

@@ -6,8 +6,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
 <header class="navbar glass">
   <div class="container nav-container">
     <a href="/" class="logo">
-      <span class="logo-icon">💧</span>
-      <span class="logo-text">Lynecares<br><small>Plomberie Liégeoise</small></span>
+      <img src="/images/logo.png" alt="Lynecares Plomberie Liégeoise" class="logo-img" />
     </a>
     
     <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">
@@ -51,22 +50,10 @@ const currentPath = pathname.slice(1); // remove the first "/"
     text-decoration: none;
   }
 
-  .logo-icon {
-    font-size: 2rem;
-  }
-
-  .logo-text {
-    font-weight: 800;
-    color: var(--navy);
-    line-height: 1.2;
-    text-transform: uppercase;
-    font-size: 1.2rem;
-  }
-
-  .logo-text small {
-    font-size: 0.8rem;
-    color: var(--cyan);
-    font-weight: 600;
+  .logo-img {
+    height: 55px;
+    width: auto;
+    object-fit: contain;
   }
 
   .nav-links {
