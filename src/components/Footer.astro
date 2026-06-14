@@ -94,9 +94,8 @@ import GlobalContactForm from './GlobalContactForm.astro';
     height: 65px;
     width: auto;
     object-fit: contain;
-    background-color: white;
-    padding: 8px;
-    border-radius: 8px;
+    /* Adding a white brightness filter since the text is dark blue and footer is navy blue */
+    filter: brightness(0) invert(1);
   }
 
   .footer-bottom {
