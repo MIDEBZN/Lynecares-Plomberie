@@ -4,71 +4,110 @@ import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
 ---
 
-<Layout title="Plombier Chauffagiste à Herstal | Lynecares Urgence 24/7" description="Un problème de plomberie à Herstal (4040) ? Débouchage, fuite, chauffage : Lynecares intervient rapidement avec des prix 100% transparents.">
+<Layout title="Plombier à Herstal (4040) | Urgence, Débouchage & Chauffage | Lynecares" description="Plombier de confiance à Herstal. Intervention urgente, débouchage, réparation de fuite et entretien de chauffage. Devis gratuit et transparence totale.">
   <Navbar />
   
   <main>
     <section class="page-header">
       <div class="container text-center">
-        <h1>Plombier à Herstal</h1>
-        <p>Un service de proximité pour vos urgences et projets sanitaires (4040)</p>
+        <h1>Plombier de Garde à Herstal (4040)</h1>
+        <p>Intervention rapide et professionnelle : Vottem, Liers, Milmort, Les Hauts-Sarts</p>
       </div>
     </section>
 
     <section class="container py-5">
-      <div class="glass p-5 mb-4">
-        <h2>Votre expert en plomberie sur la commune de Herstal</h2>
-        <p>Une fuite au milieu de la nuit ? Un évier complètement bouché un dimanche ? L'équipe de <strong>Lynecares Plomberie</strong> assure une permanence 24h/24 et 7j/7 pour les résidents de Herstal, Vottem, Milmort et Liers.</p>
+      <div class="row-split">
+        <div class="glass p-5 mb-4">
+          <h2>Votre Expert Local à Herstal</h2>
+          <p>Que vous habitiez au cœur de <strong>Herstal</strong> ou dans les quartiers environnants, Lynecares Plomberie est votre partenaire de proximité pour toute urgence sanitaire ou projet d'installation.</p>
+          
+          <h3 class="mt-4">Nos temps de réponse sur Herstal</h3>
+          <div class="highlight-box">
+            <span class="icon">⏱️</span> <strong>Délai estimé : 20 à 30 minutes.</strong>
+            <p>Notre flotte de véhicules géolocalisés nous permet d'envoyer le technicien le plus proche de chez vous en un temps record.</p>
+          </div>
+        </div>
         
-        <h3 class="mt-4">Nos spécialités à Herstal</h3>
-        <ul class="values-list">
-          <li><strong>Débouchage haute pression :</strong> Nous éliminons les bouchons coriaces sans détruire vos canalisations.</li>
-          <li><strong>Recherche de fuites :</strong> Utilisation de matériel de pointe pour trouver la fuite sans démolition.</li>
-          <li><strong>Entretien Chauffage :</strong> Entretenez votre chaudière en toute sérénité avec nos techniciens agréés.</li>
-        </ul>
-        <a href="/contact" class="btn-primary mt-4">Demander une intervention à Herstal</a>
+        <div class="glass p-5 mb-4">
+          <h2>Défis Plomberie & Climat à Herstal</h2>
+          <p>Exposée aux vents froids sur les hauteurs, Herstal connaît beaucoup de pannes de chaudières en plein hiver.</p>
+          <p>Nos plombiers sont spécialement formés pour anticiper ces spécificités géographiques et vous conseiller des solutions pérennes.</p>
+        </div>
       </div>
     </section>
-  </main>
 
+    <!-- Services Section -->
+    <section class="services-overview py-5 bg-light">
+      <div class="container">
+        <h2 class="section-title">Nos Services à Herstal</h2>
+        <div class="services-grid">
+          <div class="service-card glass">
+            <h3>🚨 Dépannage Urgence</h3>
+            <p>Fuite d'eau, rupture de tuyau ou dégât des eaux. Nous sécurisons votre domicile à Herstal 24h/24.</p>
+            <a href="/services/urgences-plomberie">En savoir plus</a>
+          </div>
+          <div class="service-card glass">
+            <h3>🌪️ Débouchage</h3>
+            <p>WC, évier ou égout extérieur bouché. Nous intervenons avec hydrocureuse et caméra d'inspection.</p>
+            <a href="/services/debouchage">En savoir plus</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Competitor Comparison -->
+    <section class="container py-5">
+      <div class="glass p-5">
+        <h2>Pourquoi choisir Lynecares face à la concurrence locale ?</h2>
+        <p><strong>Nous intervenons avec des hydrocureuses haute pression, là où les concurrents locaux se contentent de furets manuels inefficaces sur les gros bouchons.</strong></p>
+        <p>De plus, en tant qu'entreprise intervenant régulièrement auprès de grands employeurs de la région (comme <em>Zoning industriel des Hauts-Sarts, FN Herstal, Safran</em>), nous avons développé une rigueur professionnelle et une transparence tarifaire absolue.</p>
+        
+        <div class="trust-badges mt-4">
+          <span class="badge">✅ Devis Gratuit</span>
+          <span class="badge">✅ Prix Transparents</span>
+          <span class="badge">✅ Agréé Assurances</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section container py-5">
+      <h2 class="section-title">Questions Fréquentes - Herstal</h2>
+      <div class="faq-grid">
+        <div class="faq-item glass">
+          <h3>Faites-vous payer le déplacement jusqu'à Herstal ?</h3>
+          <p>Le devis sur place est gratuit. En cas d'intervention immédiate, un forfait de déplacement fixe et transparent vous est annoncé à l'avance.</p>
+        </div>
+      </div>
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "PlumbingService",
+        "name": "Lynecares Plomberie Herstal",
+        "areaServed": { "@type": "City", "name": "Herstal", "postalCode": "4040" },
+        "telephone": "+32400000000",
+        "url": "https://lynecares-plomberie.vercel.app/locations/plombier-herstal"
+      }
+      </script>
+    </section>
+  </main>
   <Footer />
 </Layout>
 
 <style>
-  .page-header {
-    background-color: var(--navy);
-    color: white;
-    padding: 150px 0 80px;
-    text-align: center;
-  }
-
-  .page-header h1 {
-    color: white;
-    font-size: 3rem;
-  }
-
-  .page-header p {
-    color: var(--cyan);
-    font-size: 1.2rem;
-  }
-
+  @import '../../styles/global.css';
+  .page-header { background-color: var(--navy); color: white; padding: 150px 0 80px; text-align: center; }
+  .page-header h1 { color: white; font-size: 3rem; margin-bottom: 15px; }
+  .page-header p { color: var(--cyan); font-size: 1.2rem; }
   .p-5 { padding: 40px; }
-
-  .values-list {
-    list-style: none;
-    padding: 0;
-  }
-
-  .values-list li {
-    padding: 10px 0 10px 30px;
-    position: relative;
-    color: #475569;
-  }
-
-  .values-list li::before {
-    content: '✔️';
-    position: absolute;
-    left: 0;
-    top: 10px;
-  }
+  .row-split { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px; }
+  .highlight-box { background: rgba(0, 168, 204, 0.1); border-left: 4px solid var(--cyan); padding: 20px; border-radius: 8px; margin-top: 20px; }
+  .bg-light { background-color: white; }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+  .service-card { padding: 30px; border-top: 4px solid var(--orange); }
+  .service-card h3 { color: var(--navy); margin-bottom: 15px; }
+  .trust-badges { display: flex; flex-wrap: wrap; gap: 15px; }
+  .badge { background: var(--navy); color: white; padding: 8px 15px; border-radius: 20px; font-size: 0.9rem; }
+  .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 20px; }
+  .faq-item { padding: 30px; }
+  .faq-item h3 { color: var(--navy); font-size: 1.1rem; margin-bottom: 10px; }
 </style>
