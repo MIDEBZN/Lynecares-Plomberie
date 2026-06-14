@@ -7,6 +7,7 @@ interface Props {
 }
 
 const { title, description = "Plomberie Liégeoise - Expert plumbing services in Liège. Dépannage, installation, and maintenance." } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://www.lynecaressrl.site');
 ---
 
 <!doctype html>
@@ -18,6 +19,7 @@ const { title, description = "Plomberie Liégeoise - Expert plumbing services in
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title} | Lynecares Plomberie</title>
+		<link rel="canonical" href={canonicalURL} />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
@@ -57,7 +59,48 @@ const { title, description = "Plomberie Liégeoise - Expert plumbing services in
 				"closes": "23:59"
 			},
 			"priceRange": "€€",
-			"description": "Plombier chauffagiste de confiance à Liège. Intervention d'urgence 24/7 en moins de 30 minutes, tarifs transparents sans surprise."
+			"description": "Plombier chauffagiste de confiance à Liège. Intervention d'urgence 24/7 en moins de 30 minutes, tarifs transparents sans surprise.",
+			"hasOfferCatalog": {
+				"@type": "OfferCatalog",
+				"name": "Services de Plomberie et Chauffage",
+				"itemListElement": [
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Service",
+							"name": "Dépannage Plomberie d'Urgence"
+						}
+					},
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Service",
+							"name": "Débouchage de canalisations"
+						}
+					},
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Service",
+							"name": "Installation de Sanitaire"
+						}
+					},
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Service",
+							"name": "Entretien de Chauffage"
+						}
+					},
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Service",
+							"name": "Détection de Fuite"
+						}
+					}
+				]
+			}
 		}
 		</script>
 	</head>
