@@ -1,0 +1,164 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="À Propos | Lynecares Plomberie Liégeoise">
+  <Navbar />
+  
+  <main>
+    <section class="page-header">
+      <div class="container text-center">
+        <h1>À Propos de Lynecares</h1>
+        <p>Votre expert en plomberie et chauffage à Liège</p>
+      </div>
+    </section>
+
+    <section class="container py-5">
+      <div class="about-grid">
+        <div class="about-content glass p-5">
+          <h2>Notre Histoire</h2>
+          <p>Fondée avec la volonté de proposer un service d'excellence, <strong>Lynecares Plomberie Liégeoise</strong> s'est rapidement imposée comme une référence dans la région. Notre entreprise est née d'un constat simple : trouver un plombier fiable, transparent et compétent relève souvent du parcours du combattant pour les particuliers.</p>
+          <p>Nous avons donc décidé de changer la donne en mettant l'accent sur la <strong>satisfaction client</strong>, la <strong>transparence des prix</strong> et la <strong>réactivité</strong>.</p>
+          
+          <h2 class="mt-4">Nos Valeurs</h2>
+          <ul class="values-list">
+            <li><strong>Intégrité :</strong> Pas de frais cachés, des devis clairs.</li>
+            <li><strong>Excellence :</strong> Un travail soigné qui respecte les normes en vigueur.</li>
+            <li><strong>Disponibilité :</strong> Un service d'urgence véritablement opérationnel 24/7.</li>
+          </ul>
+        </div>
+        <div class="about-image" style="background-image: url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+      </div>
+
+      <div class="stats-grid mt-4">
+        <div class="stat-card glass">
+          <div class="number">15+</div>
+          <div class="label">Années d'expérience</div>
+        </div>
+        <div class="stat-card glass">
+          <div class="number">2500+</div>
+          <div class="label">Interventions réussies</div>
+        </div>
+        <div class="stat-card glass">
+          <div class="number">100%</div>
+          <div class="label">Clients satisfaits</div>
+        </div>
+        <div class="stat-card glass">
+          <div class="number">24/7</div>
+          <div class="label">Disponibilité</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .page-header {
+    background-color: var(--navy);
+    color: white;
+    padding: 150px 0 80px;
+    text-align: center;
+  }
+
+  .page-header h1 {
+    color: white;
+    font-size: 3rem;
+  }
+
+  .page-header p {
+    color: var(--cyan);
+    font-size: 1.2rem;
+  }
+
+  .p-5 { padding: 40px; }
+
+  .about-grid {
+    display: flex;
+    gap: 30px;
+    align-items: stretch;
+  }
+
+  .about-content {
+    flex: 3;
+  }
+
+  .about-content h2 {
+    color: var(--navy);
+    position: relative;
+    padding-bottom: 10px;
+  }
+
+  .about-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--cyan);
+  }
+
+  .values-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .values-list li {
+    padding: 10px 0 10px 30px;
+    position: relative;
+  }
+
+  .values-list li::before {
+    content: '💧';
+    position: absolute;
+    left: 0;
+    top: 10px;
+  }
+
+  .about-image {
+    flex: 2;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    min-height: 300px;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  .stat-card {
+    padding: 30px;
+    text-align: center;
+    border-bottom: 4px solid var(--cyan);
+  }
+
+  .stat-card .number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--navy);
+  }
+
+  .stat-card .label {
+    color: #64748b;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
+
+  @media (max-width: 900px) {
+    .about-grid {
+      flex-direction: column;
+    }
+    .about-image {
+      min-height: 400px;
+    }
+  }
+</style>

@@ -1,0 +1,152 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Nos Services | Lynecares Plomberie Liégeoise">
+  <Navbar />
+  
+  <main>
+    <section class="page-header">
+      <div class="container text-center">
+        <h1>Nos Services de Plomberie</h1>
+        <p>Des solutions complètes pour votre domicile ou votre entreprise</p>
+      </div>
+    </section>
+
+    <section class="container py-5">
+      <div class="service-details">
+        
+        <div id="depannage" class="service-row glass">
+          <div class="service-content">
+            <h2>Dépannage Urgence 24/7</h2>
+            <p>Une fuite d'eau imprévue ou un WC bouché peut causer d'importants dégâts matériels si le problème n'est pas traité rapidement. Notre équipe d'urgence est mobilisée 24 heures sur 24, 7 jours sur 7 dans toute la région de Liège pour stopper les fuites et réparer vos installations défectueuses.</p>
+            <ul>
+              <li>✔️ Recherche et réparation de fuites</li>
+              <li>✔️ Débouchage express (WC, éviers, égouts)</li>
+              <li>✔️ Remplacement de pièces défectueuses</li>
+            </ul>
+            <a href="tel:+3200000000" class="btn-primary mt-4">Appeler l'Urgence</a>
+          </div>
+          <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1542013936693-884638332954?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+        </div>
+
+        <div id="installation" class="service-row glass reverse">
+          <div class="service-content">
+            <h2>Installation Sanitaire</h2>
+            <p>Nous concevons et installons vos réseaux de distribution d'eau avec des matériaux durables et certifiés. Que ce soit pour une construction neuve ou une rénovation, nous garantissons un travail aux finitions impeccables.</p>
+            <ul>
+              <li>✔️ Création de nouvelles arrivées d'eau</li>
+              <li>✔️ Installation d'adoucisseurs d'eau</li>
+              <li>✔️ Raccordement de machines à laver et lave-vaisselle</li>
+            </ul>
+            <a href="/contact" class="btn-secondary mt-4">Demander un devis</a>
+          </div>
+          <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+        </div>
+
+        <div id="chauffage" class="service-row glass">
+          <div class="service-content">
+            <h2>Entretien et Chauffage</h2>
+            <p>Un système de chauffage bien entretenu est la clé pour passer un hiver au chaud tout en maîtrisant sa facture énergétique. Nous sommes agréés pour l'entretien, le dépannage et l'installation de chaudières.</p>
+            <ul>
+              <li>✔️ Entretien obligatoire de chaudière (gaz, mazout)</li>
+              <li>✔️ Désembouage de radiateurs</li>
+              <li>✔️ Installation de thermostats intelligents</li>
+            </ul>
+            <a href="/contact" class="btn-secondary mt-4">Prendre rendez-vous</a>
+          </div>
+          <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1581094288338-2314dddb7ece?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+        </div>
+
+        <div id="renovation" class="service-row glass reverse">
+          <div class="service-content">
+            <h2>Rénovation de Salle de Bain</h2>
+            <p>Transformez votre salle de bain en un espace de détente moderne et fonctionnel. De la démolition à la pose des derniers accessoires, nous gérons votre projet de A à Z avec un seul interlocuteur.</p>
+            <ul>
+              <li>✔️ Installation de douches à l'italienne</li>
+              <li>✔️ Pose de meubles vasques et baignoires</li>
+              <li>✔️ Adaptation PMR (Personnes à Mobilité Réduite)</li>
+            </ul>
+            <a href="/contact" class="btn-secondary mt-4">Parlons de votre projet</a>
+          </div>
+          <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .page-header {
+    background-color: var(--navy);
+    color: white;
+    padding: 150px 0 80px;
+    text-align: center;
+  }
+
+  .page-header h1 {
+    color: white;
+    font-size: 3rem;
+  }
+
+  .page-header p {
+    color: var(--cyan);
+    font-size: 1.2rem;
+  }
+
+  .service-details {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .service-row {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+
+  .service-row.reverse {
+    flex-direction: row-reverse;
+  }
+
+  .service-content {
+    flex: 1;
+    min-width: 300px;
+    padding: 50px;
+  }
+
+  .service-content h2 {
+    color: var(--cyan);
+    margin-bottom: 20px;
+  }
+
+  .service-content ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+
+  .service-content ul li {
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+
+  .service-img {
+    flex: 1;
+    min-width: 300px;
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+  }
+
+  @media (max-width: 768px) {
+    .service-content { padding: 30px; }
+    .service-img { min-height: 250px; }
+  }
+</style>

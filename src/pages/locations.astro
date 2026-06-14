@@ -1,0 +1,152 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Zones d'intervention | Lynecares Plomberie Liégeoise">
+  <Navbar />
+  
+  <main>
+    <section class="page-header">
+      <div class="container text-center">
+        <h1>Nos Zones d'Intervention</h1>
+        <p>Disponibles rapidement dans toute la province de Liège</p>
+      </div>
+    </section>
+
+    <section class="container py-5">
+      <div class="glass p-5 text-center mb-4">
+        <h2>Un Plombier Près De Chez Vous</h2>
+        <p>Nous comprenons qu'une urgence de plomberie nécessite une intervention rapide. C'est pourquoi nos équipes sont stratégiquement réparties pour couvrir l'ensemble de la province de Liège, garantissant des délais d'intervention réduits.</p>
+      </div>
+
+      <div class="locations-grid">
+        <div class="location-card glass">
+          <h3>📍 Liège Centre & Agglomération</h3>
+          <ul>
+            <li>Liège ville</li>
+            <li>Herstal</li>
+            <li>Saint-Nicolas</li>
+            <li>Ans</li>
+            <li>Seraing</li>
+            <li>Grâce-Hollogne</li>
+          </ul>
+        </div>
+
+        <div class="location-card glass">
+          <h3>📍 Périphérie Nord & Est</h3>
+          <ul>
+            <li>Visé</li>
+            <li>Oupeye</li>
+            <li>Fléron</li>
+            <li>Soumagne</li>
+            <li>Blegny</li>
+            <li>Chaudfontaine</li>
+          </ul>
+        </div>
+
+        <div class="location-card glass">
+          <h3>📍 Périphérie Sud & Ouest</h3>
+          <ul>
+            <li>Flémalle</li>
+            <li>Neupré</li>
+            <li>Esneux</li>
+            <li>Awans</li>
+            <li>Waremme</li>
+            <li>Huy (sur rendez-vous)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="map-container glass mt-4">
+        <!-- Placeholder for a real map embed, visually using a background for the WOW effect -->
+        <div class="map-overlay">
+          <h3>Votre commune n'est pas listée ?</h3>
+          <p>Contactez-nous pour vérifier notre disponibilité dans votre secteur.</p>
+          <a href="/contact" class="btn-primary">Nous contacter</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .page-header {
+    background-color: var(--navy);
+    color: white;
+    padding: 150px 0 80px;
+    text-align: center;
+  }
+
+  .page-header h1 {
+    color: white;
+    font-size: 3rem;
+  }
+
+  .page-header p {
+    color: var(--cyan);
+    font-size: 1.2rem;
+  }
+
+  .p-5 { padding: 40px; }
+  
+  .locations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+
+  .location-card {
+    padding: 30px;
+    border-top: 5px solid var(--orange);
+  }
+
+  .location-card h3 {
+    color: var(--navy);
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+  }
+
+  .location-card ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .location-card ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #e2e8f0;
+    color: #475569;
+    font-weight: 500;
+  }
+
+  .location-card ul li:last-child {
+    border-bottom: none;
+  }
+
+  .map-container {
+    height: 400px;
+    background: url('https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') center/cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .map-overlay {
+    background: rgba(27, 42, 74, 0.9);
+    padding: 40px;
+    text-align: center;
+    color: white;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+  }
+
+  .map-overlay h3 {
+    color: white;
+    margin-bottom: 10px;
+  }
+</style>

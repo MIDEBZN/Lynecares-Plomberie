@@ -1,0 +1,115 @@
+---
+---
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <div class="logo">
+        <span class="logo-icon">💧</span>
+        <span class="logo-text">Lynecares<br><small>Plomberie Liégeoise</small></span>
+      </div>
+      <p class="mt-4">Votre partenaire de confiance pour tous vos travaux de plomberie et chauffage à Liège et environs. Intervention rapide 7j/7.</p>
+    </div>
+    <div class="footer-col">
+      <h3>Liens Rapides</h3>
+      <ul>
+        <li><a href="/">Accueil</a></li>
+        <li><a href="/services">Nos Services</a></li>
+        <li><a href="/locations">Zones d'intervention</a></li>
+        <li><a href="/about">À propos de nous</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Services</h3>
+      <ul>
+        <li><a href="/services#depannage">Dépannage Urgence 24/7</a></li>
+        <li><a href="/services#installation">Installation Sanitaire</a></li>
+        <li><a href="/services#chauffage">Entretien Chauffage</a></li>
+        <li><a href="/services#debouchage">Débouchage Canalisations</a></li>
+        <li><a href="/services#renovation">Rénovation Salle de Bain</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Contact</h3>
+      <p>📍 Rue de la plomberie 123, 4000 Liège</p>
+      <p>📞 <a href="tel:+3200000000">+32 (0) 400 00 00</a></p>
+      <p>✉️ <a href="mailto:info@lynecares.be">info@lynecares.be</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; {new Date().getFullYear()} Lynecares Plomberie Liégeoise. Tous droits réservés.</p>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: var(--navy);
+    color: var(--white);
+    padding: 60px 0 0 0;
+    margin-top: 80px;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+
+  .footer h3 {
+    color: var(--cyan);
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+
+  .footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer ul li {
+    margin-bottom: 10px;
+  }
+
+  .footer a {
+    color: #cbd5e1;
+    transition: color 0.3s ease;
+  }
+
+  .footer a:hover {
+    color: var(--orange);
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo-icon {
+    font-size: 2rem;
+  }
+
+  .logo-text {
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1.2;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+  }
+
+  .logo-text small {
+    font-size: 0.8rem;
+    color: var(--cyan);
+    font-weight: 600;
+  }
+
+  .footer-bottom {
+    background-color: #121d36;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #94a3b8;
+  }
+</style>

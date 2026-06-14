@@ -1,0 +1,206 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Plombier Urgence Liège | Lynecares">
+  <Navbar />
+  
+  <main>
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <div class="glass hero-box">
+          <span class="badge">Intervention en 30 minutes</span>
+          <h1>Plombier de Confiance à <span class="highlight">Liège</span></h1>
+          <p>Dépannage d'urgence, installation sanitaire et entretien de chauffage. Une équipe d'experts à votre service 24/7 dans toute la province de Liège.</p>
+          <div class="hero-btns">
+            <a href="tel:+3200000000" class="btn-primary call-btn">☎ Appeler Maintenant</a>
+            <a href="/contact" class="btn-secondary">Demander un Devis</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features container py-5">
+      <div class="feature-card glass">
+        <div class="icon">🚀</div>
+        <h3>Rapidité</h3>
+        <p>Intervention urgente en moins de 30 minutes à Liège et ses alentours.</p>
+      </div>
+      <div class="feature-card glass">
+        <div class="icon">🏆</div>
+        <h3>Expertise</h3>
+        <p>Plus de 15 ans d'expérience dans la plomberie et le chauffage.</p>
+      </div>
+      <div class="feature-card glass">
+        <div class="icon">💶</div>
+        <h3>Prix Transparents</h3>
+        <p>Devis gratuit et tarifs clairs avant chaque intervention. Pas de surprise.</p>
+      </div>
+    </section>
+
+    <section class="services-preview py-5">
+      <div class="container">
+        <h2 class="section-title">Nos Principaux Services</h2>
+        <div class="services-grid">
+          <div class="service-item glass">
+            <h3>Dépannage Urgence</h3>
+            <p>Fuite d'eau, canalisation bouchée, panne de chauffe-eau. Nous intervenons rapidement pour sécuriser votre installation.</p>
+            <a href="/services#depannage" class="read-more">En savoir plus &rarr;</a>
+          </div>
+          <div class="service-item glass">
+            <h3>Installation Sanitaire</h3>
+            <p>Rénovation complète de salle de bain, installation de WC, douches, baignoires et robinetterie moderne.</p>
+            <a href="/services#installation" class="read-more">En savoir plus &rarr;</a>
+          </div>
+          <div class="service-item glass">
+            <h3>Chauffage</h3>
+            <p>Entretien, réparation et remplacement de chaudières toutes marques. Optimisez votre consommation d'énergie.</p>
+            <a href="/services#chauffage" class="read-more">En savoir plus &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta py-5">
+      <div class="container cta-container glass">
+        <h2>Une Urgence Plomberie ?</h2>
+        <p>Nos techniciens sont prêts à intervenir immédiatement, de jour comme de nuit.</p>
+        <a href="tel:+3200000000" class="btn-primary cta-btn">Contactez l'assistance (24/7)</a>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .hero {
+    min-height: 100vh;
+    background: linear-gradient(rgba(27, 42, 74, 0.7), rgba(27, 42, 74, 0.8)), url('https://images.unsplash.com/photo-1585704032915-c3400ca199e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-top: 80px;
+  }
+
+  .hero-box {
+    max-width: 650px;
+    padding: 40px;
+    animation: slideUp 0.8s ease-out;
+  }
+
+  .badge {
+    background-color: var(--orange);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+  }
+
+  .highlight {
+    color: var(--cyan);
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #475569;
+  }
+
+  .hero-btns {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .call-btn {
+    background-color: var(--orange);
+  }
+
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: -60px;
+    position: relative;
+    z-index: 10;
+  }
+
+  .feature-card {
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-10px);
+  }
+
+  .feature-card .icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+  }
+
+  .services-preview {
+    background-color: white;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+  }
+
+  .service-item {
+    padding: 40px;
+    border-top: 5px solid var(--cyan);
+  }
+
+  .read-more {
+    display: inline-block;
+    margin-top: 15px;
+    font-weight: 600;
+  }
+
+  .cta-container {
+    background: linear-gradient(135deg, var(--navy), #2a4175);
+    color: white;
+    text-align: center;
+    padding: 60px 40px;
+    border: none;
+  }
+
+  .cta-container h2 {
+    color: white;
+  }
+
+  .cta-btn {
+    background-color: var(--orange);
+    font-size: 1.2rem;
+    padding: 15px 40px;
+    margin-top: 20px;
+  }
+
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+    .features { margin-top: 40px; }
+  }
+</style>
