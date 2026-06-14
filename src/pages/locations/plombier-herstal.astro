@@ -1,0 +1,74 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="Plombier Chauffagiste à Herstal | Lynecares Urgence 24/7" description="Un problème de plomberie à Herstal (4040) ? Débouchage, fuite, chauffage : Lynecares intervient rapidement avec des prix 100% transparents.">
+  <Navbar />
+  
+  <main>
+    <section class="page-header">
+      <div class="container text-center">
+        <h1>Plombier à Herstal</h1>
+        <p>Un service de proximité pour vos urgences et projets sanitaires (4040)</p>
+      </div>
+    </section>
+
+    <section class="container py-5">
+      <div class="glass p-5 mb-4">
+        <h2>Votre expert en plomberie sur la commune de Herstal</h2>
+        <p>Une fuite au milieu de la nuit ? Un évier complètement bouché un dimanche ? L'équipe de <strong>Lynecares Plomberie</strong> assure une permanence 24h/24 et 7j/7 pour les résidents de Herstal, Vottem, Milmort et Liers.</p>
+        
+        <h3 class="mt-4">Nos spécialités à Herstal</h3>
+        <ul class="values-list">
+          <li><strong>Débouchage haute pression :</strong> Nous éliminons les bouchons coriaces sans détruire vos canalisations.</li>
+          <li><strong>Recherche de fuites :</strong> Utilisation de matériel de pointe pour trouver la fuite sans démolition.</li>
+          <li><strong>Entretien Chauffage :</strong> Entretenez votre chaudière en toute sérénité avec nos techniciens agréés.</li>
+        </ul>
+        <a href="/contact" class="btn-primary mt-4">Demander une intervention à Herstal</a>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .page-header {
+    background-color: var(--navy);
+    color: white;
+    padding: 150px 0 80px;
+    text-align: center;
+  }
+
+  .page-header h1 {
+    color: white;
+    font-size: 3rem;
+  }
+
+  .page-header p {
+    color: var(--cyan);
+    font-size: 1.2rem;
+  }
+
+  .p-5 { padding: 40px; }
+
+  .values-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .values-list li {
+    padding: 10px 0 10px 30px;
+    position: relative;
+    color: #475569;
+  }
+
+  .values-list li::before {
+    content: '✔️';
+    position: absolute;
+    left: 0;
+    top: 10px;
+  }
+</style>

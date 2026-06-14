@@ -64,6 +64,53 @@ import Footer from '../components/Footer.astro';
       </div>
     </section>
 
+    <section class="faq-section container py-5">
+      <h2 class="section-title">Questions Fréquentes (FAQ)</h2>
+      <div class="faq-grid">
+        <div class="faq-item glass">
+          <h3>Quel est le délai d'intervention pour une urgence ?</h3>
+          <p>À Liège et dans son agglomération, nous garantissons une arrivée en moins de 30 minutes grâce à notre équipe d'astreinte.</p>
+        </div>
+        <div class="faq-item glass">
+          <h3>Combien coûte un dépannage ?</h3>
+          <p>Nos tarifs sont 100% transparents. Le technicien évalue la situation sur place et fournit un devis exact avant toute manipulation. Pas de frais cachés.</p>
+        </div>
+        <div class="faq-item glass">
+          <h3>Comment déboucher une canalisation sans casse ?</h3>
+          <p>Nous utilisons des caméras d'inspection et des systèmes d'hydrocurage à haute pression qui nettoient en profondeur sans endommager les tuyaux.</p>
+        </div>
+      </div>
+
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [{
+          "@type": "Question",
+          "name": "Quel est le délai d'intervention pour une urgence ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "À Liège et dans son agglomération, nous garantissons une arrivée en moins de 30 minutes grâce à notre équipe d'astreinte."
+          }
+        }, {
+          "@type": "Question",
+          "name": "Combien coûte un dépannage ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nos tarifs sont 100% transparents. Le technicien évalue la situation sur place et fournit un devis exact avant toute manipulation. Pas de frais cachés."
+          }
+        }, {
+          "@type": "Question",
+          "name": "Comment déboucher une canalisation sans casse ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nous utilisons des caméras d'inspection et des systèmes d'hydrocurage à haute pression qui nettoient en profondeur sans endommager les tuyaux."
+          }
+        }]
+      }
+      </script>
+    </section>
+
     <section class="cta py-5">
       <div class="container cta-container glass">
         <h2>Une Urgence Plomberie ?</h2>
@@ -202,5 +249,27 @@ import Footer from '../components/Footer.astro';
   @media (max-width: 768px) {
     .hero h1 { font-size: 2.5rem; }
     .features { margin-top: 40px; }
+  }
+
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+
+  .faq-item {
+    padding: 30px;
+    border-left: 4px solid var(--orange);
+  }
+
+  .faq-item h3 {
+    color: var(--navy);
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+  }
+
+  .faq-item p {
+    color: #475569;
+    margin: 0;
   }
 </style>

@@ -1,0 +1,95 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="Désembouage Radiateur Liège | Lynecares Plomberie" description="Expert en désembouage de radiateur à Liège. Améliorez le rendement de votre chaudière et réduisez votre facture énergétique avec notre intervention professionnelle.">
+  <Navbar />
+  
+  <main>
+    <section class="page-header">
+      <div class="container text-center">
+        <h1>Désembouage Radiateur à Liège</h1>
+        <p>Retrouvez un chauffage performant et diminuez votre facture d'énergie</p>
+      </div>
+    </section>
+
+    <section class="container py-5">
+      <div class="glass p-5 mb-4">
+        <h2>Pourquoi réaliser un désembouage de vos radiateurs ?</h2>
+        <p>Le <strong>désembouage</strong> est une opération d'entretien essentiel pour votre installation de chauffage central. Avec le temps, l'eau qui circule dans vos canalisations réagit avec les métaux et crée de la "boue". Cette boue s'accumule dans les radiateurs et la chaudière, provoquant plusieurs problèmes :</p>
+        <ul class="values-list">
+          <li><strong>Perte de rendement :</strong> L'eau chaude circule mal, le bas de vos radiateurs reste froid.</li>
+          <li><strong>Surconsommation énergétique :</strong> Votre chaudière doit chauffer plus fort pour atteindre la température souhaitée.</li>
+          <li><strong>Usure prématurée :</strong> Les boues endommagent les pièces de votre chaudière (circulateur, vanne).</li>
+          <li><strong>Bruits gênants :</strong> Claquements ou sifflements dans les tuyaux.</li>
+        </ul>
+      </div>
+
+      <div class="glass p-5 mb-4">
+        <h2>Notre Méthode d'Intervention à Liège</h2>
+        <p>Chez Lynecares, nous utilisons une machine hydropneumatique professionnelle qui combine eau sous pression et air pulsé pour décoller et évacuer toutes les boues, sans aucun risque pour vos tuyauteries. Nous rinçons chaque radiateur individuellement jusqu'à ce que l'eau soit claire.</p>
+        <a href="/contact" class="btn-primary mt-4">Demander un devis pour le désembouage</a>
+      </div>
+    </section>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Désembouage Radiateur",
+      "provider": {
+        "@type": "Plumber",
+        "name": "Lynecares Plomberie Liégeoise"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Liège"
+      },
+      "description": "Nettoyage en profondeur du circuit de chauffage et des radiateurs pour éliminer les boues accumulées, améliorer le rendement thermique et prolonger la durée de vie de la chaudière."
+    }
+    </script>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .page-header {
+    background-color: var(--navy);
+    color: white;
+    padding: 150px 0 80px;
+    text-align: center;
+  }
+
+  .page-header h1 {
+    color: white;
+    font-size: 3rem;
+  }
+
+  .page-header p {
+    color: var(--cyan);
+    font-size: 1.2rem;
+  }
+
+  .p-5 { padding: 40px; }
+
+  .values-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .values-list li {
+    padding: 10px 0 10px 30px;
+    position: relative;
+    color: #475569;
+  }
+
+  .values-list li::before {
+    content: '✅';
+    position: absolute;
+    left: 0;
+    top: 10px;
+  }
+</style>

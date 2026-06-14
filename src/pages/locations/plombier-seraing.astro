@@ -1,0 +1,74 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="Plombier Chauffagiste à Seraing | Lynecares Urgence 24/7" description="Votre plombier à Seraing (4100) pour tout dépannage urgent, débouchage canalisation et entretien chauffage. Devis gratuit et transparence totale.">
+  <Navbar />
+  
+  <main>
+    <section class="page-header">
+      <div class="container text-center">
+        <h1>Plombier à Seraing</h1>
+        <p>Intervention rapide 24h/24 et 7j/7 sur tout le territoire sérésien (4100)</p>
+      </div>
+    </section>
+
+    <section class="container py-5">
+      <div class="glass p-5 mb-4">
+        <h2>Besoin d'un plombier en urgence à Seraing ?</h2>
+        <p>Que vous habitiez près du Val Saint-Lambert, aux Biens-Communaux, ou dans le centre de Seraing (Ougrée, Jemeppe), <strong>Lynecares Plomberie</strong> vous garantit une intervention express pour toutes vos urgences : fuites d'eau, canalisations bouchées, pannes de chaudière ou chauffe-eau.</p>
+        
+        <h3 class="mt-4">Pourquoi faire appel à nous à Seraing ?</h3>
+        <ul class="values-list">
+          <li><strong>Proximité immédiate :</strong> Nos techniciens sillonnent quotidiennement la zone de Seraing et Flémalle, nous permettant d'arriver chez vous en moins de 30 minutes.</li>
+          <li><strong>Transparence des prix :</strong> Pas de mauvaises surprises. Le technicien évalue la réparation et vous donne un prix fixe avant de commencer.</li>
+          <li><strong>Service complet :</strong> Plomberie, débouchage par hydrocurage, installation et entretien de chaudières (gaz/mazout).</li>
+        </ul>
+        <a href="tel:+32400000000" class="btn-primary mt-4">Appeler notre technicien sérésien</a>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .page-header {
+    background-color: var(--navy);
+    color: white;
+    padding: 150px 0 80px;
+    text-align: center;
+  }
+
+  .page-header h1 {
+    color: white;
+    font-size: 3rem;
+  }
+
+  .page-header p {
+    color: var(--cyan);
+    font-size: 1.2rem;
+  }
+
+  .p-5 { padding: 40px; }
+
+  .values-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .values-list li {
+    padding: 10px 0 10px 30px;
+    position: relative;
+    color: #475569;
+  }
+
+  .values-list li::before {
+    content: '✔️';
+    position: absolute;
+    left: 0;
+    top: 10px;
+  }
+</style>

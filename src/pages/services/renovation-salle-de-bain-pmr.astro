@@ -1,0 +1,97 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="Rénovation Salle de Bain PMR Liège | Lynecares" description="Spécialiste de l'aménagement et la rénovation de salle de bain pour PMR à Liège. Douche de plain-pied, barres d'appui et accessoires de sécurité.">
+  <Navbar />
+  
+  <main>
+    <section class="page-header">
+      <div class="container text-center">
+        <h1>Rénovation Salle de Bain PMR à Liège</h1>
+        <p>Sécurité, confort et accessibilité pour les personnes à mobilité réduite</p>
+      </div>
+    </section>
+
+    <section class="container py-5">
+      <div class="glass p-5 mb-4">
+        <h2>Un aménagement sur mesure pour votre sécurité</h2>
+        <p>Adapter sa salle de bain est une étape cruciale pour garantir l'autonomie et prévenir les risques de chute, que ce soit pour les seniors ou les personnes en situation de handicap (PMR). Chez <strong>Lynecares Plomberie Liégeoise</strong>, nous prenons en charge la totalité de l'aménagement de votre salle de bain accessible.</p>
+        
+        <h3 class="mt-4">Nos solutions d'aménagement</h3>
+        <ul class="values-list">
+          <li><strong>Douche à l'italienne de plain-pied :</strong> Sans ressaut, avec revêtement de sol antidérapant (classe PN24 ou C).</li>
+          <li><strong>Sièges de douche et barres de maintien :</strong> Installation ergonomique et solide, fixée sur mur porteur.</li>
+          <li><strong>WC surélevés :</strong> Cuvette adaptée pour faciliter le transfert depuis un fauteuil roulant, avec accoudoirs.</li>
+          <li><strong>Lavabos suspendus ergonomiques :</strong> Accessibles en fauteuil, avec mitigeur à long levier ou détection infrarouge pour éviter les brûlures.</li>
+        </ul>
+      </div>
+
+      <div class="glass p-5 mb-4 text-center">
+        <h2>Vous avez un projet ?</h2>
+        <p>Nous étudions ensemble l'aménagement idéal en fonction de vos besoins spécifiques et de la configuration de votre domicile. Nous vous aidons également à vérifier votre éligibilité aux différentes primes de la Région Wallonne pour l'adaptation du logement (ex: prime ADAP).</p>
+        <a href="/contact" class="btn-primary mt-4">Prendre rendez-vous pour un devis gratuit</a>
+      </div>
+    </section>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Rénovation Salle de Bain PMR",
+      "provider": {
+        "@type": "Plumber",
+        "name": "Lynecares Plomberie Liégeoise"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Liège"
+      },
+      "description": "Aménagement et adaptation de salles de bain pour les personnes à mobilité réduite (PMR) et les seniors. Installation de douches de plain-pied et sanitaires adaptés."
+    }
+    </script>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .page-header {
+    background-color: var(--navy);
+    color: white;
+    padding: 150px 0 80px;
+    text-align: center;
+  }
+
+  .page-header h1 {
+    color: white;
+    font-size: 3rem;
+  }
+
+  .page-header p {
+    color: var(--cyan);
+    font-size: 1.2rem;
+  }
+
+  .p-5 { padding: 40px; }
+
+  .values-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .values-list li {
+    padding: 10px 0 10px 30px;
+    position: relative;
+    color: #475569;
+  }
+
+  .values-list li::before {
+    content: '💧';
+    position: absolute;
+    left: 0;
+    top: 10px;
+  }
+</style>
