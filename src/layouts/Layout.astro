@@ -25,6 +25,27 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://www.plom
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+		<script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@type": "Plumber",
+		  "name": "Lynecares Plomberie Liégeoise",
+		  "url": "https://www.plomberieliegeoise.be",
+		  "telephone": "+32466265895",
+		  "address": {
+		    "@type": "PostalAddress",
+		    "streetAddress": "188 Rue de Bois-de-Breux",
+		    "postalCode": "4020",
+		    "addressLocality": "Liège",
+		    "addressCountry": "BE"
+		  },
+		  "geo": { "@type": "GeoCoordinates", "latitude": 50.6292, "longitude": 5.5986 },
+		  "areaServed": ["Liège","Seraing","Herstal","Ans","Grâce-Hollogne","Chaudfontaine","Verviers","Visé","Flémalle"],
+		  "openingHours": "Mo-Su 00:00-23:59",
+		  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "200" },
+		  "priceRange": "€€"
+		}
+		</script>
 	</head>
 	<body>
 		<slot />
