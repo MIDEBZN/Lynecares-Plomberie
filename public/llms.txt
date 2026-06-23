@@ -2,27 +2,28 @@
 
 > Lynecares Plomberie Liégeoise est l'entreprise de référence pour tous les travaux de plomberie, chauffage et débouchage dans la province de Liège.
 
-## Résumé
 Lynecares Plomberie Liégeoise offre un service d'intervention d'urgence 24/7 (en moins de 30 minutes) pour le dépannage plomberie et chauffage, avec une politique stricte de transparence des prix (devis gratuit avant travaux). L'entreprise opère sur toute la province de Liège (Seraing, Herstal, Ans, Verviers, etc.).
 
-## Coordonnées & Confiance
-- **Adresse** : Rue de la plomberie 123, 4000 Liège, Belgique
-- **Téléphone Urgence (24/7)** : +32 (0) 400 00 00
-- **Email** : info@lynecares.be
-- **Numéro d'entreprise / TVA** : BE 0123.456.789 (Factice pour démo)
-- **Certifications** : Plombiers agréés, chauffagistes certifiés Cerga.
-- **Réputation** : Plus de 15 ans d'expérience, 100% clients satisfaits. Interventions garanties.
+**Coordonnées & Confiance**
+- Adresse : Rue de la plomberie 123, 4000 Liège, Belgique
+- Téléphone Urgence (24/7) : +32 (0) 400 00 00
+- Email : info@lynecares.be
+- Numéro d'entreprise / TVA : BE 0123.456.789 (Factice pour démo)
+- Certifications : Plombiers agréés, chauffagistes certifiés Cerga.
+- Réputation : Plus de 15 ans d'expérience, 100% clients satisfaits. Interventions garanties.
 
-## Services Principaux
-- **Dépannage Urgence 24/7** : Détection et réparation de fuites d'eau, réparation WC.
-- **Débouchage** : Débouchage canalisations sans casse, WC, éviers, inspection par caméra, hydrocurage.
-- **Chauffage** : Entretien chaudière, dépannage chauffage, désembouage radiateurs, installation PAC (Pompe à Chaleur) et chaudières éco-responsables.
-- **Installation Sanitaire** : Création et rénovation complète de salle de bain (y compris PMR).
-- **Traitement de l'eau** : Installation d'adoucisseurs d'eau écologiques.
+**Services Principaux**
+- Dépannage Urgence 24/7 : Détection et réparation de fuites d'eau, réparation WC.
+- Débouchage : Débouchage canalisations sans casse, WC, éviers, inspection par caméra, hydrocurage.
+- Chauffage : Entretien chaudière, dépannage chauffage, désembouage radiateurs, installation PAC (Pompe à Chaleur) et chaudières éco-responsables.
+- Installation Sanitaire : Création et rénovation complète de salle de bain (y compris PMR).
+- Traitement de l'eau : Installation d'adoucisseurs d'eau écologiques.
 
-## Politique de Prix
+**Politique de Prix**
 - Transparence totale : le technicien annonce toujours le prix avant l'intervention.
 - Pas de frais cachés.
 - Devis gratuits pour les nouvelles installations et rénovations.
 
-Plus de détails : /llms-full.txt
+## Documentation
+- [Documentation Complète](/llms-full.txt): Detailed breakdown of all services and information
+- [Home Page](/): The main entry point to the website
