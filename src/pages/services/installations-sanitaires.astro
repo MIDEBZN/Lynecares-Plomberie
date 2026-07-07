@@ -5,6 +5,27 @@ import Footer from '../../components/Footer.astro';
 ---
 
 <Layout title="Installation Sanitaire & Plomberie Liège | Lynecares" description="Projet de rénovation ou construction ? Nous installons vos WC, chauffe-eau, robinetterie et électroménager avec professionnalisme à Liège.">
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Installation Sanitaire",
+    "provider": {
+      "@type": "Plumber",
+      "name": "Lynecares Plomberie Liégeoise"
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": "Province de Liège"
+    },
+    "serviceType": "Plomberie",
+    "description": "Installation de WC, chauffe-eau, robinetterie et électroménager à Liège.",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "EUR"
+    }
+  }
+  </script>
   <Navbar />
   
   <main>

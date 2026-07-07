@@ -5,6 +5,27 @@ import Footer from '../../components/Footer.astro';
 ---
 
 <Layout title="Réparation Fuite d'Eau Liège | Lynecares Plomberie" description="Artisan plombier à Liège pour la réparation de vos fuites d'eau : robinet, sous évier, chasse d'eau, tuyau percé. Devis clair et intervention rapide.">
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Réparation de Fuite d'Eau",
+    "provider": {
+      "@type": "Plumber",
+      "name": "Lynecares Plomberie Liégeoise"
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": "Province de Liège"
+    },
+    "serviceType": "Dépannage Plomberie",
+    "description": "Réparation rapide de fuites d'eau à Liège (robinet, sous évier, chasse d'eau, tuyau percé).",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "EUR"
+    }
+  }
+  </script>
   <Navbar />
   
   <main>

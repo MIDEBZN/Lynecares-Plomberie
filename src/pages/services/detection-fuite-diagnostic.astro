@@ -5,6 +5,27 @@ import Footer from '../../components/Footer.astro';
 ---
 
 <Layout title="Détection de Fuite et Inspection Caméra Liège | Lynecares" description="Inspection par caméra et détection de fuite non destructive à Liège. Diagnostic plomberie complet avec rapports pour votre assurance.">
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Détection de Fuite par Caméra",
+    "provider": {
+      "@type": "Plumber",
+      "name": "Lynecares Plomberie Liégeoise"
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": "Province de Liège"
+    },
+    "serviceType": "Diagnostic Plomberie",
+    "description": "Inspection par caméra et détection de fuite non destructive à Liège.",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "EUR"
+    }
+  }
+  </script>
   <Navbar />
   
   <main>

@@ -5,6 +5,27 @@ import Footer from '../../components/Footer.astro';
 ---
 
 <Layout title="Urgences Plomberie 24/7 à Liège | Lynecares" description="Intervention d'urgence 24h/24 et 7j/7 à Liège pour tout problème de plomberie : débouchage, fuite d'eau, dégât des eaux, rupture de canalisation.">
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Urgences Plomberie 24/7",
+    "provider": {
+      "@type": "Plumber",
+      "name": "Lynecares Plomberie Liégeoise"
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": "Province de Liège"
+    },
+    "serviceType": "Emergency Plumbing",
+    "description": "Intervention d'urgence plomberie 24/7 à Liège. Dépannage rapide en moins de 30 minutes pour fuites, inondations et urgences.",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "EUR"
+    }
+  }
+  </script>
   <Navbar />
   
   <main>

@@ -5,6 +5,27 @@ import Footer from '../../components/Footer.astro';
 ---
 
 <Layout title="Désembouage Radiateur Liège | Lynecares Plomberie" description="Expert en désembouage de radiateur à Liège. Améliorez le rendement de votre chaudière et réduisez votre facture énergétique avec notre intervention professionnelle.">
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Désembouage de Radiateur",
+    "provider": {
+      "@type": "Plumber",
+      "name": "Lynecares Plomberie Liégeoise"
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": "Province de Liège"
+    },
+    "serviceType": "Entretien Chauffage",
+    "description": "Service de désembouage de radiateur à Liège pour améliorer le rendement de votre chaudière.",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "EUR"
+    }
+  }
+  </script>
   <Navbar />
   
   <main>

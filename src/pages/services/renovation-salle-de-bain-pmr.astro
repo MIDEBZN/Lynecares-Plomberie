@@ -5,6 +5,27 @@ import Footer from '../../components/Footer.astro';
 ---
 
 <Layout title="Rénovation Salle de Bain PMR Liège | Lynecares" description="Spécialiste de l'aménagement et la rénovation de salle de bain pour PMR à Liège. Douche de plain-pied, barres d'appui et accessoires de sécurité.">
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Rénovation de Salle de Bain PMR",
+    "provider": {
+      "@type": "Plumber",
+      "name": "Lynecares Plomberie Liégeoise"
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": "Province de Liège"
+    },
+    "serviceType": "Rénovation Sanitaire",
+    "description": "Aménagement et rénovation de salle de bain pour Personnes à Mobilité Réduite (PMR) à Liège.",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "EUR"
+    }
+  }
+  </script>
   <Navbar />
   
   <main>

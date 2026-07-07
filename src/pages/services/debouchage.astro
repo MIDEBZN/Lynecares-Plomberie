@@ -5,6 +5,27 @@ import Footer from '../../components/Footer.astro';
 ---
 
 <Layout title="Débouchage Liège | Canalisation, Évier, WC | Lynecares" description="Service professionnel de débouchage à Liège. Égout, WC, évier, baignoire. Hydrocurage haute pression et inspection caméra.">
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Débouchage de Canalisations",
+    "provider": {
+      "@type": "Plumber",
+      "name": "Lynecares Plomberie Liégeoise"
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": "Province de Liège"
+    },
+    "serviceType": "Débouchage",
+    "description": "Service de débouchage d'urgence à Liège pour WC, éviers, et égouts. Intervention avec hydrocurage haute pression.",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "EUR"
+    }
+  }
+  </script>
   <Navbar />
   
   <main>

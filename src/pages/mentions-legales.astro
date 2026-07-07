@@ -1,0 +1,121 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Mentions Légales & Politique de Confidentialité | Lynecares" description="Mentions légales et politique de confidentialité de l'entreprise Lynecares Plomberie Liégeoise.">
+  <Navbar />
+  
+  <main class="legal-page py-5">
+    <div class="container">
+      <h1 class="mb-4">Mentions Légales & Politique de Confidentialité</h1>
+      
+      <section class="glass p-5 mb-5">
+        <h2>1. Éditeur du site</h2>
+        <p>Le site <strong>plomberieliegeoise.be</strong> est édité par :</p>
+        <ul>
+          <li><strong>Nom de l'entreprise :</strong> Lynecares SRL</li>
+          <li><strong>Responsable de publication :</strong> Thomas</li>
+          <li><strong>Siège social :</strong> 188 Rue de Bois-de-Breux, 4020 Liège, Belgique</li>
+          <li><strong>Téléphone :</strong> 0466 26 58 95</li>
+          <li><strong>Email :</strong> contact@plomberieliégeoise.be</li>
+          <li><strong>Numéro d'entreprise (BCE) :</strong> [À compléter]</li>
+        </ul>
+      </section>
+
+      <section class="glass p-5 mb-5">
+        <h2>2. Hébergement</h2>
+        <p>Ce site est hébergé par Vercel Inc.<br>
+        340 S Lemon Ave #4133<br>
+        Walnut, CA 91789, USA</p>
+      </section>
+
+      <section class="glass p-5 mb-5">
+        <h2>3. Propriété intellectuelle</h2>
+        <p>L'ensemble de ce site relève de la législation belge et internationale sur le droit d'auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables et les représentations iconographiques et photographiques.</p>
+        <p>La reproduction de tout ou partie de ce site sur un support électronique quel qu'il soit est formellement interdite sauf autorisation expresse du directeur de la publication.</p>
+      </section>
+
+      <section class="glass p-5 mb-5">
+        <h2>4. Politique de Confidentialité & RGPD</h2>
+        <h3>Collecte des données</h3>
+        <p>Nous collectons les données suivantes via notre formulaire de contact : nom, adresse email, numéro de téléphone, et détails de votre demande.</p>
+        
+        <h3>Finalité de la collecte</h3>
+        <p>Ces données sont exclusivement utilisées pour :</p>
+        <ul>
+          <li>Traiter vos demandes de devis et d'intervention.</li>
+          <li>Vous recontacter dans le cadre du service demandé.</li>
+          <li>Établir des factures et devis.</li>
+        </ul>
+        
+        <h3>Conservation et protection</h3>
+        <p>Vos données sont conservées pour une durée maximale de 3 ans après notre dernier contact. Elles ne sont jamais revendues ou cédées à des tiers. Les communications sur ce site sont sécurisées via le protocole HTTPS (certificat SSL).</p>
+        
+        <h3>Vos droits</h3>
+        <p>Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès, de rectification, de suppression et d'opposition aux données personnelles vous concernant. Pour exercer ce droit, veuillez nous contacter par email à l'adresse suivante : contact@plomberieliégeoise.be.</p>
+      </section>
+
+      <section class="glass p-5">
+        <h2>5. Cookies</h2>
+        <p>Ce site n'utilise que des cookies techniques strictement nécessaires à son bon fonctionnement et ne requérant pas le consentement préalable de l'utilisateur. Nous n'utilisons aucun tracker publicitaire tiers.</p>
+      </section>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  @import '../styles/global.css';
+
+  .legal-page {
+    background-color: var(--light-bg);
+    min-height: 80vh;
+    padding-top: 150px;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    color: var(--navy);
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  h2 {
+    color: var(--cyan);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--orange);
+    padding-bottom: 10px;
+    display: inline-block;
+  }
+
+  h3 {
+    color: var(--navy);
+    font-size: 1.2rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  p, ul {
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+
+  .glass {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  }
+</style>

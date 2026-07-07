@@ -5,6 +5,27 @@ import Footer from '../../components/Footer.astro';
 ---
 
 <Layout title="Entretien Plomberie et Chauffage Liège | Lynecares" description="Contrats d'entretien plomberie et chauffage à Liège. Détartrage de boiler, désembouage, entretien préventif des canalisations.">
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Entretien Plomberie et Chauffage",
+    "provider": {
+      "@type": "Plumber",
+      "name": "Lynecares Plomberie Liégeoise"
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": "Province de Liège"
+    },
+    "serviceType": "Entretien",
+    "description": "Entretien de plomberie et chauffage à Liège. Détartrage de boiler et entretien préventif.",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "EUR"
+    }
+  }
+  </script>
   <Navbar />
   
   <main>
