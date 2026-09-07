@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import '@fontsource/inter';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 
 interface Props {
 	title: string;
@@ -64,6 +65,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://www.plom
 		<slot name="head" />
 	</head>
 	<body>
+		<Breadcrumbs />
 		<slot />
 
 		<!-- Floating WhatsApp Button -->

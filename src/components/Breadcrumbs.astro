@@ -1,0 +1,100 @@
+---
+const pathname = Astro.url.pathname;
+const segments = pathname.split('/').filter(Boolean);
+let currentPath = '';
+
+const breadcrumbs = segments.map((segment, index) => {
+  currentPath += `/${segment}`;
+  // capitaliser le premier caractère, remplacer tirets par espace
+  const name = segment.replace(/-/g, ' ').replace(/^\w/, (c) => c.toUpperCase());
+  return {
+    name,
+    url: currentPath,
+    isLast: index === segments.length - 1
+  };
+});
+
+// JSON-LD Schema
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Accueil",
+      "item": "https://www.plomberieliegeoise.be/"
+    },
+    ...breadcrumbs.map((crumb, index) => ({
+      "@type": "ListItem",
+      "position": index + 2,
+      "name": crumb.name,
+      "item": `https://www.plomberieliegeoise.be${crumb.url}`
+    }))
+  ]
+};
+---
+
+{segments.length > 0 && (
+  <>
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    <nav aria-label="Breadcrumb" class="breadcrumbs-container">
+      <div class="container">
+        <ol class="breadcrumbs">
+          <li class="breadcrumb-item">
+            <a href="/">Accueil</a>
+          </li>
+          {breadcrumbs.map((crumb) => (
+            <li class={`breadcrumb-item ${crumb.isLast ? 'active' : ''}`} aria-current={crumb.isLast ? 'page' : undefined}>
+              {!crumb.isLast ? (
+                <a href={crumb.url}>{crumb.name}</a>
+              ) : (
+                <span>{crumb.name}</span>
+              )}
+            </li>
+          ))}
+        </ol>
+      </div>
+    </nav>
+  </>
+)}
+
+<style>
+  .breadcrumbs-container {
+    background-color: #f8fafc;
+    padding: 10px 0;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .breadcrumbs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.9rem;
+  }
+  .breadcrumb-item {
+    display: flex;
+    align-items: center;
+  }
+  .breadcrumb-item + .breadcrumb-item::before {
+    content: '>';
+    margin: 0 10px;
+    color: #94a3b8;
+    font-size: 0.8rem;
+  }
+  .breadcrumb-item a {
+    color: var(--cyan);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .breadcrumb-item a:hover {
+    color: var(--orange);
+    text-decoration: underline;
+  }
+  .breadcrumb-item.active {
+    color: #475569;
+    font-weight: 600;
+  }
+</style>
