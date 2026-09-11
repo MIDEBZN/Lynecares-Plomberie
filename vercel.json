@@ -1,4 +1,22 @@
 {
+  "redirects": [
+    {
+      "source": "/blog/plombier-zingueur-liege-reparation-corniches/?",
+      "destination": "/services/fuites-reparations/",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "plomberieliegeoise.be"
+        }
+      ],
+      "destination": "https://www.plomberieliegeoise.be/$1",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
