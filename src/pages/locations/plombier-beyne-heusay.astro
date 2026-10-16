@@ -1,0 +1,131 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout 
+  title="Plombier Beyne-Heusay (4610) | Dépannage 7j/7 | Lynecares" 
+  description="Plombier à Beyne-Heusay et Queue-du-Bois (4610). Dépannage d'urgence fuite d'eau, débouchage et chauffe-eau. Intervention rapide et devis gratuit."
+>
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "PlumbingService",
+    "@id": "https://www.plomberieliegeoise.be/locations/plombier-beyne-heusay/#service",
+    "name": "Lynecares Plomberie Beyne-Heusay",
+    "provider": {
+      "@type": "Plumber",
+      "@id": "https://www.plomberieliegeoise.be/#organization",
+      "name": "Lynecares Plomberie Liégeoise"
+    },
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "name": "Beyne-Heusay",
+      "postalCode": "4610"
+    },
+    "telephone": "+32466265895",
+    "url": "https://www.plomberieliegeoise.be/locations/plombier-beyne-heusay/"
+  }
+  </script>
+  <Navbar />
+  
+  <main>
+    <section class="page-header">
+      <div class="container text-center">
+        <h1>Plombier à Beyne-Heusay (4610) et Queue-du-Bois</h1>
+        <p>Dépannage d'urgence 7j/7 : Queue-du-Bois, Bellaire et Moulins-sous-Fléron</p>
+      </div>
+    </section>
+
+    <section class="container py-5">
+      <div class="row-split">
+        <div class="glass p-5 mb-4">
+          <h2>Votre artisan plombier de proximité à Beyne-Heusay</h2>
+          <p>Située sur la N3 aux portes du Plateau de Herve, la commune de <strong>Beyne-Heusay</strong> bénéficie d'une proximité immédiate avec notre atelier basé Rue de Bois-de-Breux (4020). Que vous résidiez le long de la Grand'Route, à Queue-du-Bois ou à Bellaire, nous arrivons rapidement pour sécuriser vos installations sanitaires.</p>
+          
+          <h3 class="mt-4">Délais d'intervention sur Beyne-Heusay</h3>
+          <div class="highlight-box">
+            <span class="icon">⏱️</span> <strong>Délai estimé : Environ 15 à 20 minutes via la N3.</strong>
+            <p>Notre localisation à l'est de Liège nous permet d'intervenir sans encombre sur l'ensemble de l'entité 4610 pour tout dépannage urgent.</p>
+          </div>
+        </div>
+        
+        <div class="glass p-5 mb-4">
+          <h2>Spécificités plomberie à Beyne-Heusay</h2>
+          <p>Le relief vallonné de Beyne-Heusay engendre parfois d'importantes variations de pression sur le réseau de distribution d'eau potable. Nous installons régulièrement des <strong>réducteurs de pression</strong> pour protéger les boilers et mitigeurs contre l'usure prématurée.</p>
+          <p>De plus, l'eau distribuée sur l'entité présente une dureté notable, favorisant l'entartrage rapide des résistances de chauffe-eau.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-overview py-5 bg-light">
+      <div class="container">
+        <h2 class="section-title">Prestations prioritaires à Beyne-Heusay</h2>
+        <div class="services-grid">
+          <div class="service-card glass">
+            <h3>🚨 Dépannage Fuite d'Urgence</h3>
+            <p>Tuyau percé, fuite sous évier, vanne d'arrêt bloquée ou infiltration d'eau. Sécurisation immédiate de votre domicile.</p>
+            <a href="/services/urgences-plomberie/" class="read-more">Urgences plomberie &rarr;</a>
+          </div>
+          <div class="service-card glass">
+            <h3>🌪️ Débouchage Canalisations</h3>
+            <p>WC engorgé, refoulement dans la salle de bain ou égout extérieur bouché. Dégagement efficace au furet mécanique ou hydrocureuse.</p>
+            <a href="/services/debouchage/" class="read-more">Débouchage canalisations &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container py-5">
+      <div class="glass p-5">
+        <h2>Pourquoi faire appel à Lynecares à Beyne-Heusay ?</h2>
+        <p>Contrairement aux plateformes d'intermédiaires qui facturent des frais de déplacement exorbitants depuis Bruxelles, nous sommes vos voisins directs. Vous traitez directement avec un technicien qualifié, avec un devis annoncé clairement avant tout début de démontage.</p>
+        <div class="trust-badges mt-4">
+          <span class="badge">✅ Devis Transparent</span>
+          <span class="badge">✅ Proximité Bois-de-Breux</span>
+          <span class="badge">✅ Agréé Assurances</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section container py-5">
+      <h2 class="section-title">Questions Fréquentes - Beyne-Heusay</h2>
+      <div class="faq-grid">
+        <div class="faq-item glass">
+          <h3>Intervenez-vous également le week-end à Queue-du-Bois ?</h3>
+          <p>Oui, notre permanence d'urgence est active 24h/24 et 7j/7 sur toute l'entité de Beyne-Heusay, y compris les samedis, dimanches et jours fériés.</p>
+        </div>
+        <div class="faq-item glass">
+          <h3>Faut-il installer un adoucisseur d'eau à Beyne-Heusay ?</h3>
+          <p>La teneur en calcaire dans l'est liégeois accélère l'entartrage des boilers. La pose d'un adoucisseur ou un détartrage préventif tous les 2 ans est vivement recommandée.</p>
+        </div>
+      </div>
+      <div class="text-center mt-5">
+        <a href="/locations/" class="btn-secondary">← Retour à toutes les communes</a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  @import '../../styles/global.css';
+  .page-header { background-color: var(--navy); color: white; padding: 150px 0 80px; text-align: center; }
+  .page-header h1 { color: white; font-size: 2.8rem; margin-bottom: 15px; }
+  .page-header p { color: var(--cyan); font-size: 1.2rem; }
+  .p-5 { padding: 40px; }
+  .row-split { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 30px; }
+  .highlight-box { background: rgba(0, 168, 204, 0.08); border-left: 4px solid var(--cyan); padding: 20px; border-radius: 8px; margin-top: 20px; }
+  .bg-light { background-color: white; }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+  .service-card { padding: 30px; border-top: 4px solid var(--orange); }
+  .service-card h3 { color: var(--navy); margin-bottom: 15px; }
+  .trust-badges { display: flex; flex-wrap: wrap; gap: 15px; }
+  .badge { background: var(--navy); color: white; padding: 8px 15px; border-radius: 20px; font-size: 0.9rem; }
+  .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 20px; }
+  .faq-item { padding: 30px; border-left: 4px solid var(--orange); }
+  .faq-item h3 { color: var(--navy); font-size: 1.1rem; margin-bottom: 10px; }
+  .read-more { display: inline-block; margin-top: 15px; font-weight: 600; color: var(--cyan); }
+</style>

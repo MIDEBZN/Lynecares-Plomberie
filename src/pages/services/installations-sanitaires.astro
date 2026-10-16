@@ -4,22 +4,24 @@ import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
 ---
 
-<Layout title="Installation Sanitaire & Plomberie Liège | Lynecares" description="Projet de rénovation ou construction ? Nous installons vos WC, chauffe-eau, robinetterie et électroménager avec professionnalisme à Liège.">
+<Layout title="Installation sanitaire Liège | WC, douche et boiler | Lynecares" description="Installation sanitaire à Liège : pose de WC suspendu, remplacement de mitigeur, raccordement de boiler et tuyauterie. Devis rapide avec Lynecares.">
   <script type="application/ld+json" slot="head">
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Installation Sanitaire",
+    "@id": "https://www.plomberieliegeoise.be/services/installations-sanitaires/#service",
+    "name": "Installation Sanitaire à Liège",
     "provider": {
       "@type": "Plumber",
+      "@id": "https://www.plomberieliegeoise.be/#organization",
       "name": "Lynecares Plomberie Liégeoise"
     },
     "areaServed": {
-      "@type": "State",
+      "@type": "AdministrativeArea",
       "name": "Province de Liège"
     },
-    "serviceType": "Plomberie",
-    "description": "Installation de WC, chauffe-eau, robinetterie et électroménager à Liège.",
+    "serviceType": "Plomberie et Installation Sanitaire",
+    "description": "Installation sanitaire professionnelle à Liège : pose de WC suspendu, raccordement de chauffe-eau boiler, robinetterie et tuyauteries Alpex.",
     "offers": {
       "@type": "Offer",
       "priceCurrency": "EUR"
@@ -31,8 +33,8 @@ import Footer from '../../components/Footer.astro';
   <main>
     <section class="page-header">
       <div class="container text-center">
-        <h1>Installations Sanitaires à Liège</h1>
-        <p>De la pose d'un nouveau robinet à la création de votre salle de bain</p>
+        <h1>Installation sanitaire à Liège</h1>
+        <p>Pose de WC, chauffe-eau, robinetterie et raccordements de plomberie soignés</p>
       </div>
     </section>
 

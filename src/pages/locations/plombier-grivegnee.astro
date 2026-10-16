@@ -1,0 +1,131 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout 
+  title="Plombier Grivegnée (4030) | Dépannage Rapide | Lynecares" 
+  description="Plombier à Grivegnée (4030) pour urgence fuite, débouchage de canalisation et chauffe-eau. Proximité immédiate depuis Bois-de-Breux."
+>
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "PlumbingService",
+    "@id": "https://www.plomberieliegeoise.be/locations/plombier-grivegnee/#service",
+    "name": "Lynecares Plomberie Grivegnée",
+    "provider": {
+      "@type": "Plumber",
+      "@id": "https://www.plomberieliegeoise.be/#organization",
+      "name": "Lynecares Plomberie Liégeoise"
+    },
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "name": "Grivegnée",
+      "postalCode": "4030"
+    },
+    "telephone": "+32466265895",
+    "url": "https://www.plomberieliegeoise.be/locations/plombier-grivegnee/"
+  }
+  </script>
+  <Navbar />
+  
+  <main>
+    <section class="page-header">
+      <div class="container text-center">
+        <h1>Plombier à Grivegnée (4030) et Belleflamme</h1>
+        <p>Intervention ultra-rapide 7j/7 : Grivegnée-Bas, Grivegnée-Haut, Robermont et Péville</p>
+      </div>
+    </section>
+
+    <section class="container py-5">
+      <div class="row-split">
+        <div class="glass p-5 mb-4">
+          <h2>Votre artisan plombier à Grivegnée (4030)</h2>
+          <p>Avec notre siège d'exploitation situé Rue de Bois-de-Breux, <strong>Grivegnée</strong> est notre zone d'intervention naturelle la plus immédiate. Que vous résidiez près de la Place de la Liberté, à Belleflamme ou sur les hauteurs de Robermont, notre proximité géographique vous garantit une réactivité inégalée.</p>
+          
+          <h3 class="mt-4">Temps d'arrivée record sur Grivegnée</h3>
+          <div class="highlight-box">
+            <span class="icon">⏱️</span> <strong>Délai estimé : Moins de 15 minutes.</strong>
+            <p>Nos véhicules d'intervention sont pré-équipés pour sécuriser immédiatement toute fuite ou canalisation bouchée dans l'entité 4030.</p>
+          </div>
+        </div>
+        
+        <div class="glass p-5 mb-4">
+          <h2>Bâti liégeois et spécificités techniques</h2>
+          <p>Le parc immobilier de Grivegnée combine des maisons de maître mitoyennes, des cités ouvrières et des immeubles à appartements. Les canalisations d'origine y sont souvent en fonte ou en plomb, particulièrement vulnérables aux perforations et à l'oxydation.</p>
+          <p>Nous remplaçons ces anciennes sections par des collecteurs modernes en Alpex et multicouche pour une étanchéité définitive.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-overview py-5 bg-light">
+      <div class="container">
+        <h2 class="section-title">Services d'intervention à Grivegnée</h2>
+        <div class="services-grid">
+          <div class="service-card glass">
+            <h3>🚨 Dépannage Fuite & Urgence</h3>
+            <p>Infiltration, fuite d'eau encastrée, raccord défaillant ou dégât des eaux. Colmatage immédiat et sécurisation électrique.</p>
+            <a href="/services/urgences-plomberie/" class="read-more">Dépannage urgence 24/7 &rarr;</a>
+          </div>
+          <div class="service-card glass">
+            <h3>🔥 Chauffagiste & Boiler</h3>
+            <p>Panne de chauffe-eau, détartrage de boiler électrique et dépannage chaudière à condensation gaz/mazout.</p>
+            <a href="/services/chauffagiste-liege/" class="read-more">Dépannage chauffage &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container py-5">
+      <div class="glass p-5">
+        <h2>Un vrai plombier local à vos côtés</h2>
+        <p>Pas de centre d'appel distant ou d'intermédiaire commercial : chez Lynecares, vous parlez directement au technicien qui connaît parfaitement les spécificités de la commune de Grivegnée et de ses rues en pente.</p>
+        <div class="trust-badges mt-4">
+          <span class="badge">✅ Voisin Direct (Bois-de-Breux)</span>
+          <span class="badge">✅ Devis Gratuit</span>
+          <span class="badge">✅ Matériel Agréé</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section container py-5">
+      <h2 class="section-title">Questions Fréquentes - Grivegnée</h2>
+      <div class="faq-grid">
+        <div class="faq-item glass">
+          <h3>Pouvez-vous remplacer les anciens tuyaux en plomb de ma maison à Grivegnée ?</h3>
+          <p>Oui, nous procédons régulièrement à la dépose des anciennes canalisations en plomb pour des raisons de santé et de conformité, en installant des conduites multicouches certifiées qualité alimentaire.</p>
+        </div>
+        <div class="faq-item glass">
+          <h3>Faites-vous payer un supplément de déplacement pour Grivegnée ?</h3>
+          <p>Non, étant situés à Bois-de-Breux sur l'entité 4020 limitrophe, nos forfaits de déplacement pour Grivegnée sont appliqués au tarif local le plus bas.</p>
+        </div>
+      </div>
+      <div class="text-center mt-5">
+        <a href="/locations/" class="btn-secondary">← Retour à toutes les communes</a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  @import '../../styles/global.css';
+  .page-header { background-color: var(--navy); color: white; padding: 150px 0 80px; text-align: center; }
+  .page-header h1 { color: white; font-size: 2.8rem; margin-bottom: 15px; }
+  .page-header p { color: var(--cyan); font-size: 1.2rem; }
+  .p-5 { padding: 40px; }
+  .row-split { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 30px; }
+  .highlight-box { background: rgba(0, 168, 204, 0.08); border-left: 4px solid var(--cyan); padding: 20px; border-radius: 8px; margin-top: 20px; }
+  .bg-light { background-color: white; }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+  .service-card { padding: 30px; border-top: 4px solid var(--orange); }
+  .service-card h3 { color: var(--navy); margin-bottom: 15px; }
+  .trust-badges { display: flex; flex-wrap: wrap; gap: 15px; }
+  .badge { background: var(--navy); color: white; padding: 8px 15px; border-radius: 20px; font-size: 0.9rem; }
+  .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 20px; }
+  .faq-item { padding: 30px; border-left: 4px solid var(--orange); }
+  .faq-item h3 { color: var(--navy); font-size: 1.1rem; margin-bottom: 10px; }
+  .read-more { display: inline-block; margin-top: 15px; font-weight: 600; color: var(--cyan); }
+</style>

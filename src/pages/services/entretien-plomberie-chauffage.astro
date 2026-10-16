@@ -4,22 +4,24 @@ import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
 ---
 
-<Layout title="Entretien Plomberie et Chauffage Liège | Lynecares" description="Contrats d'entretien plomberie et chauffage à Liège. Détartrage de boiler, désembouage, entretien préventif des canalisations.">
+<Layout title="Entretien Chauffage & Boiler Liège | Prévention | Lynecares" description="Entretien préventif de chauffe-eau, détartrage de boiler et désembouage de radiateurs à Liège. Prolongez la durée de vie de vos équipements.">
   <script type="application/ld+json" slot="head">
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Entretien Plomberie et Chauffage",
+    "@id": "https://www.plomberieliegeoise.be/services/entretien-plomberie-chauffage/#service",
+    "name": "Entretien Chauffage et Plomberie à Liège",
     "provider": {
       "@type": "Plumber",
+      "@id": "https://www.plomberieliegeoise.be/#organization",
       "name": "Lynecares Plomberie Liégeoise"
     },
     "areaServed": {
-      "@type": "State",
+      "@type": "AdministrativeArea",
       "name": "Province de Liège"
     },
-    "serviceType": "Entretien",
-    "description": "Entretien de plomberie et chauffage à Liège. Détartrage de boiler et entretien préventif.",
+    "serviceType": "Entretien Préventif Chauffage et Sanitaire",
+    "description": "Entretien de plomberie et chauffage à Liège. Détartrage de boiler, vérification d'anode, désembouage de radiateurs et entretien préventif.",
     "offers": {
       "@type": "Offer",
       "priceCurrency": "EUR"
@@ -31,8 +33,8 @@ import Footer from '../../components/Footer.astro';
   <main>
     <section class="page-header">
       <div class="container text-center">
-        <h1>Entretien & Prévention</h1>
-        <p>Prolongez la durée de vie de vos installations et évitez les pannes coûteuses</p>
+        <h1>Entretien de chauffage et plomberie à Liège</h1>
+        <p>Prolongez la durée de vie de vos équipements et prévenez les pannes coûteuses</p>
       </div>
     </section>
 
@@ -42,9 +44,10 @@ import Footer from '../../components/Footer.astro';
       <div class="glass p-5 mb-4">
         <ul class="values-list">
           <li><strong>Entretien de chauffe-eau et boiler :</strong> Remplacement de l'anode en magnésium, vidange et vérification de la résistance électrique.</li>
-          <li><strong>Détartrage de canalisation :</strong> Élimination du calcaire incrusté dans les conduites d'eau chaude pour retrouver de la pression.</li>
-          <li><strong>Désembouage radiateurs :</strong> <a href="/services/desembouage-radiateur-liege/">Service complet de nettoyage de vos radiateurs</a> pour un meilleur rendement.</li>
-          <li><strong>Contrat d'entretien plomberie :</strong> Visite annuelle pour vérifier l'étanchéité de tous les siphons, vannes d'arrêt et robinetteries (idéal pour les copropriétés et syndics).</li>
+          <li><strong>Détartrage de canalisation :</strong> Élimination du calcaire incrusté dans les conduites d'eau chaude pour retrouver un débit optimal.</li>
+          <li><strong>Désembouage radiateurs :</strong> <a href="/services/desembouage-radiateur-liege/">Service complet de nettoyage de vos radiateurs</a> pour un meilleur rendement thermique.</li>
+          <li><strong>Dépannage d'urgence chaudière :</strong> Pour une réparation immédiate de chaudière en panne, consultez notre service <a href="/services/chauffagiste-liege/" class="text-cyan">chauffagiste à Liège</a>.</li>
+          <li><strong>Contrat d'entretien plomberie :</strong> Visite annuelle pour vérifier l'étanchéité de tous les siphons, vannes d'arrêt et robinetteries (copropriétés et particuliers).</li>
         </ul>
       </div>
     </section>
@@ -60,7 +63,7 @@ import Footer from '../../components/Footer.astro';
           </div>
           <div class="problem-card glass">
             <h4>Surconsommation électrique</h4>
-            <p>Un chauffe-eau entartré doit chauffer le calcaire avant de chauffer l'eau. Un entretien régulier fait baisser votre facture d'électricité jusqu'à 20%.</p>
+            <p>Un chauffe-eau entartré doit chauffer la couche de calcaire avant de chauffer l'eau. Un entretien régulier optimise le rendement énergétique et évite la surconsommation.</p>
           </div>
         </div>
         <div class="mt-5 text-center">

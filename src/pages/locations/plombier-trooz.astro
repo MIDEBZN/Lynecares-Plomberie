@@ -1,0 +1,131 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout 
+  title="Plombier Trooz (4870) | Urgence & Sanitaire | Lynecares" 
+  description="Plombier à Trooz (4870) et Fraipont. Spécialiste dépannage fuite, remise en état sanitaire et débouchage. Devis clair et transparent."
+>
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "PlumbingService",
+    "@id": "https://www.plomberieliegeoise.be/locations/plombier-trooz/#service",
+    "name": "Lynecares Plomberie Trooz",
+    "provider": {
+      "@type": "Plumber",
+      "@id": "https://www.plomberieliegeoise.be/#organization",
+      "name": "Lynecares Plomberie Liégeoise"
+    },
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "name": "Trooz",
+      "postalCode": "4870"
+    },
+    "telephone": "+32466265895",
+    "url": "https://www.plomberieliegeoise.be/locations/plombier-trooz/"
+  }
+  </script>
+  <Navbar />
+  
+  <main>
+    <section class="page-header">
+      <div class="container text-center">
+        <h1>Plombier à Trooz (4870), Fraipont et Vallée de la Vesdre</h1>
+        <p>Intervention 7j/7 pour urgences sanitaires, rénovations et débouchages de canalisations</p>
+      </div>
+    </section>
+
+    <section class="container py-5">
+      <div class="row-split">
+        <div class="glass p-5 mb-4">
+          <h2>Dépannage plomberie de confiance à Trooz</h2>
+          <p>Implantée dans la Vallée de la Vesdre, la commune de <strong>Trooz</strong> (comprenant Fraipont, Nessonvaux et Prayon) est desservie très rapidement depuis notre base liégeoise via la N61 et l'axe de Chaudfontaine. Nos techniciens interviennent pour sécuriser vos tuyauteries et moderniser vos sanitaires.</p>
+          
+          <h3 class="mt-4">Délais d'intervention sur Trooz</h3>
+          <div class="highlight-box">
+            <span class="icon">⏱️</span> <strong>Délai estimé : Environ 15 à 25 minutes via la N61.</strong>
+            <p>Trajet direct le long de la vallée permettant une prise en charge rapide des urgences d'eau et de chauffage.</p>
+          </div>
+        </div>
+        
+        <div class="glass p-5 mb-4">
+          <h2>Remise en état sanitaire & sécurisation</h2>
+          <p>La région de Trooz a connu d'importants défis liés aux inondations de la Vesdre. De nombreux propriétaires ont dû reconstruire leurs réseaux de plomberie.</p>
+          <p>Nous installons des <strong>équipements surélevés</strong> (chauffe-eau fixés en hauteur, vannes de sectionnement facilement accessibles) et des <strong>clapets anti-retour</strong> homologués pour prévenir les refoulements d'eaux usées.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-overview py-5 bg-light">
+      <div class="container">
+        <h2 class="section-title">Nos interventions à Trooz et Fraipont</h2>
+        <div class="services-grid">
+          <div class="service-card glass">
+            <h3>🚨 Dépannage Urgence Fuite</h3>
+            <p>Tuyau percé, fuite sur compteur ou chauffe-eau percé. Déplacement rapide pour couper et réparer sans attendre.</p>
+            <a href="/services/urgences-plomberie/" class="read-more">Urgences plomberie &rarr;</a>
+          </div>
+          <div class="service-card glass">
+            <h3>🔧 Installation Sanitaire Durable</h3>
+            <p>Pose de WC suspendu, remplacement de robinetterie et installation de chauffe-eau électrique ou thermodynamique.</p>
+            <a href="/services/installations-sanitaires/" class="read-more">Installations sanitaires &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container py-5">
+      <div class="glass p-5">
+        <h2>La garantie d'un travail soigné aux normes</h2>
+        <p>Toutes nos réparations et installations à Trooz font l'objet d'un devis préalable gratuit et respectent strictement les normes sanitaires wallonnes en vigueur.</p>
+        <div class="trust-badges mt-4">
+          <span class="badge">✅ Devis Transparent</span>
+          <span class="badge">✅ Proximité N61</span>
+          <span class="badge">✅ Agréé Assurances</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section container py-5">
+      <h2 class="section-title">Questions Fréquentes - Trooz</h2>
+      <div class="faq-grid">
+        <div class="faq-item glass">
+          <h3>Comment protéger son installation contre les refoulements d'égout à Trooz ?</h3>
+          <p>L'installation d'un clapet anti-retour sur votre conduite principale d'évacuation empêche mécaniquement les eaux de l'égout communal de refluer vers votre maison lors des crues ou orages violents.</p>
+        </div>
+        <div class="faq-item glass">
+          <h3>Dépêchez-vous un plombier le dimanche à Fraipont ou Nessonvaux ?</h3>
+          <p>Oui, notre service d'astreinte est opérationnel 7j/7 et 24h/24 pour tous les habitants de la commune de Trooz et des villages voisins.</p>
+        </div>
+      </div>
+      <div class="text-center mt-5">
+        <a href="/locations/" class="btn-secondary">← Retour à toutes les communes</a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  @import '../../styles/global.css';
+  .page-header { background-color: var(--navy); color: white; padding: 150px 0 80px; text-align: center; }
+  .page-header h1 { color: white; font-size: 2.8rem; margin-bottom: 15px; }
+  .page-header p { color: var(--cyan); font-size: 1.2rem; }
+  .p-5 { padding: 40px; }
+  .row-split { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 30px; }
+  .highlight-box { background: rgba(0, 168, 204, 0.08); border-left: 4px solid var(--cyan); padding: 20px; border-radius: 8px; margin-top: 20px; }
+  .bg-light { background-color: white; }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+  .service-card { padding: 30px; border-top: 4px solid var(--orange); }
+  .service-card h3 { color: var(--navy); margin-bottom: 15px; }
+  .trust-badges { display: flex; flex-wrap: wrap; gap: 15px; }
+  .badge { background: var(--navy); color: white; padding: 8px 15px; border-radius: 20px; font-size: 0.9rem; }
+  .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 20px; }
+  .faq-item { padding: 30px; border-left: 4px solid var(--orange); }
+  .faq-item h3 { color: var(--navy); font-size: 1.1rem; margin-bottom: 10px; }
+  .read-more { display: inline-block; margin-top: 15px; font-weight: 600; color: var(--cyan); }
+</style>

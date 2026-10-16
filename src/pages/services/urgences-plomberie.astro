@@ -4,22 +4,24 @@ import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
 ---
 
-<Layout title="Urgences Plomberie 24/7 à Liège | Lynecares" description="Intervention d'urgence 24h/24 et 7j/7 à Liège pour tout problème de plomberie : débouchage, fuite d'eau, dégât des eaux, rupture de canalisation.">
+<Layout title="Plombier urgence Liège 24h/24 | Lynecares" description="Urgence plomberie à Liège : fuite, canalisation, WC ou chauffe-eau. Appelez Lynecares au 0466 26 58 95 pour vérifier la disponibilité.">
   <script type="application/ld+json" slot="head">
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Urgences Plomberie 24/7",
+    "@id": "https://www.plomberieliegeoise.be/services/urgences-plomberie/#service",
+    "name": "Dépannage et Urgence Plomberie 24/7",
     "provider": {
       "@type": "Plumber",
+      "@id": "https://www.plomberieliegeoise.be/#organization",
       "name": "Lynecares Plomberie Liégeoise"
     },
     "areaServed": {
-      "@type": "State",
+      "@type": "AdministrativeArea",
       "name": "Province de Liège"
     },
-    "serviceType": "Emergency Plumbing",
-    "description": "Intervention d'urgence plomberie 24/7 à Liège. Dépannage rapide en moins de 30 minutes pour fuites, inondations et urgences.",
+    "serviceType": "Emergency Plumbing Service",
+    "description": "Dépannage d'urgence plomberie 24/7 à Liège. Intervention rapide pour fuites d'eau majeures, canalisations bouchées, inondations et pannes de chauffe-eau.",
     "offers": {
       "@type": "Offer",
       "priceCurrency": "EUR"
@@ -31,20 +33,21 @@ import Footer from '../../components/Footer.astro';
   <main>
     <section class="page-header">
       <div class="container text-center">
-        <h1>Urgences Plomberie à Liège</h1>
-        <p>Intervention immédiate 24h/24 et 7j/7 en moins de 30 minutes</p>
+        <h1>Plombier urgence à Liège, 24h/24 et 7j/7</h1>
+        <p>Intervention rapide d'astreinte : fuites, WC bouchés, inondations et pannes sanitaires</p>
       </div>
     </section>
 
     <!-- WHAT'S INCLUDED -->
     <section class="container py-5">
-      <h2 class="section-title">Ce qui est inclus dans nos urgences</h2>
+      <h2 class="section-title">Nos interventions d'urgence plomberie</h2>
       <div class="glass p-5 mb-4">
         <ul class="values-list">
-          <li><strong>Débouchage d'urgence 24h/24 :</strong> Intervention immédiate pour les WC débordants ou canalisations complètement bloquées.</li>
-          <li><strong>Réparation fuite d'eau en urgence :</strong> Arrêt immédiat de la fuite pour protéger votre habitation.</li>
-          <li><strong>Intervention dégât des eaux :</strong> Sécurisation de l'installation électrique et colmatage des arrivées d'eau.</li>
-          <li><strong>Réparation rupture de canalisation :</strong> Travaux de terrassement ou réparation encastrée d'urgence.</li>
+          <li><strong>Débouchage d'urgence 24h/24 :</strong> Intervention immédiate pour les WC débordants ou canalisations complètement obstruées.</li>
+          <li><strong>Réparation fuite d'eau en urgence :</strong> Arrêt immédiat de la fuite et colmatage pour protéger votre habitation.</li>
+          <li><strong>Intervention inondation & dégât des eaux :</strong> Sécurisation de l'alimentation électrique, pompage et mise hors d'eau.</li>
+          <li><strong>Rupture de canalisation ou tuyau éclaté :</strong> Remplacement express de tronçon de tuyau (cuivre, Alpex, plomb) ou vanne d'arrêt défectueuse.</li>
+          <li><strong>Panne d'eau chaude urgente :</strong> Diagnostic sur chauffe-eau ou boiler en panne avec sécurisation électrique ou gaz.</li>
         </ul>
       </div>
     </section>
@@ -52,15 +55,19 @@ import Footer from '../../components/Footer.astro';
     <!-- COMMON PROBLEMS -->
     <section class="problems-section py-5">
       <div class="container">
-        <h2 class="section-title">Problèmes fréquents que nous résolvons</h2>
+        <h2 class="section-title">Problèmes fréquents traités en astreinte</h2>
         <div class="problems-grid">
           <div class="problem-card glass">
             <h4>Inondation soudaine</h4>
-            <p>Une canalisation lâche au milieu de la nuit, menaçant d'inonder vos sols et vos murs. Nous coupons l'eau, pompons l'excédent et réparons la tuyauterie.</p>
+            <p>Une canalisation lâche au milieu de la nuit, menaçant d'inonder vos sols et plafonds. Nous vous guidons par téléphone pour fermer la vanne d'arrêt générale avant notre arrivée.</p>
           </div>
           <div class="problem-card glass">
             <h4>Fuite de gaz suspecte</h4>
-            <p>Une odeur de gaz anormale. Nous intervenons en urgence absolue pour détecter la source avec un nez électronique et sécuriser la conduite.</p>
+            <p>Une odeur de gaz anormale. Nous intervenons en urgence absolue pour détecter la source avec un nez électronique et sécuriser immédiatement la conduite.</p>
+          </div>
+          <div class="problem-card glass">
+            <h4>WC bouché débordant</h4>
+            <p>Refoulement des eaux usées empêchant toute utilisation des sanitaires. Dégagement immédiat au furet électrique ou hydrocurage.</p>
           </div>
         </div>
       </div>
@@ -68,36 +75,39 @@ import Footer from '../../components/Footer.astro';
 
     <!-- OUR PROCESS -->
     <section class="container py-5">
-      <h2 class="section-title">Notre Processus d'Urgence</h2>
+      <h2 class="section-title">Notre Processus d'Intervention d'Urgence</h2>
       <div class="process-steps">
         <div class="step glass">
           <div class="step-number">1</div>
-          <h3>Appel SOS (24/7)</h3>
-          <p>Dès votre appel, un plombier de garde prend la route.</p>
+          <h3>Triage Téléphonique Immédiat</h3>
+          <p>Dès votre appel au <strong>0466 26 58 95</strong>, nous identifions le sinistre et vous donnons les consignes de sécurité (fermeture vanne, coupure disjoncteur).</p>
         </div>
         <div class="step glass">
           <div class="step-number">2</div>
-          <h3>Sécurisation Immédiate</h3>
-          <p>À notre arrivée, nous coupons l'arrivée générale pour stopper les dégâts.</p>
+          <h3>Arrivée sur les Lieux</h3>
+          <p>Un technicien d'astreinte se déplace chez vous en environ 30 minutes selon la circulation et votre localisation dans le Grand Liège.</p>
         </div>
         <div class="step glass">
           <div class="step-number">3</div>
-          <h3>Devis Rapide & Clair</h3>
-          <p>Le technicien évalue la réparation et vous donne un prix fixe.</p>
+          <h3>Diagnostic & Devis Fixe</h3>
+          <p>Avant tout travail, le technicien examine l'origine de la panne et vous présente un devis précis incluant le déplacement et la main-d'œuvre.</p>
         </div>
         <div class="step glass">
           <div class="step-number">4</div>
-          <h3>Réparation Définitive</h3>
-          <p>Nous réparons la casse avec des pièces de stock de haute qualité.</p>
+          <h3>Mise en Sécurité & Réparation</h3>
+          <p>Nous réparons ou colmatons la panne avec du matériel professionnel agréé, puis testons l'étanchéité complète avant de quitter le chantier.</p>
         </div>
       </div>
     </section>
 
-    <!-- WHY CHOOSE US -->
+    <!-- WHY CHOOSE US & PRICING TRANSPARENCY -->
     <section class="why-us-section py-5">
       <div class="container text-center">
-        <h2 class="section-title text-white">Pourquoi nous choisir pour vos urgences ?</h2>
-        <p class="text-white mb-4">Parce que l'urgence ne justifie pas les prix exorbitants. Lynecares s'engage sur la transparence des tarifs de nuit et de week-end. Nos camions sont toujours pré-équipés pour résoudre 95% des pannes dès la première visite.</p>
+        <h2 class="section-title text-white">Politique tarifaire de nuit et de week-end</h2>
+        <p class="text-white mb-4" style="max-width: 850px; margin-inline: auto; font-size: 1.1rem; line-height: 1.7;">
+          L'urgence ne doit jamais être synonyme d'abus. Chez Lynecares, nous appliquons une politique de transparence stricte : le coût du déplacement d'urgence et le taux horaire de garde (soirée, nuit, samedi, dimanche et jours fériés) vous sont systématiquement confirmés par téléphone avant le départ de notre technicien. Nos camionnettes disposent des raccords et pièces de rechange courantes pour sécuriser votre domicile dès la visite.
+        </p>
+        <a href="tel:0466265895" class="btn-primary" style="font-size: 1.2rem; padding: 15px 35px;">📞 Appeler l'astreinte d'urgence : 0466 26 58 95</a>
       </div>
     </section>
 
@@ -106,32 +116,37 @@ import Footer from '../../components/Footer.astro';
       <div class="info-split">
         <div class="emergency-info glass">
           <span class="huge-icon">🚑</span>
-          <h3>Disponibilité d'Urgence</h3>
-          <p>Notre pôle urgence est opérationnel <strong>24 heures sur 24, 7 jours sur 7, y compris les week-ends et les jours fériés</strong>.</p>
+          <h3>Disponibilité Permanente</h3>
+          <p>Notre pôle urgence est opérationnel <strong>24 heures sur 24, 7 jours sur 7</strong>, sans interruption.</p>
           <ul class="values-list" style="text-align: left;">
             <li>Intervention sur canalisations gelées (découvrez <a href="/blog/comment-degeler-tuyaux-geles-hiver-liege/" class="text-cyan">comment dégeler sans éclater</a>)</li>
+            <li>Recherche de fuite non destructive et colmatage</li>
           </ul>
-          <a href="tel:0466265895" class="btn-primary mt-3">Intervention Urgente : 0466 26 58 95</a>
+          <a href="tel:0466265895" class="btn-primary mt-3">Urgence 24/7 : 0466 26 58 95</a>
         </div>
         <div class="area-info glass">
           <span class="huge-icon">📍</span>
-          <h3>Zones d'Intervention</h3>
-          <p>Nous couvrons l'intégralité de la Province de Liège : Liège ville, Seraing, Herstal, Ans, Flémalle, Visé, Waremme, Huy...</p>
+          <h3>Zones d'Astreinte Rapide</h3>
+          <p>Nous couvrons l'intégralité de la province de Liège : Liège Ville (4000, 4020, 4030), Seraing, Herstal, Ans, Flémalle, Chaudfontaine, Oupeye, Visé, Beyne-Heusay, Trooz, Aywaille...</p>
         </div>
       </div>
     </section>
 
     <!-- FAQS -->
     <section class="faq-section container py-5">
-      <h2 class="section-title">Foire Aux Questions (FAQ)</h2>
+      <h2 class="section-title">Foire Aux Questions (FAQ) - Urgence Plomberie</h2>
       <div class="faq-grid">
         <div class="faq-item glass">
-          <h3>Combien de temps faut-il pour arriver ?</h3>
-          <p>En moyenne, nous sommes sur place en moins de 30 minutes dans le grand Liège.</p>
+          <h3>Quel est le délai d'arrivée en cas d'urgence ?</h3>
+          <p>Le délai moyen d'arrivée est d'environ 30 minutes pour l'agglomération liégeoise, selon l'état du trafic routier et la disponibilité des équipes d'astreinte.</p>
         </div>
         <div class="faq-item glass">
-          <h3>Y a-t-il des frais de déplacement supplémentaires la nuit ?</h3>
-          <p>Un tarif de garde (soir/nuit/weekend) s'applique, mais il vous est communiqué clairement au téléphone avant notre départ.</p>
+          <h3>Comment sont calculés les frais de nuit et de week-end ?</h3>
+          <p>Conformément aux barèmes du secteur en Belgique, une majoration légale s'applique sur la main-d'œuvre en dehors des heures ouvrables (+50% en soirée et samedi, +100% la nuit et dimanche). Le forfait de déplacement reste fixe et vous est communiqué au préalable.</p>
+        </div>
+        <div class="faq-item glass">
+          <h3>Que faire en attendant l'arrivée du plombier ?</h3>
+          <p>Fermez immédiatement la vanne d'arrêt générale (souvent située près du compteur d'eau), coupez l'électricité de la zone si de l'eau s'est infiltrée près des prises, et épongez pour limiter les dégâts matériels.</p>
         </div>
       </div>
     </section>

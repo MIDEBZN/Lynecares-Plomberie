@@ -1,0 +1,131 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout 
+  title="Plombier Aywaille (4920) | Dépannage & Chauffage | Lynecares" 
+  description="Service de plomberie et chauffage à Aywaille (4920), Remouchamps et Vallée de l'Amblève. Dépannage fuite, boiler et canalisation."
+>
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "PlumbingService",
+    "@id": "https://www.plomberieliegeoise.be/locations/plombier-aywaille/#service",
+    "name": "Lynecares Plomberie Aywaille",
+    "provider": {
+      "@type": "Plumber",
+      "@id": "https://www.plomberieliegeoise.be/#organization",
+      "name": "Lynecares Plomberie Liégeoise"
+    },
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "name": "Aywaille",
+      "postalCode": "4920"
+    },
+    "telephone": "+32466265895",
+    "url": "https://www.plomberieliegeoise.be/locations/plombier-aywaille/"
+  }
+  </script>
+  <Navbar />
+  
+  <main>
+    <section class="page-header">
+      <div class="container text-center">
+        <h1>Plombier à Aywaille (4920) et Remouchamps</h1>
+        <p>Intervention rapide dans la Vallée de l'Amblève : Remouchamps, Sougné, Harzé et Nonceveux</p>
+      </div>
+    </section>
+
+    <section class="container py-5">
+      <div class="row-split">
+        <div class="glass p-5 mb-4">
+          <h2>Plombier chauffagiste réactif à Aywaille</h2>
+          <p>Aux portes des Ardennes liégeoises, la commune d'<strong>Aywaille</strong> et ses villages avoisinants (Remouchamps, Harzé, Nonceveux) requièrent des professionnels capables de se déplacer rapidement via l'autoroute E25. Lynecares assure vos dépannages de plomberie et chauffage 7j/7.</p>
+          
+          <h3 class="mt-4">Délais d'intervention sur Aywaille</h3>
+          <div class="highlight-box">
+            <span class="icon">⏱️</span> <strong>Délai estimé : Environ 25 à 35 minutes via la E25 (sortie 46).</strong>
+            <p>Notre accès direct à l'autoroute permet de relier le centre d'Aywaille et la vallée sans perte de temps en cas d'urgence.</p>
+          </div>
+        </div>
+        
+        <div class="glass p-5 mb-4">
+          <h2>Spécificités géographiques de l'Amblève</h2>
+          <p>La présence du relief karstique (grottes de Remouchamps) apporte une eau particulièrement riche en minéraux calcaires, provoquant un entartrage rapide des chauffe-eau et échangeurs de chaudières.</p>
+          <p>En bord d'Amblève, nous installons également des <strong>clapets anti-retour</strong> fiables pour prémunir les sous-sols contre les refoulements d'égouts lors des épisodes pluvieux intenses.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-overview py-5 bg-light">
+      <div class="container">
+        <h2 class="section-title">Prestations fréquentes à Aywaille</h2>
+        <div class="services-grid">
+          <div class="service-card glass">
+            <h3>🚨 Urgences Sanitaires 24/7</h3>
+            <p>Rupture de canalisation gelée en hiver, fuite de vanne générale ou WC bouché débordant.</p>
+            <a href="/services/urgences-plomberie/" class="read-more">Urgences plomberie &rarr;</a>
+          </div>
+          <div class="service-card glass">
+            <h3>🔥 Dépannage Chauffage & Mazout</h3>
+            <p>Remise en route de chaudière mazout/gaz, purge radiateurs et remplacement de circulateur défaillant.</p>
+            <a href="/services/chauffagiste-liege/" class="read-more">Dépannage chaudière &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container py-5">
+      <div class="glass p-5">
+        <h2>Transparence et engagement qualité</h2>
+        <p>Les résidents d'Aywaille et des communes rurales méritent la même réactivité et la même clarté tarifaire que les habitants du centre-ville liégeois. Nous annonçons nos frais de déplacement et nos forfaits de main-d'œuvre à l'avance.</p>
+        <div class="trust-badges mt-4">
+          <span class="badge">✅ Accès Rapide E25</span>
+          <span class="badge">✅ Devis Gratuit</span>
+          <span class="badge">✅ Certifié Cerga & Cédicol</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section container py-5">
+      <h2 class="section-title">Questions Fréquentes - Aywaille</h2>
+      <div class="faq-grid">
+        <div class="faq-item glass">
+          <h3>Dépannez-vous les chaudières à mazout à Harzé et Aywaille ?</h3>
+          <p>Oui, nos techniciens disposent des compétences requises pour l'entretien et le dépannage des brûleurs mazout et chaudières fioul courantes dans la région.</p>
+        </div>
+        <div class="faq-item glass">
+          <h3>Comment protéger ses tuyaux contre le gel en hiver à Aywaille ?</h3>
+          <p>Dans les zones plus froides de la vallée, nous conseillons le calorifugeage des tuyaux extérieurs ou non chauffés (garages, caves) et la vidange des robinets de jardin dès l'automne.</p>
+        </div>
+      </div>
+      <div class="text-center mt-5">
+        <a href="/locations/" class="btn-secondary">← Retour à toutes les communes</a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  @import '../../styles/global.css';
+  .page-header { background-color: var(--navy); color: white; padding: 150px 0 80px; text-align: center; }
+  .page-header h1 { color: white; font-size: 2.8rem; margin-bottom: 15px; }
+  .page-header p { color: var(--cyan); font-size: 1.2rem; }
+  .p-5 { padding: 40px; }
+  .row-split { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 30px; }
+  .highlight-box { background: rgba(0, 168, 204, 0.08); border-left: 4px solid var(--cyan); padding: 20px; border-radius: 8px; margin-top: 20px; }
+  .bg-light { background-color: white; }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+  .service-card { padding: 30px; border-top: 4px solid var(--orange); }
+  .service-card h3 { color: var(--navy); margin-bottom: 15px; }
+  .trust-badges { display: flex; flex-wrap: wrap; gap: 15px; }
+  .badge { background: var(--navy); color: white; padding: 8px 15px; border-radius: 20px; font-size: 0.9rem; }
+  .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 20px; }
+  .faq-item { padding: 30px; border-left: 4px solid var(--orange); }
+  .faq-item h3 { color: var(--navy); font-size: 1.1rem; margin-bottom: 10px; }
+  .read-more { display: inline-block; margin-top: 15px; font-weight: 600; color: var(--cyan); }
+</style>

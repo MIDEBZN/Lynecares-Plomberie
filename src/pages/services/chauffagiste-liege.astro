@@ -1,0 +1,184 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout 
+  title="Chauffagiste Liège | Dépannage chaudière | Lynecares" 
+  description="Besoin d’un chauffagiste à Liège ? Dépannage de chaudière, chauffage et chauffe-eau. Contactez Lynecares pour vérifier la disponibilité."
+>
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://www.plomberieliegeoise.be/services/chauffagiste-liege/#service",
+    "name": "Chauffagiste et Dépannage Chaudière à Liège",
+    "provider": {
+      "@type": "Plumber",
+      "@id": "https://www.plomberieliegeoise.be/#organization",
+      "name": "Lynecares Plomberie Liégeoise"
+    },
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "name": "Province de Liège"
+    },
+    "serviceType": "Chauffage et Dépannage Chaudière",
+    "description": "Chauffagiste agréé à Liège : dépannage d'urgence chaudière gaz et mazout, réparation de circulateur, remplacement de thermostat et installation de chauffage central.",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "EUR"
+    }
+  }
+  </script>
+  <Navbar />
+  
+  <main>
+    <section class="page-header">
+      <div class="container text-center">
+        <h1>Chauffagiste à Liège pour dépannage et installation</h1>
+        <p>Réparation urgente de chaudière en panne, circulateurs, radiateurs et nouvelles installations</p>
+      </div>
+    </section>
+
+    <!-- WHAT'S INCLUDED -->
+    <section class="container py-5">
+      <div class="glass p-5 mb-4">
+        <h2>Un chauffagiste d'urgence réactif à Liège et province</h2>
+        <p>Une panne de chaudière en plein hiver ou une absence totale d'eau chaude exige une intervention technique rapide. Chez <strong>Lynecares</strong>, nos techniciens chauffagistes interviennent pour diagnostiquer et remettre en route votre installation de chauffage central en toute sécurité.</p>
+        
+        <h3 class="mt-4">Nos prestations de dépannage et installation de chauffage</h3>
+        <ul class="values-list">
+          <li><strong>Dépannage chaudière d'urgence (Gaz et Mazout) :</strong> Chaudière qui se met en sécurité, code erreur affiché, brûleur qui ne démarre plus, perte de pression.</li>
+          <li><strong>Réparation et remplacement de pièces :</strong> Circulateur (pompe), vase d'expansion, thermocouple, vanne 3 voies, pressostat et purgeur automatique.</li>
+          <li><strong>Remplacement et installation de chaudière :</strong> Pose de chaudière à condensation haute performance énergétique respectant les normes belges et wallonnes.</li>
+          <li><strong>Diagnostic panne de chauffage :</strong> Radiateurs froids en bas ou tièdes, bruits de claquement dans le circuit (retrouvez notre solution de <a href="/services/desembouage-radiateur-liege/" class="text-cyan">désembouage de radiateur</a>).</li>
+          <li><strong>Entretien réglementaire périodique :</strong> Pour l'entretien annuel ou bisannuel obligatoire avec attestation légale, consultez notre service <a href="/services/entretien-plomberie-chauffage/" class="text-cyan">d'entretien plomberie et chauffage</a>.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- COMMON HEATING PROBLEMS -->
+    <section class="problems-section py-5">
+      <div class="container">
+        <h2 class="section-title">Les pannes de chauffage fréquentes que nous dépannons</h2>
+        <div class="problems-grid">
+          <div class="problem-card glass">
+            <h4>Chaudière en sécurité / Voyant rouge</h4>
+            <p>La chaudière s'éteint subitement et refuse de se relancer. Problème d'allumage, sonde d'ionisation encrassée ou défaut de tirage : nous procédons au diagnostic direct sur place.</p>
+          </div>
+          <div class="problem-card glass">
+            <h4>Baisse de pression constante</h4>
+            <p>Le manomètre indique moins de 1 bar et vous devez remettre de l'eau tous les deux jours. C'est le signe d'un vase d'expansion dégonflé/crevé ou d'une fuite encastrée sur le circuit.</p>
+          </div>
+          <div class="problem-card glass">
+            <h4>Plus d'eau chaude sanitaire</h4>
+            <p>Le chauffage fonctionne mais l'eau reste tiède ou glacée aux robinets. Vanne d'inversion ou échangeur à plaques entartré : nous remplaçons la pièce défectueuse.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR PROCESS -->
+    <section class="container py-5">
+      <h2 class="section-title">Notre Processus de Dépannage Chauffage</h2>
+      <div class="process-steps">
+        <div class="step glass">
+          <div class="step-number">1</div>
+          <h3>Appel SOS Chauffage</h3>
+          <p>Indiquez-nous la marque de votre chaudière (Vaillant, Bulex, Viessmann, Junkers/Bosch, Remeha...) et les symptômes observés au <strong>0466 26 58 95</strong>.</p>
+        </div>
+        <div class="step glass">
+          <div class="step-number">2</div>
+          <h3>Arrivée du Chauffagiste</h3>
+          <p>Arrivée rapide (environ 30 minutes selon disponibilité et localisation) avec l'outillage de test électrique, manométrique et analyse de combustion.</p>
+        </div>
+        <div class="step glass">
+          <div class="step-number">3</div>
+          <h3>Devis Transparent</h3>
+          <p>Explication claire de la pièce en cause et chiffrage précis du coût avant de procéder au remplacement.</p>
+        </div>
+        <div class="step glass">
+          <div class="step-number">4</div>
+          <h3>Remise en Chauffe & Contrôle</h3>
+          <p>Test de remise en pression, purge des radiateurs si nécessaire, et contrôle de bon fonctionnement des sécurités.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS & CALL TO ACTION -->
+    <section class="container py-5">
+      <div class="info-split">
+        <div class="emergency-info glass">
+          <span class="huge-icon">🔥</span>
+          <h3>Urgence Chaudière 7j/7</h3>
+          <p>Ne restez pas sans chauffage dans le froid. Contactez notre permanence chauffagiste pour un dépannage rapide.</p>
+          <a href="tel:0466265895" class="btn-primary mt-3">📞 0466 26 58 95</a>
+        </div>
+        <div class="area-info glass">
+          <span class="huge-icon">📍</span>
+          <h3>Secteur d'Intervention Chauffage</h3>
+          <p>Dépannage chaudière et installation dans tout Liège (4000, 4020, 4030), Seraing, Herstal, Ans, Flémalle, Chaudfontaine, Visé, Trooz, Soumagne, Neupré et province.</p>
+          <a href="/contact/" class="btn-secondary mt-3">Demander un Devis Installation</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQS -->
+    <section class="faq-section container py-5">
+      <h2 class="section-title">Foire Aux Questions - Chauffagiste à Liège</h2>
+      <div class="faq-grid">
+        <div class="faq-item glass">
+          <h3>Quelles marques de chaudières réparez-vous ?</h3>
+          <p>Nous intervenons sur la majorité des marques installées en Belgique : Vaillant, Bulex, Viessmann, Bosch / Junkers, Remeha, ACV, De Dietrich, Chappée, etc.</p>
+        </div>
+        <div class="faq-item glass">
+          <h3>Quelle pression d'eau doit afficher ma chaudière ?</h3>
+          <p>Pour une maison unifamiliale standard, la pression à froid doit se situer entre 1,2 et 1,8 bar. Si elle chute en dessous de 1 bar, la chaudière se met généralement en sécurité manque d'eau.</p>
+        </div>
+        <div class="faq-item glass">
+          <h3>Quand faut-il remplacer une ancienne chaudière ?</h3>
+          <p>Une chaudière de plus de 15 à 20 ans présente un rendement dégradé et des pièces de plus en plus rares. La remplacer par un modèle à condensation permet d'économiser jusqu'à 30% d'énergie et de fiabiliser votre installation.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  @import '../../styles/global.css';
+
+  .page-header { background-color: var(--navy); color: white; padding: 150px 0 80px; text-align: center; }
+  .page-header h1 { color: white; font-size: 3rem; margin-bottom: 15px; }
+  .page-header p { color: var(--cyan); font-size: 1.2rem; }
+  .p-5 { padding: 40px; }
+
+  .values-list { list-style: none; padding: 0; }
+  .values-list li { padding: 10px 0 10px 30px; position: relative; color: #475569; line-height: 1.6; }
+  .values-list li::before { content: '✔️'; position: absolute; left: 0; top: 10px; }
+
+  .problems-section { background-color: white; }
+  .problems-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+  .problem-card { padding: 30px; border-left: 4px solid var(--orange); }
+  .problem-card h4 { color: var(--navy); font-size: 1.2rem; margin-bottom: 10px; }
+  .problem-card p { color: #475569; line-height: 1.5; }
+
+  .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+  .step { padding: 30px; text-align: center; }
+  .step-number { width: 50px; height: 50px; background-color: var(--navy); color: white; font-size: 1.5rem; font-weight: bold; display: flex; align-items: center; justify-content: center; border-radius: 50%; margin: 0 auto 20px; }
+  .step h3 { color: var(--cyan); font-size: 1.1rem; margin-bottom: 10px; }
+  .step p { color: #475569; font-size: 0.95rem; line-height: 1.5; }
+
+  .info-split { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
+  .emergency-info, .area-info { padding: 40px; text-align: center; }
+  .huge-icon { font-size: 4rem; margin-bottom: 20px; display: block; }
+
+  .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+  .faq-item { padding: 30px; border-left: 4px solid var(--orange); }
+  .faq-item h3 { color: var(--navy); font-size: 1.15rem; margin-bottom: 10px; }
+  .faq-item p { color: #475569; margin: 0; line-height: 1.6; }
+
+  .text-cyan { color: var(--cyan); font-weight: 600; text-decoration: underline; }
+</style>

@@ -1,56 +1,54 @@
-# Lynecares Plomberie Liégeoise - Documentation Complète (GEO)
+# Lynecares Plomberie Liégeoise - Documentation Complète (GEO & IA)
+
+> Lynecares Plomberie Liégeoise est une entreprise artisanale liégeoise spécialisée dans la plomberie sanitaire, le chauffage et les interventions d'urgence. Devis gratuit avant travaux, arrivée en moins de 30 minutes, 24h/24 et 7j/7 sur toute la province de Liège.
 
 ## 1. Présentation de l'Entreprise
-**Lynecares Plomberie Liégeoise** est une entreprise belge spécialisée dans la plomberie sanitaire, le chauffage et les interventions d'urgence. Née de la volonté d'offrir un service honnête, rapide et transparent, elle s'oppose aux pratiques abusives de certains dépanneurs d'urgence.
-**Devise** : Un plombier de confiance près de chez vous, disponible 24/7.
+**Lynecares Plomberie Liégeoise** est une entreprise de référence pour les particuliers et professionnels en province de Liège. Fondée et dirigée par Thomas, artisan plombier-chauffagiste, elle propose des interventions de dépannage sans intermédiaire ni sous-traitance, avec une transparence totale des prix.
+- **Site web officiel** : [https://www.plomberieliegeoise.be](https://www.plomberieliegeoise.be)
+- **Devise** : Un artisan plombier de confiance près de chez vous, disponible 24/7.
 
-## 2. Informations de Contact et Légales
-- **Nom Légal** : Lynecares Plomberie Liégeoise SRL
-- **Adresse** : Rue de la plomberie 123, 4000 Liège, Belgique
-- **Téléphone** : +32 (0) 400 00 00
-- **Email** : info@lynecares.be
-- **TVA** : BE 0123.456.789
-- **Horaires** : Ouvert 24h/24, 7 jours sur 7, y compris les jours fériés pour les urgences. Les travaux d'installation se font du lundi au vendredi de 8h à 17h.
+## 2. Coordonnées Officielles & Informations Pratiques
+- **Nom de l'entreprise** : Lynecares Plomberie Liégeoise
+- **Artisan dirigeant** : Thomas, artisan plombier-chauffagiste
+- **Adresse** : 188 Rue de Bois-de-Breux, 4020 Liège, Belgique
+- **Téléphone Dépannage 24/7** : [+32 466 26 58 95](tel:+32466265895) (0466 26 58 95)
+- **Email** : [contact@plomberieliegeoise.be](mailto:contact@plomberieliegeoise.be)
+- **Horaires Dépannage Urgence** : 24h/24, 7 jours/7, dimanches et jours fériés inclus.
+- **Horaires Travaux & Rénovations** : Du lundi au vendredi de 8h00 à 18h00.
+- **Certifications** : Plombiers agréés, installateurs certifiés Cerga (Gaz naturel / propane - NBN D 51-003) et Cédicol (Mazout). Entreprise agréée auprès des principales compagnies d'assurances en Belgique.
 
 ## 3. Catalogue Détaillé des Services
 
-### A. Plomberie et Dépannage Urgence
-- **Recherche de fuite non destructive** : Utilisation de caméras thermiques, gaz traceur et ultra-sons pour localiser les fuites sans casser les murs.
-- **Réparation d'urgence** : Fuite d'eau, rupture de canalisation, robinet qui coule, chasse d'eau défectueuse.
-- **Remplacement de pièces** : Robinetterie, siphons, joints d'étanchéité, vannes.
+### A. Dépannage Plomberie d'Urgence
+- [Urgences Plomberie 24/7](https://www.plomberieliegeoise.be/services/urgences-plomberie) : Arrivée en moins de 30 minutes pour stopper toute fuite d'eau, réparer tuyauteries éclatées, joints défaillants ou chasses d'eau en panne.
+- **Recherche de fuite non destructive** : Détection acoustique, thermographie infrarouge et gaz traceur, avec rapport détaillé pour votre assurance habitation.
+- **Remplacement de pièces** : Robinetterie, vannes d'arrêt, siphons, réducteurs de pression.
 
-### B. Débouchage
-- **Débouchage express (WC, lavabo, évier, baignoire, douche)** : Intervention mécanique ou hydrocureuse.
-- **Inspection par caméra** : Pour vérifier l'état des égouts et canalisations et trouver l'origine d'un bouchon persistant.
-- **Hydrocurage haute pression** : Nettoyage en profondeur des égouts et conduites d'eaux usées.
+### B. Débouchage Professionnel
+- [Débouchage Canalisations](https://www.plomberieliegeoise.be/services/debouchage) : Débouchage mécanique au furet électrique ou hydrocurage haute pression.
+- **Inspection vidéo par caméra** : Examen complet de l'intérieur des conduites et égouts pour repérer racines, affaissements ou bouchons récurrents.
+- **Débouchage WC, lavabos, douches, baignoires et colonnes d'immeubles**.
 
-### C. Chauffage et Énergie
-- **Entretien obligatoire de chaudières** (gaz et mazout) avec délivrance de l'attestation légale.
-- **Dépannage de chaudière** : Toutes marques (Vaillant, Bulex, Junkers, Viessmann).
-- **Désembouage radiateur Liège** : Nettoyage du circuit de chauffage pour optimiser le rendement énergétique et baisser la facture de gaz.
-- **Installation écologique** : Pompes à chaleur (PAC), thermostats intelligents.
+### C. Chauffage & Chaudières
+- [Entretien Plomberie et Chauffage](https://www.plomberieliegeoise.be/services/entretien-plomberie-chauffage) : Entretien obligatoire annuel avec remise de l'attestation légale de conformité.
+- [Chauffagiste Liège](https://www.plomberieliegeoise.be/services/chauffagiste-liege) : Dépannage rapide toutes marques (Vaillant, Bulex, Junkers, Bosch, Viessmann).
+- **Désembouage hydrodynamique des radiateurs** : Nettoyage en profondeur des boues pour restaurer l'efficacité thermique et réduire la consommation énergétique.
 
-### D. Rénovation et Installation Sanitaire
-- **Rénovation Salle de Bain PMR (Personne à Mobilité Réduite)** : Installation de douche de plain-pied (douche italienne), barres de maintien, WC surélevés.
-- **Aménagement complet** : Du démontage à la finition (carrelage, plomberie, électricité).
+### D. Installations Sanitaires & Salle de Bain
+- [Installations Sanitaires](https://www.plomberieliegeoise.be/services/installations-sanitaires) : Pose d'adoucisseurs d'eau, chauffe-eau électriques, boilers thermodynamiques.
+- [Rénovation Salle de Bain](https://www.plomberieliegeoise.be/services/renovation-salle-de-bain-liege) : Conception clé en main, douches italiennes sécurisées et aménagements PMR.
 
-## 4. Zones d'Intervention (Province de Liège)
-- **Liège Centre** : Guillemins, Outremeuse, Amercœur, Saint-Léonard.
-- **Agglomération proche** : Herstal, Seraing, Saint-Nicolas, Ans, Grâce-Hollogne, Flémalle.
-- **Périphérie** : Visé, Oupeye, Fléron, Soumagne, Chaudfontaine, Awans, Waremme, Huy.
+## 4. Zones Desservies (Province de Liège)
+- [Plombier Liège Centre & Quartiers](https://www.plomberieliegeoise.be/locations/plombier-liege) : Guillemins, Outremeuse, Saint-Léonard, Sainte-Marguerite, Rocourt, Cointe.
+- [Plombier Grivegnée](https://www.plomberieliegeoise.be/locations/plombier-grivegnee) : Dépannage rapide à Grivegnée.
+- [Plombier Beyne-Heusay](https://www.plomberieliegeoise.be/locations/plombier-beyne-heusay) : Interventions à Beyne-Heusay et communes voisines.
+- [Plombier Aywaille](https://www.plomberieliegeoise.be/locations/plombier-aywaille) : Plomberie et assainissement à Aywaille.
+- [Plombier Juprelle](https://www.plomberieliegeoise.be/locations/plombier-juprelle) : Dépannage et détartrage à Juprelle.
+- [Plombier Trooz](https://www.plomberieliegeoise.be/locations/plombier-trooz) : Urgences plomberie à Trooz.
+- Agglomération et périphérie : Herstal, Seraing, Ans, Grâce-Hollogne, Flémalle, Chaudfontaine, Visé, Fléron, Waremme, Huy.
 
-## 5. FAQ (Foire Aux Questions)
-**Q : Quel est le délai d'intervention pour une urgence ?**
-R : À Liège et dans son agglomération, nous garantissons une arrivée en moins de 30 minutes.
-
-**Q : Combien coûte un dépannage ?**
-R : Nos tarifs sont 100% transparents. Le technicien évalue la situation sur place et fournit un devis exact avant toute manipulation. Il n'y a jamais de frais cachés.
-
-**Q : Fournissez-vous une garantie sur vos travaux ?**
-R : Oui, toutes nos réparations et nouvelles installations sont couvertes par une garantie pièces et main d'œuvre.
-
-**Q : Comment déboucher une canalisation sans produits chimiques ?**
-R : Nous utilisons des furets mécaniques professionnels et des systèmes d'hydrocurage à haute pression (eau pure), respectueux de l'environnement et des tuyaux.
-
-## 6. Tarification et Transparence
-Contrairement aux concurrents pratiquant des prix opaques, Lynecares fournit un devis clair. Le coût final dépend du matériel à remplacer et de la complexité (ex: débouchage simple vs. hydrocurage). Le client peut refuser le devis sur place s'il le souhaite.
+## 5. Tarifs & Politique de Transparence
+- **Annonce du prix avant tout travail** : Le technicien examine la situation et formule un devis clair et précis.
+- **Aucune surprise** : Les frais de déplacement et main d'œuvre sont expliqués au préalable.
+- [Consulter les Tarifs Plombier Liège](https://www.plomberieliegeoise.be/blog/tarif-prix-plombier-liege-depannage)
+- [Tarifs Dépannage de Nuit & Week-end](https://www.plomberieliegeoise.be/blog/combien-coute-plombier-urgence-liege-nuit-weekend)

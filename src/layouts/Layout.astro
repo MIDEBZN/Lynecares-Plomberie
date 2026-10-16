@@ -9,8 +9,9 @@ interface Props {
 	preloadImage?: string;
 }
 
-const { title, description = "Plombier urgence à Liège — intervention garantie en 30 min, 24h/24 et 7j/7. Fuite, bouchon, chaudière : appelez le 0466 26 58 95, devis gratuit.", preloadImage } = Astro.props;
+const { title, description = "Besoin d’un plombier à Liège ? Dépannage, fuite, débouchage, sanitaire et chauffage. Appelez Lynecares au 0466 26 58 95.", preloadImage } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://www.plomberieliegeoise.be');
+const pageTitle = title.includes('Lynecares') ? title : `${title} | Lynecares`;
 ---
 
 <!doctype html>
@@ -22,20 +23,20 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://www.plom
 		{preloadImage && <link rel="preload" as="image" href={preloadImage} fetchpriority="high" />}
 		<link rel="icon" type="image/png" href="/images/logo.png" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title} | Lynecares Plomberie</title>
+		<title>{pageTitle}</title>
 		<link rel="canonical" href={canonicalURL} />
 		
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content={canonicalURL} />
-		<meta property="og:title" content={`${title} | Lynecares Plomberie`} />
+		<meta property="og:title" content={pageTitle} />
 		<meta property="og:description" content={description} />
 		<meta property="og:image" content={preloadImage || "https://www.plomberieliegeoise.be/images/social-preview.jpg"} />
 		
 		<!-- Twitter -->
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:url" content={canonicalURL} />
-		<meta name="twitter:title" content={`${title} | Lynecares Plomberie`} />
+		<meta name="twitter:title" content={pageTitle} />
 		<meta name="twitter:description" content={description} />
 		<meta name="twitter:image" content={preloadImage || "https://www.plomberieliegeoise.be/images/social-preview.jpg"} />
 
@@ -43,11 +44,13 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://www.plom
 		{
 		  "@context": "https://schema.org",
 		  "@type": "Plumber",
+		  "@id": "https://www.plomberieliegeoise.be/#organization",
 		  "name": "Lynecares Plomberie Liégeoise",
-		  "url": "https://www.plomberieliegeoise.be",
+		  "url": "https://www.plomberieliegeoise.be/",
 		  "logo": "https://www.plomberieliegeoise.be/images/logo.png",
 		  "image": "https://www.plomberieliegeoise.be/images/social-preview.jpg",
 		  "telephone": "+32466265895",
+		  "email": "contact@plomberieliegeoise.be",
 		  "address": {
 		    "@type": "PostalAddress",
 		    "streetAddress": "188 Rue de Bois-de-Breux",
@@ -56,9 +59,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://www.plom
 		    "addressCountry": "BE"
 		  },
 		  "geo": { "@type": "GeoCoordinates", "latitude": 50.6292, "longitude": 5.5986 },
-		  "areaServed": ["Liège","Seraing","Herstal","Ans","Grâce-Hollogne","Chaudfontaine","Verviers","Visé","Flémalle"],
+		  "areaServed": ["Liège","Seraing","Herstal","Ans","Grâce-Hollogne","Chaudfontaine","Verviers","Visé","Flémalle","Beyne-Heusay","Grivegnée","Aywaille","Trooz","Soumagne","Juprelle"],
 		  "openingHours": "Mo-Su 00:00-23:59",
-		  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "200" },
 		  "priceRange": "€€"
 		}
 		</script>

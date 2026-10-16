@@ -4,22 +4,24 @@ import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
 ---
 
-<Layout title="Débouchage Liège | Canalisation, Évier, WC | Lynecares" description="Service professionnel de débouchage à Liège. Égout, WC, évier, baignoire. Hydrocurage haute pression et inspection caméra.">
+<Layout title="Débouchage Liège | Canalisation, WC et évier | Lynecares" description="Débouchage canalisation à Liège : WC, évier, douche et égout. Intervention d'urgence avec furet et hydrocureuse haute pression. Devis clair.">
   <script type="application/ld+json" slot="head">
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Débouchage de Canalisations",
+    "@id": "https://www.plomberieliegeoise.be/services/debouchage/#service",
+    "name": "Débouchage de Canalisation à Liège",
     "provider": {
       "@type": "Plumber",
+      "@id": "https://www.plomberieliegeoise.be/#organization",
       "name": "Lynecares Plomberie Liégeoise"
     },
     "areaServed": {
-      "@type": "State",
+      "@type": "AdministrativeArea",
       "name": "Province de Liège"
     },
-    "serviceType": "Débouchage",
-    "description": "Service de débouchage d'urgence à Liège pour WC, éviers, et égouts. Intervention avec hydrocurage haute pression.",
+    "serviceType": "Débouchage et Hydrocurage",
+    "description": "Service professionnel de débouchage d'urgence à Liège : WC bouché, évier, baignoire, égout principal, hydrocurage haute pression et inspection par caméra vidéo.",
     "offers": {
       "@type": "Offer",
       "priceCurrency": "EUR"
@@ -31,78 +33,79 @@ import Footer from '../../components/Footer.astro';
   <main>
     <section class="page-header">
       <div class="container text-center">
-        <h1>Débouchage à Liège</h1>
-        <p>Des canalisations propres, fluides et sans mauvaises odeurs</p>
+        <h1>Débouchage de canalisation à Liège</h1>
+        <p>Intervention rapide 7j/7 pour WC, éviers, douches et égouts extérieurs avec hydrocureuse et caméra</p>
       </div>
     </section>
 
-    <!-- WHAT'S INCLUDED -->
+    <!-- WHAT'S INCLUDED: DETAILED SECTIONS -->
     <section class="container py-5">
-      <h2 class="section-title">Ce qui est inclus dans nos services de débouchage</h2>
-      <div class="glass p-5 mb-4">
-        <ul class="values-list">
-          <li><strong>Débouchage d'évier :</strong> Dissolution des graisses et résidus alimentaires.</li>
-          <li><strong>Débouchage WC et toilettes :</strong> Retrait des amas de papier ou objets bloquants.</li>
-          <li><strong>Débouchage douche et baignoire :</strong> Élimination des amas de cheveux et savon.</li>
-          <li><strong>Débouchage d'égout extérieur :</strong> Désobstruction des conduites enterrées.</li>
-          <li><strong>Débouchage de canalisation principale :</strong> Rétablissement du flux général vers l'égout.</li>
-          <li><strong>Hydrocurage haute pression :</strong> Nettoyage intensif des parois internes pour éviter les récidives.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- COMMON PROBLEMS -->
-    <section class="problems-section py-5">
-      <div class="container">
-        <h2 class="section-title">Problèmes fréquents que nous résolvons</h2>
-        <div class="problems-grid">
-          <div class="problem-card glass">
-            <h4>Odeurs nauséabondes</h4>
-            <p>Des remontées d'odeurs d'égout dans la salle de bain ou la cuisine causées par un bouchon en formation ou un siphon désamorcé.</p>
-          </div>
-          <div class="problem-card glass">
-            <h4>Écoulement lent ou nul</h4>
-            <p>L'eau de votre baignoire met des heures à s'évacuer, signe qu'un bouchon s'est solidifié en profondeur dans la canalisation.</p>
-          </div>
+      <h2 class="section-title">Nos solutions spécialisées de débouchage</h2>
+      <div class="services-grid mb-4">
+        <div class="service-item glass">
+          <h3>🚽 Débouchage WC & Toilettes</h3>
+          <p>Papier compacté, lingettes ou objet coincé provoquant un débordement. Dégagement immédiat au furet électrique professionnel sans rayer la céramique.</p>
         </div>
-        <div class="mt-5 text-center">
-          <p>Vous essayez de déboucher vous-même ? Lisez nos <a href="/blog/wc-bouche-liege-solutions-efficaces/" class="text-cyan">5 astuces pour déboucher un WC avant d'appeler le plombier</a>.</p>
+        <div class="service-item glass">
+          <h3>🍳 Débouchage Évier & Cuisine</h3>
+          <p>Graisses de cuisson solidifiées, restes alimentaires et dépôts de savon. Nettoyage mécanique du siphon et de la colonne d'évacuation.</p>
+        </div>
+        <div class="service-item glass">
+          <h3>🚿 Débouchage Douche & Baignoire</h3>
+          <p>Amas de cheveux et résidus de savon bloquant la bonde ou le siphon de sol. Rétablissement immédiat de l'écoulement normal.</p>
+        </div>
+        <div class="service-item glass">
+          <h3>🏡 Débouchage d'Égout Principal & Chambre de Visite</h3>
+          <p>Refoulement général vers la cave ou le sous-sol. Désobstruction des conduites enterrées et raccordement au réseau public de voirie.</p>
+        </div>
+        <div class="service-item glass">
+          <h3>📹 Inspection Caméra Endoscopique</h3>
+          <p>Passage d'une caméra étanche HD pour visualiser l'intérieur du tuyau, mesurer la distance exacte du bouchon et repérer les racines ou cassures.</p>
+        </div>
+        <div class="service-item glass">
+          <h3>💧 Hydrocurage Haute Pression (300 Bars)</h3>
+          <p>Nettoyage en profondeur des parois par injection d'eau sous pression. Élimine totalement le tartre et la graisse accumulée sans abîmer le PVC ou le grès.</p>
         </div>
       </div>
     </section>
 
     <!-- OUR PROCESS -->
     <section class="container py-5">
-      <h2 class="section-title">Notre Processus de Débouchage</h2>
+      <h2 class="section-title">Comment se déroule notre intervention de débouchage ?</h2>
       <div class="process-steps">
         <div class="step glass">
           <div class="step-number">1</div>
-          <h3>Diagnostic & Caméra</h3>
-          <p>Nous introduisons si nécessaire une caméra endoscopique pour localiser le bouchon avec précision.</p>
+          <h3>Diagnostic Initial</h3>
+          <p>Nous vérifions si le bouchon est localisé (un seul appareil) ou général (tous les sanitaires de la maison refoulent).</p>
         </div>
         <div class="step glass">
           <div class="step-number">2</div>
-          <h3>Choix de l'outil</h3>
-          <p>Selon la nature du bouchon (graisse, racines, lingettes), nous utilisons un furet mécanique ou une hydrocureuse.</p>
+          <h3>Méthode Adaptée</h3>
+          <p>Sélection de l'outil approprié : furet mécanique rotatif pour les petits diamètres, ou buse d'hydrocurage pour les colonnes principales.</p>
         </div>
         <div class="step glass">
           <div class="step-number">3</div>
-          <h3>Destruction du bouchon</h3>
-          <p>L'intervention se fait sans produits chimiques corrosifs, pour protéger vos tuyaux et l'environnement.</p>
+          <h3>Débouchage & Curage</h3>
+          <p>Broyage ou évacuation du bouchon sans produit chimique corrosif afin de préserver vos conduites et l'environnement.</p>
         </div>
         <div class="step glass">
           <div class="step-number">4</div>
-          <h3>Test d'écoulement</h3>
-          <p>Nous vérifions le débit de l'eau pour s'assurer que la canalisation est entièrement libérée.</p>
+          <h3>Contrôle d'Écoulement</h3>
+          <p>Test avec un fort volume d'eau pour vérifier la fluidité totale et remise d'un rapport pour votre assurance si nécessaire.</p>
         </div>
       </div>
     </section>
 
-    <!-- WHY CHOOSE US -->
-    <section class="why-us-section py-5">
-      <div class="container text-center">
-        <h2 class="section-title text-white">Pourquoi nous choisir pour votre débouchage ?</h2>
-        <p class="text-white mb-4">Contrairement aux "déboucheurs du dimanche", nous sommes équipés d'hydrocureuses montées sur camionnettes. Cela nous permet d'injecter de l'eau à plus de 300 bars de pression, garantissant un débouchage total et durable là où un simple furet manuel échouerait.</p>
+    <!-- TRANSPARENT PRICING RULES -->
+    <section class="container py-5">
+      <div class="glass p-5">
+        <h2>Règles tarifaires claires pour votre débouchage</h2>
+        <p>Un problème de canalisation ne doit pas donner lieu à des devis abusifs. Chez Lynecares, nos tarifs sont arrêtés avant toute opération :</p>
+        <ul class="values-list">
+          <li><strong>Forfait débouchage simple :</strong> Comprend le déplacement et l'intervention mécanique classique.</li>
+          <li><strong>Hydrocurage haute pression ou caméra :</strong> Si la complexité du réseau l'exige, le coût vous est annoncé avant toute manipulation.</li>
+          <li><strong>Pas de surprise finale :</strong> Consultez notre guide des <a href="/blog/tarif-prix-plombier-liege-depannage/" class="text-cyan">prix et tarifs plombier à Liège</a> pour connaître les moyennes du marché.</li>
+        </ul>
       </div>
     </section>
 
@@ -111,29 +114,34 @@ import Footer from '../../components/Footer.astro';
       <div class="info-split">
         <div class="emergency-info glass">
           <span class="huge-icon">🚑</span>
-          <h3>Disponibilité d'Urgence</h3>
-          <p>Service opérationnel <strong>24h/24 et 7j/7</strong>. Un WC bouché est une urgence absolue que nous traitons en priorité.</p>
-          <a href="tel:0466265895" class="btn-primary mt-3">Urgence : Appelez-nous</a>
+          <h3>Urgence Débouchage 24/7</h3>
+          <p>Vos toilettes débordent ou l'eau remonte dans votre bac de douche ? Contactez-nous pour une intervention d'urgence immédiate.</p>
+          <a href="tel:0466265895" class="btn-primary mt-3">📞 0466 26 58 95</a>
         </div>
         <div class="area-info glass">
           <span class="huge-icon">📍</span>
-          <h3>Zones d'Intervention</h3>
-          <p>Nous débouchons vos canalisations partout en Province de Liège : Liège centre, Seraing, Herstal, Jemeppe, Fléron...</p>
+          <h3>Périmètre d'Intervention</h3>
+          <p>Nous intervenons dans toute la province de Liège : Liège Ville, Seraing, Herstal, Ans, Flémalle, Oupeye, Chaudfontaine, Visé, Beyne-Heusay, Trooz...</p>
+          <a href="/services/urgences-plomberie/" class="btn-secondary mt-3">Voir les urgences plomberie</a>
         </div>
       </div>
     </section>
 
     <!-- FAQS -->
     <section class="faq-section container py-5">
-      <h2 class="section-title">Foire Aux Questions (FAQ)</h2>
+      <h2 class="section-title">Foire Aux Questions - Débouchage Canalisations</h2>
       <div class="faq-grid">
         <div class="faq-item glass">
-          <h3>Le débouchage à haute pression abîme-t-il les tuyaux ?</h3>
-          <p>Non, l'hydrocurage est spécifiquement conçu pour nettoyer la paroi interne des canalisations sans endommager le PVC ou le grès.</p>
+          <h3>Pourquoi éviter les déboucheurs chimiques du commerce ?</h3>
+          <p>Les déboucheurs à base de soude caustique ou d'acide sulfurique stagnent sur le bouchon, chauffent et peuvent faire fondre les raccords PVC tout en dégageant des vapeurs toxiques nocives pour la santé.</p>
         </div>
         <div class="faq-item glass">
-          <h3>Pourquoi mon WC se bouche-t-il régulièrement ?</h3>
-          <p>Cela peut être dû à un entartrage important, à des racines dans les égouts extérieurs ou à l'utilisation de lingettes non biodégradables. Une inspection caméra permet de trouver la cause exacte.</p>
+          <h3>L'assurance habitation prend-elle en charge le débouchage ?</h3>
+          <p>Si le bouchon a causé un dégât des eaux chez vous ou chez un voisin, l'assurance prend en charge les dommages matériels. Notre facture détaillée peut être transmise à votre assureur.</p>
+        </div>
+        <div class="faq-item glass">
+          <h3>L'hydrocurage risque-t-il d'abîmer mes tuyaux ?</h3>
+          <p>Non, les buses rotatives adaptent la pression et le jet d'eau rétroactif pour décoller les matières organiques sans agresser la paroi structurelle des conduites.</p>
         </div>
       </div>
     </section>

@@ -1,0 +1,131 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout 
+  title="Plombier Juprelle (4450) | Dépannage Plomberie | Lynecares" 
+  description="Artisan plombier à Juprelle, Lantin et Slins (4450). Débouchage, réparation de tuyauterie, remplacement de robinetterie et chauffe-eau."
+>
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "PlumbingService",
+    "@id": "https://www.plomberieliegeoise.be/locations/plombier-juprelle/#service",
+    "name": "Lynecares Plomberie Juprelle",
+    "provider": {
+      "@type": "Plumber",
+      "@id": "https://www.plomberieliegeoise.be/#organization",
+      "name": "Lynecares Plomberie Liégeoise"
+    },
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "name": "Juprelle",
+      "postalCode": "4450"
+    },
+    "telephone": "+32466265895",
+    "url": "https://www.plomberieliegeoise.be/locations/plombier-juprelle/"
+  }
+  </script>
+  <Navbar />
+  
+  <main>
+    <section class="page-header">
+      <div class="container text-center">
+        <h1>Plombier à Juprelle (4450), Lantin et Slins</h1>
+        <p>Intervention rapide en Hesbaye liégeoise : Lantin, Slins, Voroux-lez-Liers, Fexhe-Slins et Paifve</p>
+      </div>
+    </section>
+
+    <section class="container py-5">
+      <div class="row-split">
+        <div class="glass p-5 mb-4">
+          <h2>Votre artisan plombier à Juprelle et environs</h2>
+          <p>Située au nord de Liège sur l'axe de la Chaussée de Tongres (N20), la commune de <strong>Juprelle</strong> bénéficie d'une liaison rapide avec notre équipe. Que vous soyez domicilié à Lantin, Slins, Villers-Saint-Siméon ou au centre de Juprelle, nous intervenons rapidement pour tous travaux sanitaires.</p>
+          
+          <h3 class="mt-4">Délais d'intervention sur Juprelle</h3>
+          <div class="highlight-box">
+            <span class="icon">⏱️</span> <strong>Délai estimé : Environ 20 à 25 minutes via la N20 ou l'échangeur de Vottem.</strong>
+            <p>Accès fluide vers la Hesbaye liégeoise pour sécuriser vos installations en cas d'urgence.</p>
+          </div>
+        </div>
+        
+        <div class="glass p-5 mb-4">
+          <h2>Dureté de l'eau en Hesbaye liégeoise</h2>
+          <p>La nappe phréatique de Hesbaye alimentant Juprelle présente une <strong>dureté très élevée (souvent supérieure à 30 degrés français)</strong>. Cette concentration en calcaire accélère l'entartrage des boilers, fait chuter le débit d'eau chaude et bouche les aérateurs de robinetterie.</p>
+          <p>Nous installons des <strong>adoucisseurs d'eau compacts</strong> et effectuons le détartrage mécanique régulier des cuves de chauffe-eau.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-overview py-5 bg-light">
+      <div class="container">
+        <h2 class="section-title">Prestations fréquentes à Juprelle</h2>
+        <div class="services-grid">
+          <div class="service-card glass">
+            <h3>🌪️ Débouchage Canalisations</h3>
+            <p>Intervention pour WC bouché, fosse septique engorgée, chambre de visite saturée et tuyauteries de cuisine.</p>
+            <a href="/services/debouchage/" class="read-more">Débouchage canalisations &rarr;</a>
+          </div>
+          <div class="service-card glass">
+            <h3>⚙️ Détartrage & Boiler</h3>
+            <p>Détartrage complet de boiler, pose d'adoucisseur d'eau et contrôle de pression sur vos arrivées sanitaires.</p>
+            <a href="/services/entretien-plomberie-chauffage/" class="read-more">Entretien & prévention &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container py-5">
+      <div class="glass p-5">
+        <h2>Un service transparent et des tarifs clairs</h2>
+        <p>À Juprelle comme partout en province de Liège, nos tarifs de déplacement et nos forfaits horaires vous sont indiqués par téléphone. Pas de supplément surprise à la facturation.</p>
+        <div class="trust-badges mt-4">
+          <span class="badge">✅ Spécialiste Calcaire Hesbaye</span>
+          <span class="badge">✅ Devis Gratuit</span>
+          <span class="badge">✅ Débouchage Professionnel</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section container py-5">
+      <h2 class="section-title">Questions Fréquentes - Juprelle</h2>
+      <div class="faq-grid">
+        <div class="faq-item glass">
+          <h3>Comment savoir si mon boiler est entartré à Juprelle ?</h3>
+          <p>Si votre eau chaude met plus de temps à chauffer, si vous entendez des bruits d'ébullition ou de sifflement dans le cumulus, ou si la réserve d'eau chaude diminue rapidement, votre résistance est enrobée de calcaire.</p>
+        </div>
+        <div class="faq-item glass">
+          <h3>Intervenez-vous sur les fosses septiques à Juprelle ?</h3>
+          <p>Oui, pour les habitations non encore raccordées au tout-à-l'égout collectif, nous désobstruons les conduites d'amenée et siphons disconnecteurs menant à la fosse.</p>
+        </div>
+      </div>
+      <div class="text-center mt-5">
+        <a href="/locations/" class="btn-secondary">← Retour à toutes les communes</a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  @import '../../styles/global.css';
+  .page-header { background-color: var(--navy); color: white; padding: 150px 0 80px; text-align: center; }
+  .page-header h1 { color: white; font-size: 2.8rem; margin-bottom: 15px; }
+  .page-header p { color: var(--cyan); font-size: 1.2rem; }
+  .p-5 { padding: 40px; }
+  .row-split { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 30px; }
+  .highlight-box { background: rgba(0, 168, 204, 0.08); border-left: 4px solid var(--cyan); padding: 20px; border-radius: 8px; margin-top: 20px; }
+  .bg-light { background-color: white; }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+  .service-card { padding: 30px; border-top: 4px solid var(--orange); }
+  .service-card h3 { color: var(--navy); margin-bottom: 15px; }
+  .trust-badges { display: flex; flex-wrap: wrap; gap: 15px; }
+  .badge { background: var(--navy); color: white; padding: 8px 15px; border-radius: 20px; font-size: 0.9rem; }
+  .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 20px; }
+  .faq-item { padding: 30px; border-left: 4px solid var(--orange); }
+  .faq-item h3 { color: var(--navy); font-size: 1.1rem; margin-bottom: 10px; }
+  .read-more { display: inline-block; margin-top: 15px; font-weight: 600; color: var(--cyan); }
+</style>
