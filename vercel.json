@@ -1,7 +1,12 @@
 {
   "redirects": [
     {
-      "source": "/blog/plombier-zingueur-liege-reparation-corniches/?",
+      "source": "/blog/plombier-zingueur-liege-reparation-corniches",
+      "destination": "/services/fuites-reparations/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/plombier-zingueur-liege-reparation-corniches/",
       "destination": "/services/fuites-reparations/",
       "permanent": true
     },
