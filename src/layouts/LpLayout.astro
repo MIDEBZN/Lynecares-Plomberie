@@ -1,0 +1,219 @@
+---
+import '@fontsource/inter';
+import LpHeader from '../components/lp/LpHeader.astro';
+import LpFooter from '../components/lp/LpFooter.astro';
+import LpPersistentCallBar from '../components/lp/LpPersistentCallBar.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalPath: string;
+  serviceCategory: 'urgence' | 'debouchage' | 'fuite_depannage';
+  phoneDisplay: string;
+  phoneTel: string;
+  whatsappUrl: string;
+  persistentBarCtaText: string;
+}
+
+const {
+  title,
+  description,
+  canonicalPath,
+  serviceCategory,
+  phoneDisplay,
+  phoneTel,
+  whatsappUrl,
+  persistentBarCtaText
+} = Astro.props;
+
+const siteUrl = Astro.site ? Astro.site.toString().replace(/\/$/, '') : 'https://www.plomberieliegeoise.be';
+const canonicalURL = new URL(canonicalPath, siteUrl).toString();
+---
+
+<!doctype html>
+<html lang="fr" class="lp-html">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <!-- Google Ads Paid Traffic: Noindex, Follow -->
+    <meta name="robots" content="noindex, follow" />
+    <meta name="googlebot" content="noindex, follow" />
+
+    <link rel="canonical" href={canonicalURL} />
+    <link rel="icon" type="image/png" href="/images/logo.png" />
+
+    <!-- Local Business Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "PlumbingService",
+      "name": "Lynecares Plomberie Liégeoise",
+      "url": "https://www.plomberieliegeoise.be/",
+      "logo": "https://www.plomberieliegeoise.be/images/logo.png",
+      "telephone": "+32466265895",
+      "email": "contact@plomberieliegeoise.be",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "188 Rue de Bois-de-Breux",
+        "postalCode": "4020",
+        "addressLocality": "Liège",
+        "addressCountry": "BE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 50.6292,
+        "longitude": 5.5986
+      },
+      "areaServed": "Province de Liège",
+      "priceRange": "€€"
+    }
+    </script>
+
+    <!-- Tracking Layer Initialization (GTM / GA4 / Google Ads Ready) -->
+    <script is:inline define:vars={{ serviceCategory }}>
+      window.dataLayer = window.dataLayer || [];
+      
+      // Global robust event dispatcher for Google Ads & Analytics
+      window.trackLpEvent = function(eventName, customParams) {
+        try {
+          const payload = Object.assign({
+            event: eventName,
+            service_category: serviceCategory,
+            page_path: window.location.pathname,
+            timestamp: Date.now()
+          }, customParams || {});
+
+          window.dataLayer.push(payload);
+
+          // Support gtag if loaded
+          if (typeof window.gtag === 'function') {
+            window.gtag('event', eventName, payload);
+          }
+
+          // Debug log in dev
+          if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+            console.log('[LP Tracking]', eventName, payload);
+          }
+        } catch (e) {
+          console.warn('[LP Tracking Error]', e);
+        }
+      };
+    </script>
+  </head>
+  <body class="lp-body">
+    <div class="lp-page-wrapper">
+      <LpHeader 
+        phoneDisplay={phoneDisplay} 
+        phoneTel={phoneTel} 
+        serviceCategory={serviceCategory} 
+      />
+
+      <main class="lp-main-content">
+        <slot />
+      </main>
+
+      <LpFooter 
+        phoneDisplay={phoneDisplay} 
+        phoneTel={phoneTel} 
+      />
+
+      <LpPersistentCallBar 
+        phoneDisplay={phoneDisplay} 
+        phoneTel={phoneTel} 
+        whatsappUrl={whatsappUrl} 
+        ctaText={persistentBarCtaText} 
+        serviceCategory={serviceCategory} 
+      />
+    </div>
+
+    <!-- Click Tracking Listener for Tel and WhatsApp CTA elements -->
+    <script is:inline define:vars={{ serviceCategory }}>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Track telephone link clicks
+        document.querySelectorAll('a[href^="tel:"]').forEach(function(el) {
+          el.addEventListener('click', function() {
+            const placement = el.getAttribute('data-track-cta') || 'body_call_link';
+            if (typeof window.trackLpEvent === 'function') {
+              window.trackLpEvent('cta_call_click', {
+                cta_placement: placement,
+                service_category: serviceCategory
+              });
+            }
+          });
+        });
+
+        // Track WhatsApp link clicks
+        document.querySelectorAll('a[href*="wa.me"]').forEach(function(el) {
+          el.addEventListener('click', function() {
+            const placement = el.getAttribute('data-track-cta') || 'whatsapp_link';
+            if (typeof window.trackLpEvent === 'function') {
+              window.trackLpEvent('cta_whatsapp_click', {
+                cta_placement: placement,
+                service_category: serviceCategory
+              });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
+
+<style is:global>
+  /* Landing page scoped reset and variables */
+  html.lp-html {
+    box-sizing: border-box;
+    font-size: 16px;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body.lp-body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #1b2a4a;
+    background-color: #ffffff;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .lp-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  /* Leave comfortable space on mobile for the persistent bottom call bar */
+  @media (max-width: 767px) {
+    .lp-main-content {
+      padding-bottom: 74px;
+    }
+  }
+
+  .lp-html *,
+  .lp-html *::before,
+  .lp-html *::after {
+    box-sizing: inherit;
+  }
+
+  .lp-container {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  @media (min-width: 768px) {
+    .lp-container {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  }
+</style>

@@ -1,0 +1,196 @@
+---
+interface Props {
+  phoneDisplay: string;
+  phoneTel: string;
+}
+
+const { phoneDisplay, phoneTel } = Astro.props;
+---
+
+<footer class="lp-footer">
+  <div class="lp-container lp-footer-inner">
+    <div class="lp-footer-col">
+      <div class="lp-footer-brand">
+        <img 
+          src="/images/logo.png" 
+          alt="Lynecares Plomberie Liégeoise" 
+          class="lp-footer-logo" 
+          width="150" 
+          height="40" 
+          loading="lazy"
+        />
+        <p class="lp-footer-desc">
+          Artisans plombiers qualifiés au service des particuliers et professionnels de la région liégeoise. Dépannage urgent, débouchage et réparations sanitaires.
+        </p>
+      </div>
+    </div>
+
+    <div class="lp-footer-col">
+      <h3 class="lp-footer-heading">Coordonnées de l'Atelier</h3>
+      <ul class="lp-footer-list">
+        <li>
+          <span class="lp-footer-icon" aria-hidden="true">📍</span>
+          <span>188 Rue de Bois-de-Breux, 4020 Liège, Belgique</span>
+        </li>
+        <li>
+          <span class="lp-footer-icon" aria-hidden="true">📞</span>
+          <a href={phoneTel} class="lp-footer-link">{phoneDisplay}</a>
+        </li>
+        <li>
+          <span class="lp-footer-icon" aria-hidden="true">✉️</span>
+          <a href="mailto:contact@plomberieliegeoise.be" class="lp-footer-link">contact@plomberieliegeoise.be</a>
+        </li>
+        <li>
+          <span class="lp-footer-icon" aria-hidden="true">🕒</span>
+          <span>Astreinte d’urgence & permanence téléphonique 7j/7</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="lp-footer-col">
+      <h3 class="lp-footer-heading">Garanties & Transparence</h3>
+      <ul class="lp-footer-list">
+        <li>✓ Devis clair présenté et validé avant travaux</li>
+        <li>✓ Pièces et raccords agréés aux normes belges</li>
+        <li>✓ Facture détaillée remise pour assurance habitation</li>
+        <li>✓ Matériel professionnel d’inspection et de curage</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="lp-footer-bottom">
+    <div class="lp-container lp-footer-bottom-inner">
+      <p class="lp-copyright">
+        &copy; {new Date().getFullYear()} Lynecares SRL. Tous droits réservés.
+      </p>
+      <div class="lp-footer-legal">
+        <a href="/mentions-legales/" class="lp-legal-link">Mentions Légales & Confidentialité</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .lp-footer {
+    background-color: #111b30;
+    color: #e2e8f0;
+    padding-top: 48px;
+    padding-bottom: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .lp-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+
+  .lp-footer-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding-bottom: 36px;
+  }
+
+  @media (min-width: 768px) {
+    .lp-footer-inner {
+      grid-template-columns: 1.2fr 1fr 1fr;
+      gap: 40px;
+    }
+  }
+
+  .lp-footer-logo {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 12px;
+  }
+
+  .lp-footer-desc {
+    color: #94a3b8;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .lp-footer-heading {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 14px;
+    letter-spacing: -0.2px;
+  }
+
+  .lp-footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 0.88rem;
+    color: #cbd5e1;
+  }
+
+  .lp-footer-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    line-height: 1.4;
+  }
+
+  .lp-footer-icon {
+    flex-shrink: 0;
+  }
+
+  .lp-footer-link {
+    color: #38bdf8;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .lp-footer-link:hover,
+  .lp-footer-link:focus-visible {
+    color: #e27d60;
+    text-decoration: underline;
+  }
+
+  .lp-footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 20px;
+  }
+
+  .lp-footer-bottom-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 0.82rem;
+    color: #94a3b8;
+    text-align: center;
+  }
+
+  @media (min-width: 640px) {
+    .lp-footer-bottom-inner {
+      flex-direction: row;
+      text-align: left;
+    }
+  }
+
+  .lp-copyright {
+    margin: 0;
+  }
+
+  .lp-legal-link {
+    color: #94a3b8;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+  }
+
+  .lp-legal-link:hover,
+  .lp-legal-link:focus-visible {
+    color: #ffffff;
+  }
+</style>

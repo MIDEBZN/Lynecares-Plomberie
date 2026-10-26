@@ -1,0 +1,1230 @@
+---
+import type { LpConfig } from '../../data/lpConfig';
+import LpCallbackForm from './LpCallbackForm.astro';
+
+interface Props {
+  config: LpConfig;
+}
+
+const { config } = Astro.props;
+---
+
+<div class="lp-template">
+  <!-- 1. COMPACT HERO SECTION (Engineered for immediate mobile CTA above fold) -->
+  <section class="lp-hero">
+    <div class="lp-container">
+      <div class="lp-hero-content">
+        <!-- Compact location & availability badge -->
+        <div class="lp-hero-pill">
+          <span class="lp-hero-pill-icon" aria-hidden="true">📍</span>
+          <span>{config.heroBadge}</span>
+        </div>
+
+        <!-- Mobile-first H1 -->
+        <h1 class="lp-hero-h1">{config.heroH1}</h1>
+
+        <!-- Short problem summary -->
+        <p class="lp-hero-subheadline">{config.heroSubheadline}</p>
+
+        <!-- Primary Call Button (must be above fold at 320x568) -->
+        <div class="lp-hero-cta-box">
+          <a 
+            href={config.phoneNumberTel} 
+            class="lp-btn-hero-call" 
+            data-track-cta="hero_primary_call" 
+            data-service={config.serviceCategory}
+          >
+            <svg class="lp-icon-phone" viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+              <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1v3.5a1 1 0 01-1 1A17.93 17.93 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/>
+            </svg>
+            <span>{config.heroPrimaryCtaText}</span>
+          </a>
+
+          <!-- Brief pricing reassurance & secondary anchor link -->
+          <p class="lp-hero-reassurance">{config.heroReassurance}</p>
+          <a href="#rappel" class="lp-hero-callback-link">
+            Ou demander un rappel en ligne ↓
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. REASSURANCE STRIP -->
+  <section class="lp-strip" aria-label="Engagements de service">
+    <div class="lp-container">
+      <div class="lp-strip-grid">
+        {config.reassuranceStrip.map((item) => (
+          <div class="lp-strip-item">
+            <span class="lp-strip-icon" aria-hidden="true">{item.icon}</span>
+            <div class="lp-strip-text">
+              <strong class="lp-strip-title">{item.title}</strong>
+              <span class="lp-strip-subtitle">{item.subtitle}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. RECOGNIZABLE CUSTOMER PROBLEMS -->
+  <section class="lp-section lp-problems-section" id="problemes">
+    <div class="lp-container">
+      <div class="lp-section-header">
+        <h2 class="lp-section-title">{config.problemsSectionTitle}</h2>
+        <p class="lp-section-subtitle">{config.problemsSectionIntro}</p>
+      </div>
+
+      <div class="lp-problems-grid">
+        {config.problems.map((problem) => (
+          <div class="lp-problem-card">
+            <div class="lp-problem-card-top">
+              <span class="lp-problem-icon" aria-hidden="true">{problem.icon}</span>
+              {problem.urgencyHint && (
+                <span class="lp-problem-tag">{problem.urgencyHint}</span>
+              )}
+            </div>
+            <h3 class="lp-problem-title">{problem.title}</h3>
+            <p class="lp-problem-desc">{problem.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. 3-STEP PROCESS -->
+  <section class="lp-section lp-process-section" id="processus">
+    <div class="lp-container">
+      <div class="lp-section-header">
+        <h2 class="lp-section-title">{config.processSectionTitle}</h2>
+        <p class="lp-section-subtitle">{config.processSectionIntro}</p>
+      </div>
+
+      <div class="lp-process-grid">
+        {config.processSteps.map((step) => (
+          <div class="lp-process-step">
+            <div class="lp-step-badge">{step.step}</div>
+            <h3 class="lp-step-title">{step.title}</h3>
+            <p class="lp-step-desc">{step.description}</p>
+            {step.highlight && (
+              <span class="lp-step-highlight">✓ {step.highlight}</span>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. DETAILED SERVICES & PRESTATIONS -->
+  <section class="lp-section lp-solutions-section" id="services">
+    <div class="lp-container">
+      <div class="lp-section-header">
+        <h2 class="lp-section-title">{config.solutionsSectionTitle}</h2>
+        <p class="lp-section-subtitle">{config.solutionsSectionIntro}</p>
+      </div>
+
+      <div class="lp-solutions-grid">
+        {config.solutions.map((sol) => (
+          <div class="lp-solution-card">
+            <span class="lp-solution-icon" aria-hidden="true">{sol.icon}</span>
+            <div class="lp-solution-content">
+              <h3 class="lp-solution-title">{sol.title}</h3>
+              <p class="lp-solution-desc">{sol.description}</p>
+              {sol.equipment && (
+                <span class="lp-solution-equip">🔧 {sol.equipment}</span>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. TRANSPARENT PRICING SECTION -->
+  <section class="lp-section lp-pricing-section" id="tarifs">
+    <div class="lp-container">
+      <div class="lp-section-header">
+        <h2 class="lp-section-title">{config.pricingSectionTitle}</h2>
+        <p class="lp-section-subtitle">{config.pricingSectionIntro}</p>
+      </div>
+
+      <div class="lp-pricing-grid">
+        {config.pricingItems.map((item) => (
+          <div class="lp-pricing-card">
+            {item.badge && <span class="lp-pricing-badge">{item.badge}</span>}
+            <h3 class="lp-pricing-title">{item.title}</h3>
+            <div class="lp-pricing-amount">{item.amount}</div>
+            <p class="lp-pricing-details">{item.details}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="lp-pricing-notice">
+        <h4 class="lp-pricing-notice-title">💡 Conditions de facturation & transparence :</h4>
+        <ul class="lp-pricing-notice-list">
+          {config.pricingNotes.map((note) => (
+            <li>{note}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. MID-PAGE CALL BANNER -->
+  <section class="lp-mid-banner" aria-label="Appel rapide">
+    <div class="lp-container lp-mid-banner-inner">
+      <div class="lp-mid-banner-text">
+        <h3 class="lp-mid-banner-title">Besoin d’une confirmation immédiate pour votre dépannage ?</h3>
+        <p class="lp-mid-banner-sub">Notre artisan examine votre situation en direct au téléphone et valide le délai de passage.</p>
+      </div>
+      <div class="lp-mid-banner-actions">
+        <a 
+          href={config.phoneNumberTel} 
+          class="lp-btn-banner-call" 
+          data-track-cta="mid_banner_call" 
+          data-service={config.serviceCategory}
+        >
+          <svg class="lp-icon-phone" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+            <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1v3.5a1 1 0 01-1 1A17.93 17.93 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/>
+          </svg>
+          <span>{config.phoneNumberDisplay}</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. VERIFIED CUSTOMER REVIEWS -->
+  <section class="lp-section lp-testimonials-section" id="avis">
+    <div class="lp-container">
+      <div class="lp-section-header">
+        <h2 class="lp-section-title">{config.testimonialsSectionTitle}</h2>
+        <p class="lp-section-subtitle">Témoignages de clients dépannés sur Liège et sa périphérie.</p>
+      </div>
+
+      <div class="lp-testimonials-grid">
+        {config.testimonials.map((t) => (
+          <div class="lp-testimonial-card">
+            <div class="lp-testimonial-header">
+              <div class="lp-testimonial-avatar" aria-hidden="true">
+                {t.author.charAt(0)}
+              </div>
+              <div class="lp-testimonial-meta">
+                <strong class="lp-testimonial-author">{t.author}</strong>
+                <span class="lp-testimonial-location">{t.location}</span>
+              </div>
+            </div>
+            <p class="lp-testimonial-quote">« {t.quote} »</p>
+            <div class="lp-testimonial-footer">
+              <span class="lp-testimonial-service">{t.service}</span>
+              <span class="lp-testimonial-context">✓ {t.context}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. SERVICE AREA COVERAGE -->
+  <section class="lp-section lp-coverage-section" id="zones">
+    <div class="lp-container">
+      <div class="lp-section-header">
+        <h2 class="lp-section-title">{config.coverageSectionTitle}</h2>
+        <p class="lp-section-subtitle">{config.coverageIntro}</p>
+      </div>
+
+      <div class="lp-towns-grid">
+        {config.coverageTowns.map((town) => (
+          <div class="lp-town-pill">
+            <span class="lp-town-dot" aria-hidden="true"></span>
+            <span class="lp-town-name">{town.name}</span>
+            <span class="lp-town-zip">({town.zip})</span>
+          </div>
+        ))}
+      </div>
+
+      <p class="lp-coverage-disclaimer">
+        ℹ️ {config.coverageDisclaimer}
+      </p>
+    </div>
+  </section>
+
+  <!-- 10. CALLBACK FORM -->
+  <LpCallbackForm 
+    serviceCategory={config.serviceCategory} 
+    problemOptions={config.formProblemOptions} 
+    sectionTitle={config.formSectionTitle} 
+    sectionIntro={config.formSectionIntro} 
+    phoneDisplay={config.phoneNumberDisplay} 
+    phoneTel={config.phoneNumberTel} 
+  />
+
+  <!-- 11. SERVICE SPECIFIC FAQS -->
+  <section class="lp-section lp-faq-section" id="faq">
+    <div class="lp-container">
+      <div class="lp-section-header">
+        <h2 class="lp-section-title">{config.faqsSectionTitle}</h2>
+        <p class="lp-section-subtitle">Réponses factuelles aux questions les plus fréquentes.</p>
+      </div>
+
+      <div class="lp-faq-list">
+        {config.faqs.map((faq) => (
+          <details class="lp-faq-item">
+            <summary class="lp-faq-question">
+              <span>{faq.question}</span>
+              <span class="lp-faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="lp-faq-answer">
+              <p>{faq.answer}</p>
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. FINAL CTA ACTION -->
+  <section class="lp-section lp-final-cta">
+    <div class="lp-container">
+      <div class="lp-final-cta-card">
+        <h2 class="lp-final-title">{config.finalCtaTitle}</h2>
+        <p class="lp-final-subtext">{config.finalCtaSubtext}</p>
+        <div class="lp-final-btn-group">
+          <a 
+            href={config.phoneNumberTel} 
+            class="lp-btn-final-call" 
+            data-track-cta="final_cta_call" 
+            data-service={config.serviceCategory}
+          >
+            <svg class="lp-icon-phone" viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+              <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1v3.5a1 1 0 01-1 1A17.93 17.93 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/>
+            </svg>
+            <span>{config.finalCtaButtonText}</span>
+          </a>
+          <a href="#rappel" class="lp-btn-final-form">
+            Ou demander un rappel en ligne
+          </a>
+        </div>
+        <p class="lp-final-reminder">
+          Permanence d’astreinte 7j/7 • Tarif de déplacement et conditions confirmés avant le départ de l’artisan.
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<style>
+  /* ==========================================================================
+     HERO SECTION: MOBILE-FIRST COMPACT ELEVATION
+     Designed to guarantee primary CTA is visible above fold on 320x568
+     ========================================================================== */
+  .lp-hero {
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+    padding: 16px 0 24px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .lp-hero-content {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .lp-hero-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #e0f2fe;
+    color: #0369a1;
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    margin-bottom: 10px;
+    border: 1px solid #bae6fd;
+    line-height: 1.2;
+  }
+
+  .lp-hero-pill-icon {
+    font-size: 0.9rem;
+  }
+
+  .lp-hero-h1 {
+    color: #1b2a4a;
+    font-size: 1.7rem; /* ~27px on mobile */
+    font-weight: 800;
+    line-height: 1.18;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.5px;
+  }
+
+  .lp-hero-subheadline {
+    color: #334155;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 0 0 16px 0;
+    font-weight: 500;
+  }
+
+  .lp-hero-cta-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .lp-btn-hero-call {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #e27d60;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 800;
+    padding: 14px 22px;
+    border-radius: 10px;
+    text-decoration: none;
+    width: 100%;
+    max-width: 440px;
+    min-height: 52px;
+    box-shadow: 0 4px 14px rgba(226, 125, 96, 0.4);
+    transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  }
+
+  .lp-btn-hero-call:hover {
+    background-color: #d16b4e;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(226, 125, 96, 0.5);
+  }
+
+  .lp-btn-hero-call:focus-visible {
+    outline: 3px solid #00a8cc;
+    outline-offset: 3px;
+  }
+
+  .lp-hero-reassurance {
+    color: #475569;
+    font-size: 0.82rem;
+    font-weight: 600;
+    margin: 4px 0 0;
+    line-height: 1.3;
+  }
+
+  .lp-hero-callback-link {
+    color: #00a8cc;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: underline;
+    margin-top: 4px;
+    transition: color 0.2s ease;
+  }
+
+  .lp-hero-callback-link:hover {
+    color: #1b2a4a;
+  }
+
+  @media (min-width: 768px) {
+    .lp-hero {
+      padding: 36px 0 44px;
+    }
+
+    .lp-hero-h1 {
+      font-size: 2.5rem;
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    .lp-hero-subheadline {
+      font-size: 1.15rem;
+      margin-bottom: 22px;
+    }
+
+    .lp-btn-hero-call {
+      font-size: 1.2rem;
+      padding: 16px 32px;
+    }
+  }
+
+  /* ==========================================================================
+     REASSURANCE STRIP
+     ========================================================================== */
+  .lp-strip {
+    background-color: #1b2a4a;
+    color: #ffffff;
+    padding: 16px 0;
+  }
+
+  .lp-strip-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  @media (min-width: 768px) {
+    .lp-strip-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+  }
+
+  .lp-strip-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 6px 0;
+  }
+
+  .lp-strip-icon {
+    font-size: 1.4rem;
+    flex-shrink: 0;
+  }
+
+  .lp-strip-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.25;
+  }
+
+  .lp-strip-title {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #ffffff;
+  }
+
+  .lp-strip-subtitle {
+    font-size: 0.8rem;
+    color: #cbd5e1;
+  }
+
+  /* ==========================================================================
+     COMMON SECTION STYLES
+     ========================================================================== */
+  .lp-section {
+    padding: 44px 0;
+  }
+
+  .lp-section-header {
+    text-align: center;
+    max-width: 740px;
+    margin: 0 auto 32px;
+  }
+
+  .lp-section-title {
+    color: #1b2a4a;
+    font-size: 1.55rem;
+    font-weight: 800;
+    margin: 0 0 10px;
+    letter-spacing: -0.3px;
+    line-height: 1.25;
+  }
+
+  .lp-section-subtitle {
+    color: #475569;
+    font-size: 0.95rem;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  @media (min-width: 768px) {
+    .lp-section {
+      padding: 64px 0;
+    }
+
+    .lp-section-title {
+      font-size: 2.1rem;
+    }
+
+    .lp-section-subtitle {
+      font-size: 1.05rem;
+    }
+  }
+
+  /* ==========================================================================
+     3. PROBLEMS GRID
+     ========================================================================== */
+  .lp-problems-section {
+    background: #ffffff;
+  }
+
+  .lp-problems-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  @media (min-width: 640px) {
+    .lp-problems-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .lp-problems-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+  }
+
+  .lp-problem-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  }
+
+  .lp-problem-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(27, 42, 74, 0.08);
+    border-color: #cbd5e1;
+  }
+
+  .lp-problem-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+
+  .lp-problem-icon {
+    font-size: 1.6rem;
+  }
+
+  .lp-problem-tag {
+    font-size: 0.72rem;
+    font-weight: 700;
+    background: #fee2e2;
+    color: #991b1b;
+    padding: 3px 8px;
+    border-radius: 6px;
+  }
+
+  .lp-problem-title {
+    color: #1b2a4a;
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 0 0 8px;
+    line-height: 1.3;
+  }
+
+  .lp-problem-desc {
+    color: #475569;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* ==========================================================================
+     4. PROCESS STEPS
+     ========================================================================== */
+  .lp-process-section {
+    background: #f1f5f9;
+  }
+
+  .lp-process-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  @media (min-width: 768px) {
+    .lp-process-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+  }
+
+  .lp-process-step {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 24px;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  }
+
+  .lp-step-badge {
+    width: 38px;
+    height: 38px;
+    background: #1b2a4a;
+    color: #ffffff;
+    font-size: 1.15rem;
+    font-weight: 800;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+  }
+
+  .lp-step-title {
+    color: #1b2a4a;
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin: 0 0 10px;
+    line-height: 1.3;
+  }
+
+  .lp-step-desc {
+    color: #475569;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    margin: 0 0 14px;
+  }
+
+  .lp-step-highlight {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #0369a1;
+    background: #e0f2fe;
+    padding: 4px 8px;
+    border-radius: 6px;
+  }
+
+  /* ==========================================================================
+     5. SOLUTIONS / PRESTATIONS
+     ========================================================================== */
+  .lp-solutions-section {
+    background: #ffffff;
+  }
+
+  .lp-solutions-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  @media (min-width: 640px) {
+    .lp-solutions-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .lp-solution-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .lp-solution-icon {
+    font-size: 1.8rem;
+    flex-shrink: 0;
+    background: #f0fdfa;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border: 1px solid #ccfbf1;
+  }
+
+  .lp-solution-content {
+    flex: 1;
+  }
+
+  .lp-solution-title {
+    color: #1b2a4a;
+    font-size: 1.05rem;
+    font-weight: 800;
+    margin: 0 0 6px;
+    line-height: 1.3;
+  }
+
+  .lp-solution-desc {
+    color: #475569;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    margin: 0 0 10px;
+  }
+
+  .lp-solution-equip {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #0f766e;
+    background: #f0fdfa;
+    padding: 3px 8px;
+    border-radius: 6px;
+    border: 1px solid #ccfbf1;
+  }
+
+  /* ==========================================================================
+     6. PRICING SECTION
+     ========================================================================== */
+  .lp-pricing-section {
+    background: #f8fafc;
+  }
+
+  .lp-pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: 768px) {
+    .lp-pricing-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+  }
+
+  .lp-pricing-card {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 24px 20px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  }
+
+  .lp-pricing-badge {
+    position: absolute;
+    top: -10px;
+    right: 14px;
+    background: #1b2a4a;
+    color: #ffffff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 9999px;
+  }
+
+  .lp-pricing-title {
+    color: #1b2a4a;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0 0 10px;
+    line-height: 1.3;
+  }
+
+  .lp-pricing-amount {
+    color: #00a8cc;
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+  }
+
+  .lp-pricing-details {
+    color: #64748b;
+    font-size: 0.85rem;
+    line-height: 1.45;
+    margin: 0;
+  }
+
+  .lp-pricing-notice {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #00a8cc;
+    border-radius: 8px;
+    padding: 16px 20px;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .lp-pricing-notice-title {
+    color: #1b2a4a;
+    font-size: 0.95rem;
+    font-weight: 800;
+    margin: 0 0 8px;
+  }
+
+  .lp-pricing-notice-list {
+    margin: 0;
+    padding-left: 20px;
+    color: #475569;
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .lp-pricing-notice-list li {
+    margin-bottom: 4px;
+  }
+
+  /* ==========================================================================
+     7. MID-PAGE CALL BANNER
+     ========================================================================== */
+  .lp-mid-banner {
+    background: #1b2a4a;
+    color: #ffffff;
+    padding: 32px 0;
+  }
+
+  .lp-mid-banner-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 18px;
+  }
+
+  @media (min-width: 768px) {
+    .lp-mid-banner-inner {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+  }
+
+  .lp-mid-banner-title {
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin: 0 0 6px;
+    line-height: 1.25;
+  }
+
+  .lp-mid-banner-sub {
+    color: #cbd5e1;
+    font-size: 0.92rem;
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  .lp-btn-banner-call {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #e27d60;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 800;
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+  }
+
+  .lp-btn-banner-call:hover {
+    background: #d16b4e;
+    color: #ffffff;
+    transform: translateY(-2px);
+  }
+
+  /* ==========================================================================
+     8. TESTIMONIALS
+     ========================================================================== */
+  .lp-testimonials-section {
+    background: #ffffff;
+  }
+
+  .lp-testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 640px) {
+    .lp-testimonials-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .lp-testimonial-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .lp-testimonial-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .lp-testimonial-avatar {
+    width: 40px;
+    height: 40px;
+    background: #00a8cc;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+
+  .lp-testimonial-meta {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.25;
+  }
+
+  .lp-testimonial-author {
+    color: #1b2a4a;
+    font-size: 0.95rem;
+  }
+
+  .lp-testimonial-location {
+    color: #64748b;
+    font-size: 0.8rem;
+  }
+
+  .lp-testimonial-quote {
+    color: #334155;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    font-style: italic;
+    margin: 0 0 14px;
+    flex: 1;
+  }
+
+  .lp-testimonial-footer {
+    border-top: 1px solid #e2e8f0;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    font-size: 0.78rem;
+  }
+
+  .lp-testimonial-service {
+    color: #1b2a4a;
+    font-weight: 700;
+  }
+
+  .lp-testimonial-context {
+    color: #166534;
+    font-weight: 600;
+  }
+
+  /* ==========================================================================
+     9. COVERAGE
+     ========================================================================== */
+  .lp-coverage-section {
+    background: #f1f5f9;
+  }
+
+  .lp-towns-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto 20px;
+  }
+
+  .lp-town-pill {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 9999px;
+    padding: 7px 14px;
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  }
+
+  .lp-town-dot {
+    width: 6px;
+    height: 6px;
+    background: #00a8cc;
+    border-radius: 50%;
+  }
+
+  .lp-town-name {
+    color: #1b2a4a;
+    font-weight: 700;
+  }
+
+  .lp-town-zip {
+    color: #64748b;
+    font-size: 0.78rem;
+  }
+
+  .lp-coverage-disclaimer {
+    color: #64748b;
+    font-size: 0.85rem;
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto;
+    line-height: 1.45;
+  }
+
+  /* ==========================================================================
+     11. FAQS ACCORDION
+     ========================================================================== */
+  .lp-faq-section {
+    background: #ffffff;
+  }
+
+  .lp-faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .lp-faq-item {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 0;
+    overflow: hidden;
+    transition: border-color 0.2s ease;
+  }
+
+  .lp-faq-item[open] {
+    border-color: #00a8cc;
+    background: #ffffff;
+  }
+
+  .lp-faq-question {
+    padding: 16px 20px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1b2a4a;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    user-select: none;
+  }
+
+  .lp-faq-question::-webkit-details-marker {
+    display: none;
+  }
+
+  .lp-faq-icon {
+    font-size: 1.2rem;
+    color: #00a8cc;
+    font-weight: 700;
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+    margin-left: 12px;
+  }
+
+  .lp-faq-item[open] .lp-faq-icon {
+    transform: rotate(45deg);
+  }
+
+  .lp-faq-answer {
+    padding: 0 20px 18px;
+    color: #475569;
+    font-size: 0.92rem;
+    line-height: 1.55;
+  }
+
+  .lp-faq-answer p {
+    margin: 0;
+  }
+
+  /* ==========================================================================
+     12. FINAL CALL TO ACTION
+     ========================================================================== */
+  .lp-final-cta {
+    background: #111b30;
+    color: #ffffff;
+    padding: 56px 0;
+    text-align: center;
+  }
+
+  .lp-final-cta-card {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .lp-final-title {
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin: 0 0 10px;
+    line-height: 1.25;
+  }
+
+  .lp-final-subtext {
+    color: #cbd5e1;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0 0 24px;
+  }
+
+  .lp-final-btn-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: 640px) {
+    .lp-final-btn-group {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+
+  .lp-btn-final-call {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #e27d60;
+    color: #ffffff;
+    font-size: 1.15rem;
+    font-weight: 800;
+    padding: 14px 26px;
+    border-radius: 8px;
+    text-decoration: none;
+    min-height: 52px;
+    box-shadow: 0 4px 14px rgba(226, 125, 96, 0.4);
+    transition: background-color 0.2s ease, transform 0.15s ease;
+  }
+
+  .lp-btn-final-call:hover {
+    background-color: #d16b4e;
+    color: #ffffff;
+    transform: translateY(-2px);
+  }
+
+  .lp-btn-final-form {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    min-height: 52px;
+    transition: background 0.2s ease, border-color 0.2s ease;
+  }
+
+  .lp-btn-final-form:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #ffffff;
+    color: #ffffff;
+  }
+
+  .lp-final-reminder {
+    color: #94a3b8;
+    font-size: 0.82rem;
+    margin: 0;
+    line-height: 1.4;
+  }
+</style>

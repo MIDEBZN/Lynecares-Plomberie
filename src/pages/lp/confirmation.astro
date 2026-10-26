@@ -1,0 +1,185 @@
+---
+import LpLayout from '../../layouts/LpLayout.astro';
+import { LP_COMMON } from '../../data/lpConfig';
+---
+
+<LpLayout
+  title="Demande de Rappel Confirmée | Lynecares Plomberie"
+  description="Votre demande de rappel a bien été transmise à notre permanence d'astreinte Lynecares Plomberie Liégeoise."
+  canonicalPath="/lp/confirmation/"
+  serviceCategory="urgence"
+  phoneDisplay={LP_COMMON.phoneDisplay}
+  phoneTel={LP_COMMON.phoneTel}
+  whatsappUrl={LP_COMMON.whatsappBase}
+  persistentBarCtaText="Urgence : 0466 26 58 95"
+>
+  <section class="lp-confirmation-section">
+    <div class="lp-container">
+      <div class="lp-confirmation-card">
+        <div class="lp-confirmation-icon" aria-hidden="true">✓</div>
+        <h1 class="lp-confirmation-title">Demande de rappel enregistrée</h1>
+        <p class="lp-confirmation-text">
+          Votre message a bien été transmis à notre permanence locale. Un technicien Lynecares prendra contact avec vous sur votre numéro de téléphone dans les meilleurs délais.
+        </p>
+
+        <div class="lp-confirmation-urgent-box">
+          <strong>Votre situation est critique (inondation, refoulement actif) ?</strong>
+          <p>Ne restez pas dans l'attente : appelez directement notre numéro d'astreinte.</p>
+          <a href={LP_COMMON.phoneTel} class="lp-btn-confirm-call">
+            📞 Appeler le {LP_COMMON.phoneDisplay}
+          </a>
+        </div>
+
+        <div class="lp-confirmation-steps">
+          <h3>Prochaines étapes :</h3>
+          <ol>
+            <li>Si une fuite est en cours, coupez la vanne d'arrêt générale.</li>
+            <li>Gardez votre téléphone à portée de main.</li>
+            <li>Notre technicien confirmera avec vous le délai exact d'arrivée et les conditions tarifaires.</li>
+          </ol>
+        </div>
+
+        <div class="lp-confirmation-back">
+          <a href="/lp/urgence-plomberie-liege/" class="lp-btn-back">
+            ← Revenir à la page de dépannage
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</LpLayout>
+
+<script is:inline>
+  // Safeguard against duplicate conversion tracking on page refresh
+  (function() {
+    const KEY = 'lp_callback_converted';
+    const isAlreadyCounted = sessionStorage.getItem(KEY);
+
+    if (!isAlreadyCounted) {
+      sessionStorage.setItem(KEY, 'true');
+      if (typeof window.trackLpEvent === 'function') {
+        window.trackLpEvent('form_submit_success', {
+          source_page: 'confirmation_page'
+        });
+      }
+    }
+  })();
+</script>
+
+<style>
+  .lp-confirmation-section {
+    padding: 60px 0 80px;
+    background: #f8fafc;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .lp-confirmation-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 36px 24px;
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(27, 42, 74, 0.08);
+  }
+
+  .lp-confirmation-icon {
+    width: 64px;
+    height: 64px;
+    background: #dcfce7;
+    color: #166534;
+    font-size: 2rem;
+    font-weight: 800;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+  }
+
+  .lp-confirmation-title {
+    color: #1b2a4a;
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin: 0 0 12px;
+  }
+
+  .lp-confirmation-text {
+    color: #475569;
+    font-size: 1rem;
+    line-height: 1.55;
+    margin: 0 0 24px;
+  }
+
+  .lp-confirmation-urgent-box {
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+    border-radius: 8px;
+    padding: 18px;
+    color: #9a3412;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .lp-confirmation-urgent-box p {
+    margin: 6px 0 14px;
+    font-size: 0.92rem;
+  }
+
+  .lp-btn-confirm-call {
+    display: inline-block;
+    background: #e27d60;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 1.05rem;
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s ease;
+  }
+
+  .lp-btn-confirm-call:hover {
+    background: #d16b4e;
+  }
+
+  .lp-confirmation-steps {
+    text-align: left;
+    background: #f1f5f9;
+    border-radius: 8px;
+    padding: 18px 20px;
+    margin-bottom: 24px;
+  }
+
+  .lp-confirmation-steps h3 {
+    color: #1b2a4a;
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin: 0 0 10px;
+  }
+
+  .lp-confirmation-steps ol {
+    margin: 0;
+    padding-left: 20px;
+    color: #475569;
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+
+  .lp-confirmation-steps li {
+    margin-bottom: 6px;
+  }
+
+  .lp-confirmation-back {
+    margin-top: 16px;
+  }
+
+  .lp-btn-back {
+    color: #00a8cc;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+</style>

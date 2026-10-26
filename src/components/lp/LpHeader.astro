@@ -1,0 +1,205 @@
+---
+interface Props {
+  phoneDisplay: string;
+  phoneTel: string;
+  serviceCategory: string;
+}
+
+const { phoneDisplay, phoneTel, serviceCategory } = Astro.props;
+---
+
+<header class="lp-header" id="top">
+  <div class="lp-container lp-header-inner">
+    <a href="#top" class="lp-logo-link" aria-label="Lynecares Plomberie Liégeoise - Haut de page">
+      <img 
+        src="/images/logo.png" 
+        alt="Lynecares Plomberie Liégeoise" 
+        class="lp-logo-img" 
+        width="160" 
+        height="44" 
+        loading="eager"
+      />
+    </a>
+
+    <div class="lp-header-badge" aria-hidden="true">
+      <span class="lp-status-dot"></span>
+      <span class="lp-badge-text">Permanence 7j/7 • Liège & Province</span>
+    </div>
+
+    <nav class="lp-header-nav" aria-label="Navigation de la page">
+      <a href="#services" class="lp-nav-link">Services</a>
+      <a href="#tarifs" class="lp-nav-link">Tarifs</a>
+      <a href="#avis" class="lp-nav-link">Avis</a>
+      <a href="#zones" class="lp-nav-link">Communes</a>
+      <a href="#faq" class="lp-nav-link">FAQ</a>
+    </nav>
+
+    <div class="lp-header-cta">
+      <a 
+        href={phoneTel} 
+        class="lp-btn-header-call" 
+        data-track-cta="header_call" 
+        data-service={serviceCategory}
+      >
+        <svg class="lp-icon-phone" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+          <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1v3.5a1 1 0 01-1 1A17.93 17.93 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/>
+        </svg>
+        <span class="lp-header-phone-text">{phoneDisplay}</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<style>
+  .lp-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 8px 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+
+  .lp-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+
+  .lp-header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .lp-logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  .lp-logo-img {
+    height: 38px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+  }
+
+  .lp-header-badge {
+    display: none;
+    align-items: center;
+    gap: 6px;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    color: #166534;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .lp-status-dot {
+    width: 8px;
+    height: 8px;
+    background: #22c55e;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .lp-header-nav {
+    display: none;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .lp-nav-link {
+    color: #1b2a4a;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .lp-nav-link:hover,
+  .lp-nav-link:focus-visible {
+    color: #00a8cc;
+  }
+
+  .lp-header-cta {
+    display: flex;
+    align-items: center;
+  }
+
+  .lp-btn-header-call {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #e27d60;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 8px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+    white-space: nowrap;
+    min-height: 40px;
+  }
+
+  .lp-btn-header-call:hover {
+    background-color: #d16b4e;
+    color: #ffffff;
+    transform: translateY(-1px);
+  }
+
+  .lp-btn-header-call:focus-visible {
+    outline: 3px solid #00a8cc;
+    outline-offset: 2px;
+  }
+
+  .lp-icon-phone {
+    flex-shrink: 0;
+  }
+
+  @media (min-width: 768px) {
+    .lp-header {
+      padding: 10px 0;
+    }
+
+    .lp-logo-img {
+      height: 44px;
+    }
+
+    .lp-header-badge {
+      display: inline-flex;
+    }
+
+    .lp-header-nav {
+      display: flex;
+    }
+
+    .lp-btn-header-call {
+      padding: 9px 18px;
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .lp-logo-img {
+      height: 32px;
+    }
+
+    .lp-btn-header-call {
+      padding: 7px 10px;
+      font-size: 0.88rem;
+      gap: 6px;
+    }
+
+    .lp-header-phone-text {
+      letter-spacing: -0.2px;
+    }
+  }
+</style>

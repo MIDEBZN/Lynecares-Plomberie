@@ -1,0 +1,20 @@
+---
+import LpLayout from '../../layouts/LpLayout.astro';
+import LandingPageTemplate from '../../components/lp/LandingPageTemplate.astro';
+import { LP_SERVICES } from '../../data/lpConfig';
+
+const config = LP_SERVICES['fuite-depannage-liege'];
+---
+
+<LpLayout
+  title={config.metaTitle}
+  description={config.metaDescription}
+  canonicalPath={config.canonicalPath}
+  serviceCategory={config.serviceCategory}
+  phoneDisplay={config.phoneNumberDisplay}
+  phoneTel={config.phoneNumberTel}
+  whatsappUrl={config.whatsappUrl}
+  persistentBarCtaText={config.persistentBarCtaText}
+>
+  <LandingPageTemplate config={config} />
+</LpLayout>

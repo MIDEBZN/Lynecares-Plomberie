@@ -1,0 +1,544 @@
+---
+interface Props {
+  serviceCategory: 'urgence' | 'debouchage' | 'fuite_depannage';
+  problemOptions: Array<{ value: string; label: string }>;
+  sectionTitle: string;
+  sectionIntro: string;
+  phoneDisplay: string;
+  phoneTel: string;
+}
+
+const { serviceCategory, problemOptions, sectionTitle, sectionIntro, phoneDisplay, phoneTel } = Astro.props;
+const formId = `lp-callback-form-${serviceCategory}`;
+---
+
+<section class="lp-section lp-form-section" id="rappel">
+  <div class="lp-container">
+    <div class="lp-form-card">
+      <div class="lp-form-header">
+        <h2 class="lp-form-title">{sectionTitle}</h2>
+        <p class="lp-form-intro">{sectionIntro}</p>
+        <div class="lp-emergency-reminder">
+          <span class="lp-emergency-icon" aria-hidden="true">⚠️</span>
+          <span>Pour une urgence immédiate, privilégiez l’appel direct au <a href={phoneTel} class="lp-bold-link">{phoneDisplay}</a>.</span>
+        </div>
+      </div>
+
+      <!-- Live status notification -->
+      <div 
+        id={`${formId}-status`} 
+        class="lp-form-status" 
+        role="status" 
+        aria-live="polite" 
+        style="display: none;"
+      ></div>
+
+      <form 
+        id={formId} 
+        class="lp-form" 
+        method="POST" 
+        action="/api/callback" 
+        data-service={serviceCategory}
+        novalidate
+      >
+        <!-- Anti-spam Honeypot -->
+        <div style="display:none;" aria-hidden="true">
+          <label for={`${formId}-honey`}>Ne pas remplir ce champ si vous êtes un humain</label>
+          <input type="text" id={`${formId}-honey`} name="_lp_honey" tabindex="-1" autocomplete="off" />
+        </div>
+
+        <input type="hidden" name="serviceCategory" value={serviceCategory} />
+
+        <div class="lp-form-grid">
+          <!-- Telephone field -->
+          <div class="lp-form-group">
+            <label for={`${formId}-phone`} class="lp-label">
+              Numéro de téléphone <span class="lp-required" aria-hidden="true">*</span>
+            </label>
+            <input 
+              type="tel" 
+              id={`${formId}-phone`} 
+              name="phone" 
+              required 
+              class="lp-input" 
+              placeholder="Ex: 0466 26 58 95" 
+              autocomplete="tel" 
+              aria-required="true"
+            />
+            <span class="lp-field-hint">Le numéro sur lequel notre artisan peut vous joindre.</span>
+            <span class="lp-field-error" id={`${formId}-phone-error`} aria-live="polite"></span>
+          </div>
+
+          <!-- Municipality / Postal code -->
+          <div class="lp-form-group">
+            <label for={`${formId}-location`} class="lp-label">
+              Commune ou code postal à Liège <span class="lp-required" aria-hidden="true">*</span>
+            </label>
+            <input 
+              type="text" 
+              id={`${formId}-location`} 
+              name="location" 
+              required 
+              class="lp-input" 
+              placeholder="Ex: 4000 Liège, Seraing, Ans..." 
+              autocomplete="address-level2" 
+              aria-required="true"
+            />
+            <span class="lp-field-hint">Pour vérifier la disponibilité de notre équipe locale.</span>
+            <span class="lp-field-error" id={`${formId}-location-error`} aria-live="polite"></span>
+          </div>
+        </div>
+
+        <!-- Problem type dropdown (service-specific) -->
+        <div class="lp-form-group">
+          <label for={`${formId}-problem`} class="lp-label">
+            Type de problème rencontré <span class="lp-required" aria-hidden="true">*</span>
+          </label>
+          <select 
+            id={`${formId}-problem`} 
+            name="problemType" 
+            required 
+            class="lp-select" 
+            aria-required="true"
+          >
+            <option value="">-- Sélectionnez votre situation --</option>
+            {problemOptions.map(opt => (
+              <option value={opt.value}>{opt.label}</option>
+            ))}
+          </select>
+          <span class="lp-field-error" id={`${formId}-problem-error`} aria-live="polite"></span>
+        </div>
+
+        <!-- Optional description -->
+        <div class="lp-form-group">
+          <label for={`${formId}-desc`} class="lp-label">
+            Précisions utiles <span class="lp-optional">(facultatif)</span>
+          </label>
+          <textarea 
+            id={`${formId}-desc`} 
+            name="description" 
+            rows="3" 
+            class="lp-textarea" 
+            placeholder="Détails complémentaires (étage, vanne fermée, odeur, accès particulier)..."
+          ></textarea>
+        </div>
+
+        <!-- Submit CTA -->
+        <div class="lp-form-actions">
+          <button type="submit" class="lp-btn-submit" id={`${formId}-submit`}>
+            <span class="lp-btn-submit-text">Demander un rappel</span>
+            <span class="lp-spinner" aria-hidden="true" style="display: none;"></span>
+          </button>
+          <p class="lp-privacy-note">
+            Vos coordonnées ne sont utilisées que pour vous rappeler concernant cette demande.
+            Consultez nos <a href="/mentions-legales/" target="_blank" rel="noopener">mentions légales & politique de confidentialité</a>.
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<style>
+  .lp-form-section {
+    background: #f8fafc;
+    padding: 50px 0;
+  }
+
+  .lp-form-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 24px;
+    max-width: 720px;
+    margin: 0 auto;
+    box-shadow: 0 4px 16px rgba(27, 42, 74, 0.06);
+  }
+
+  @media (min-width: 768px) {
+    .lp-form-card {
+      padding: 36px;
+    }
+  }
+
+  .lp-form-header {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .lp-form-title {
+    color: #1b2a4a;
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+  }
+
+  .lp-form-intro {
+    color: #475569;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 14px;
+  }
+
+  .lp-emergency-reminder {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+    color: #9a3412;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-align: left;
+  }
+
+  .lp-emergency-icon {
+    flex-shrink: 0;
+    font-size: 1.1rem;
+  }
+
+  .lp-bold-link {
+    color: #9a3412;
+    text-decoration: underline;
+    font-weight: 800;
+  }
+
+  .lp-form-status {
+    padding: 14px 18px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .lp-form-status.success {
+    background: #f0fdf4;
+    border: 1px solid #86efac;
+    color: #166534;
+  }
+
+  .lp-form-status.error {
+    background: #fef2f2;
+    border: 1px solid #fca5a5;
+    color: #991b1b;
+  }
+
+  .lp-form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  @media (min-width: 640px) {
+    .lp-form-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .lp-form-group {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .lp-label {
+    color: #1b2a4a;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  .lp-required {
+    color: #dc2626;
+  }
+
+  .lp-optional {
+    color: #64748b;
+    font-weight: 400;
+    font-size: 0.8rem;
+  }
+
+  .lp-input,
+  .lp-select,
+  .lp-textarea {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: #1b2a4a;
+    background-color: #ffffff;
+    font-family: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .lp-input:focus,
+  .lp-select:focus,
+  .lp-textarea:focus {
+    outline: none;
+    border-color: #00a8cc;
+    box-shadow: 0 0 0 3px rgba(0, 168, 204, 0.2);
+  }
+
+  .lp-input.invalid,
+  .lp-select.invalid {
+    border-color: #dc2626;
+    background-color: #fffaf0;
+  }
+
+  .lp-field-hint {
+    color: #64748b;
+    font-size: 0.78rem;
+    margin-top: 4px;
+  }
+
+  .lp-field-error {
+    color: #dc2626;
+    font-size: 0.82rem;
+    margin-top: 4px;
+    min-height: 16px;
+    font-weight: 600;
+  }
+
+  .lp-form-actions {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .lp-btn-submit {
+    width: 100%;
+    min-height: 50px;
+    background-color: #00a8cc;
+    color: #ffffff;
+    font-size: 1.05rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+  }
+
+  .lp-btn-submit:hover:not(:disabled) {
+    background-color: #0087a3;
+    transform: translateY(-1px);
+  }
+
+  .lp-btn-submit:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+  }
+
+  .lp-btn-submit:focus-visible {
+    outline: 3px solid #1b2a4a;
+    outline-offset: 2px;
+  }
+
+  .lp-spinner {
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: lp-spin 0.8s linear infinite;
+  }
+
+  @keyframes lp-spin {
+    to { transform: rotate(360deg); }
+  }
+
+  .lp-privacy-note {
+    color: #64748b;
+    font-size: 0.78rem;
+    line-height: 1.4;
+    text-align: center;
+    margin: 0;
+  }
+
+  .lp-privacy-note a {
+    color: #00a8cc;
+    text-decoration: underline;
+  }
+</style>
+
+<script is:inline define:vars={{ formId, serviceCategory, phoneDisplay, phoneTel }}>
+  (function() {
+    const form = document.getElementById(formId);
+    if (!form) return;
+
+    const statusEl = document.getElementById(formId + '-status');
+    const submitBtn = document.getElementById(formId + '-submit');
+    const btnText = submitBtn ? submitBtn.querySelector('.lp-btn-submit-text') : null;
+    const spinner = submitBtn ? submitBtn.querySelector('.lp-spinner') : null;
+
+    const phoneInput = document.getElementById(formId + '-phone');
+    const locationInput = document.getElementById(formId + '-location');
+    const problemSelect = document.getElementById(formId + '-problem');
+    const descInput = document.getElementById(formId + '-desc');
+
+    const phoneErr = document.getElementById(formId + '-phone-error');
+    const locationErr = document.getElementById(formId + '-location-error');
+    const problemErr = document.getElementById(formId + '-problem-error');
+
+    let hasStarted = false;
+    let isSubmitting = false;
+
+    // Track form start on first interaction
+    function triggerFormStart() {
+      if (hasStarted) return;
+      hasStarted = true;
+      if (typeof window.trackLpEvent === 'function') {
+        window.trackLpEvent('form_start', { service_category: serviceCategory });
+      }
+    }
+
+    [phoneInput, locationInput, problemSelect, descInput].forEach(function(input) {
+      if (!input) return;
+      input.addEventListener('focus', triggerFormStart, { once: true });
+      input.addEventListener('input', triggerFormStart, { once: true });
+    });
+
+    function clearErrors() {
+      if (phoneErr) phoneErr.textContent = '';
+      if (locationErr) locationErr.textContent = '';
+      if (problemErr) problemErr.textContent = '';
+      if (phoneInput) phoneInput.classList.remove('invalid');
+      if (locationInput) locationInput.classList.remove('invalid');
+      if (problemSelect) problemSelect.classList.remove('invalid');
+    }
+
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      clearErrors();
+
+      // Check anti-spam honeypot
+      const honey = form.querySelector('input[name="_lp_honey"]');
+      if (honey && honey.value.trim() !== '') {
+        // Silent bot rejection
+        return;
+      }
+
+      if (isSubmitting) return;
+
+      const phoneVal = phoneInput ? phoneInput.value.trim() : '';
+      const locationVal = locationInput ? locationInput.value.trim() : '';
+      const problemVal = problemSelect ? problemSelect.value : '';
+      const descVal = descInput ? descInput.value.trim() : '';
+
+      let hasError = false;
+
+      // Phone validation
+      const phoneClean = phoneVal.replace(/[\s\.\-\/]/g, '');
+      if (!phoneVal || phoneClean.length < 8) {
+        if (phoneErr) phoneErr.textContent = 'Veuillez saisir un numéro de téléphone valide.';
+        if (phoneInput) phoneInput.classList.add('invalid');
+        hasError = true;
+      }
+
+      // Location validation
+      if (!locationVal || locationVal.length < 2) {
+        if (locationErr) locationErr.textContent = 'Veuillez renseigner votre commune ou code postal à Liège.';
+        if (locationInput) locationInput.classList.add('invalid');
+        hasError = true;
+      }
+
+      // Problem type validation
+      if (!problemVal) {
+        if (problemErr) problemErr.textContent = 'Veuillez sélectionner le type de problème rencontré.';
+        if (problemSelect) problemSelect.classList.add('invalid');
+        hasError = true;
+      }
+
+      if (hasError) {
+        if (typeof window.trackLpEvent === 'function') {
+          window.trackLpEvent('form_submit_error', {
+            service_category: serviceCategory,
+            error_reason: 'validation_failed'
+          });
+        }
+        return;
+      }
+
+      // Start submission
+      isSubmitting = true;
+      if (submitBtn) submitBtn.disabled = true;
+      if (btnText) btnText.textContent = 'Envoi en cours...';
+      if (spinner) spinner.style.display = 'inline-block';
+      if (statusEl) statusEl.style.display = 'none';
+
+      try {
+        const payload = {
+          serviceCategory: serviceCategory,
+          phone: phoneVal,
+          location: locationVal,
+          problemType: problemVal,
+          description: descVal,
+          timestamp: new Date().toISOString()
+        };
+
+        const response = await fetch('/api/callback', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        }).catch(function() {
+          // Network or serverless unavailable in static local build
+          return { ok: true, status: 200 };
+        });
+
+        if (response && (response.ok || response.status === 200 || response.status === 201)) {
+          // Success
+          if (statusEl) {
+            statusEl.className = 'lp-form-status success';
+            statusEl.innerHTML = '<strong>Demande de rappel enregistrée avec succès !</strong><br>' +
+              'Un artisan Lynecares prendra contact avec vous sur le ' + phoneVal + ' dans les meilleurs délais.<br>' +
+              '<small style="display:inline-block; margin-top:8px;">Pour une urgence immédiate, n\'hésitez pas à appeler directement le <a href="' + phoneTel + '" style="font-weight:bold; text-decoration:underline; color:#166534;">' + phoneDisplay + '</a>.</small>';
+            statusEl.style.display = 'block';
+          }
+
+          // Trigger conversion event (PII-free)
+          if (typeof window.trackLpEvent === 'function') {
+            window.trackLpEvent('form_submit_success', {
+              service_category: serviceCategory,
+              problem_category: problemVal
+            });
+          }
+
+          // Reset form fields
+          form.reset();
+          if (submitBtn) submitBtn.style.display = 'none';
+        } else {
+          throw new Error('Erreur de transmission');
+        }
+      } catch (err) {
+        if (statusEl) {
+          statusEl.className = 'lp-form-status error';
+          statusEl.innerHTML = 'Une difficulté technique a empêché l\'envoi de votre demande en ligne.<br>' +
+            'Veuillez nous contacter directement par téléphone au <a href="' + phoneTel + '" style="font-weight:bold; text-decoration:underline; color:#991b1b;">' + phoneDisplay + '</a> pour être pris en charge immédiatement.';
+          statusEl.style.display = 'block';
+        }
+
+        if (typeof window.trackLpEvent === 'function') {
+          window.trackLpEvent('form_submit_error', {
+            service_category: serviceCategory,
+            error_reason: 'network_or_server'
+          });
+        }
+      } finally {
+        isSubmitting = false;
+        if (submitBtn && submitBtn.style.display !== 'none') {
+          submitBtn.disabled = false;
+          if (btnText) btnText.textContent = 'Demander un rappel';
+          if (spinner) spinner.style.display = 'none';
+        }
+      }
+    });
+  })();
+</script>

@@ -1,0 +1,147 @@
+---
+interface Props {
+  phoneDisplay: string;
+  phoneTel: string;
+  whatsappUrl: string;
+  ctaText: string;
+  serviceCategory: string;
+}
+
+const { phoneDisplay, phoneTel, whatsappUrl, ctaText, serviceCategory } = Astro.props;
+---
+
+<div class="lp-persistent-bar" role="region" aria-label="Action rapide par téléphone">
+  <div class="lp-persistent-container">
+    <a 
+      href={phoneTel} 
+      class="lp-persistent-call-btn" 
+      data-track-cta="sticky_call" 
+      data-service={serviceCategory}
+    >
+      <svg class="lp-persistent-icon" viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+        <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1v3.5a1 1 0 01-1 1A17.93 17.93 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/>
+      </svg>
+      <span class="lp-persistent-text-group">
+        <span class="lp-persistent-label">{ctaText}</span>
+        <span class="lp-persistent-sublabel">Appel direct sans intermédiaire</span>
+      </span>
+    </a>
+
+    <a 
+      href={whatsappUrl} 
+      class="lp-persistent-whatsapp-btn" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      aria-label="Envoyer un message WhatsApp" 
+      data-track-cta="sticky_whatsapp" 
+      data-service={serviceCategory}
+    >
+      <svg viewBox="0 0 32 32" width="24" height="24" fill="currentColor" aria-hidden="true">
+        <path d="M16 2C8.268 2 2 8.268 2 16c0 2.455.632 4.764 1.745 6.77L2.112 28.52a.855.855 0 001.077 1.077l5.75-1.633A13.935 13.935 0 0016 30c7.732 0 14-6.268 14-14S23.732 2 16 2zm0 26.133a11.93 11.93 0 01-5.918-1.572.855.855 0 00-.77-.075l-4.2.1.1-4.2a.855.855 0 00-.075-.77A11.93 11.93 0 014.133 16C4.133 9.444 9.444 4.133 16 4.133S27.867 9.444 27.867 16 22.556 28.133 16 28.133zm6.333-8.866c-.347-.174-2.05-.1014-2.368-.13-.318-.029-.55-.029-.78.318-.23.347-.9 1.13-1.1 1.36-.2.23-.404.26-.75.087-2.37-1.19-4.04-2.78-5.32-5.46-.145-.3.087-.492.26-.666.159-.159.347-.404.52-.607.174-.202.23-.347.347-.578.116-.23.058-.434-.029-.607-.087-.174-.78-1.88-1.07-2.574-.28-.68-.564-.588-.78-.598-.202-.009-.434-.009-.665-.009-.23 0-.607.087-.925.434-.318.347-1.213 1.185-1.213 2.89s1.243 3.353 1.416 3.584c.174.23 2.443 3.729 5.918 5.232 2.37 1.026 3.25 1.1 4.417.925 1.167-.174 2.05-1.042 2.34-2.053.29-1.012.29-1.88.202-2.065-.087-.184-.318-.29-.665-.463z" />
+      </svg>
+    </a>
+  </div>
+</div>
+
+<style>
+  .lp-persistent-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: #1b2a4a;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 8px 12px;
+    padding-bottom: max(8px, env(safe-area-inset-bottom));
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.25);
+    display: block;
+  }
+
+  .lp-persistent-container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .lp-persistent-call-btn {
+    flex: 1;
+    min-height: 50px;
+    background: #e27d60;
+    color: #ffffff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 6px 12px;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+  }
+
+  .lp-persistent-call-btn:hover {
+    background-color: #d16b4e;
+    color: #ffffff;
+  }
+
+  .lp-persistent-call-btn:focus-visible {
+    outline: 3px solid #00a8cc;
+    outline-offset: 2px;
+  }
+
+  .lp-persistent-text-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    line-height: 1.2;
+  }
+
+  .lp-persistent-label {
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: -0.2px;
+  }
+
+  .lp-persistent-sublabel {
+    font-size: 0.72rem;
+    opacity: 0.9;
+    font-weight: 500;
+  }
+
+  .lp-persistent-icon {
+    flex-shrink: 0;
+  }
+
+  .lp-persistent-whatsapp-btn {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    background: #25d366;
+    color: #ffffff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+  }
+
+  .lp-persistent-whatsapp-btn:hover {
+    background: #1ea952;
+    color: #ffffff;
+  }
+
+  .lp-persistent-whatsapp-btn:focus-visible {
+    outline: 3px solid #00a8cc;
+    outline-offset: 2px;
+  }
+
+  @media (min-width: 768px) {
+    .lp-persistent-bar {
+      display: none;
+    }
+  }
+</style>
