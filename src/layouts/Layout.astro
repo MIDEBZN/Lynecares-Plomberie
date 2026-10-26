@@ -27,7 +27,7 @@ const pageTitle = title.includes('Lynecares') ? title : `${title} | Lynecares`;
 		  gtag('config', 'AW-18531930544');
 		</script>
 
-		<!-- Event snippet for Click to call conversion page
+		<!-- Event snippet for Click to call site conversion page
 		In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
 		<script is:inline>
 		function gtag_report_conversion(url) {
@@ -36,16 +36,26 @@ const pageTitle = title.includes('Lynecares') ? title : `${title} | Lynecares`;
 		      window.location = url;
 		    }
 		  };
-		  if (typeof gtag === 'function') {
-		    gtag('event', 'conversion', {
-		        'send_to': 'AW-18531930544/2KWiCJC206odELCj24RF',
-		        'value': 1.0,
-		        'currency': 'EUR',
-		        'event_callback': callback
-		    });
-		  }
+		  gtag('event', 'conversion', {
+		      'send_to': 'AW-18531930544/c0yQCKn32KodELCj24RF',
+		      'value': 1.0,
+		      'currency': 'EUR',
+		      'event_callback': callback
+		  });
 		  return false;
 		}
+		</script>
+
+		<script is:inline>
+		  document.addEventListener('DOMContentLoaded', function() {
+		    document.querySelectorAll('a[href^="tel:"]').forEach(function(el) {
+		      el.addEventListener('click', function() {
+		        if (typeof window.gtag_report_conversion === 'function') {
+		          window.gtag_report_conversion();
+		        }
+		      });
+		    });
+		  });
 		</script>
 
 		<meta charset="UTF-8" />
@@ -144,16 +154,5 @@ const pageTitle = title.includes('Lynecares') ? title : `${title} | Lynecares`;
 				}
 			}
 		</style>
-		<script is:inline>
-			document.addEventListener('DOMContentLoaded', function() {
-				document.querySelectorAll('a[href^="tel:"]').forEach(function(el) {
-					el.addEventListener('click', function() {
-						if (typeof window.gtag_report_conversion === 'function') {
-							window.gtag_report_conversion();
-						}
-					});
-				});
-			});
-		</script>
 	</body>
 </html>
